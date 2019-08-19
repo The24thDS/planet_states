@@ -1,1 +1,58 @@
-#todo
+
+planet_states = {
+	sub_title = "COUNTRY_PLANET_STATE"
+	sub_title_desc = "COUNTRY_PLANET_STATE_DESC"
+
+	blocks_piracy = yes
+	show_in_contacts_list = yes
+	can_have_their_comms_shared = yes
+	observable = no
+
+	faction = {
+		hostile = no
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = yes
+	}
+
+	ai = {
+		enabled = yes
+		declare_war = no
+		colonizer = no
+		construction = yes
+		internal_policies = no
+		modification = no
+		tech = no
+	}
+
+	custom_diplomacy = yes
+	custom_opinion = yes
+
+	modules = {
+		all_technology_module = {}
+		standard_event_module = {}
+		standard_leader_module = {}
+		standard_economy_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = script_only
+		} # Nothing is allowed, but we need this for relationships.
+	}
+
+	resources = {
+		category = country_base
+		produces = {
+			energy = 1000
+			minerals = 250
+			food = 100
+			alloys = 100
+			consumer_goods = 200
+			rare_crystals = 10
+			exotic_gases = 10
+			volatile_motes = 10
+			sr_dark_matter = 2
+			sr_living_metal = 2
+			sr_zro = 2
+			influence = 3
+		}
+	}
+}
