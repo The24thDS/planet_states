@@ -1,1 +1,92 @@
 namespace = ps
+
+# ps.1: Spawn Planet States
+event = {
+	id = ps.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_system = {
+			limit = {
+				NOR = {
+					is_fe_cluster = yes
+					has_star_flag = empire_home_system
+					has_star_flag = empire_cluster
+					has_star_flag = enclave
+					has_star_flag = guardian
+					has_star_flag = hostile_system
+				}
+				any_system_planet = {
+					uninhabitable_regular_planet = yes
+				}
+			}
+
+			random_system_planet = {
+				limit = { uninhabitable_regular_planet = yes }
+
+				# Set Planet Size and Class
+				set_planet_size = 25
+				change_pc = pc_city
+
+				# Create Species and Country
+				create_species = {
+					name = random
+					class = random_non_machine
+					portrait = random
+					traits = random
+				}
+				create_country = {
+					name = random
+					type = planet_state
+					authority = "auth_democratic"
+					civics = random
+					species = last_created
+					flag = random
+					ethos = {
+						ethic = ethic_fanatic_egalitarian
+					}
+					ignore_initial_colony_error = yes
+				}
+				last_created_country = {
+					save_event_target_as = first_planet_state
+				}
+
+				# Set Planet State as Owner of the planet
+				set_owner = event_target:first_planet_state
+				set_controller = event_target:first_planet_state
+				set_capital = yes
+
+				# Add Builings, Districts, Pops
+				add_building = building_ancient_palace
+				add_building = building_fe_stronghold
+				add_building = building_fe_stronghold
+				add_building = building_affluence_center
+				add_building = building_affluence_center
+				add_building = building_nourishment_center
+				add_building = building_nourishment_center
+				add_building = building_class_4_singularity
+				add_building = building_class_4_singularity
+				add_building = building_class_4_singularity
+				add_building = building_dimensional_fabricator
+				add_building = building_dimensional_fabricator
+				add_building = building_dimensional_fabricator
+				add_building = building_nano_forge
+				add_building = building_nano_forge
+				add_building = building_nano_forge
+				while = {
+					count = 20
+					add_district = district_arcology_housing
+				}
+				while = {
+					count = 94
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+
+				# Create Starbase
+			}
+		}
+	}
+}

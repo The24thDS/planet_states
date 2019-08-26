@@ -1,1 +1,7 @@
-#todo
+
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		ps.1 # Spawn Planet States
+	}
+}
