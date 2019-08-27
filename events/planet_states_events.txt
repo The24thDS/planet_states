@@ -8,7 +8,7 @@ event = {
 
 	immediate = {
 
-		# Planet State 1: The City
+		# Planet State 1: The Ecumenopolis
 		random_system = {
 			limit = {
 				NOR = {
@@ -21,6 +21,7 @@ event = {
 					has_star_flag = marauder_system
 					has_star_flag = caravaneer_home
 				}
+				is_bottleneck_system = yes
 				any_system_planet = {
 					uninhabitable_regular_planet = yes
 				}
@@ -31,7 +32,7 @@ event = {
 				limit = { uninhabitable_regular_planet = yes }
 
 				# Set Planet Size and Class
-				set_planet_size = 24
+				set_planet_size = 25
 				change_pc = pc_city
 
 				# Create Species and Country
@@ -54,18 +55,37 @@ event = {
 					ignore_initial_colony_error = yes
 				}
 
+				# Set Species Rights
+				last_created_species = {
+					set_citizenship_type = {
+						country = prev
+						type = citizenship_full
+						cooldown = no
+					}
+					set_military_service_type  = {
+						country = prev
+						type = military_service_full
+						cooldown = no
+					}
+					set_living_standard = {
+						country = prev
+						type = living_standard_utopian
+						cooldown = no
+					}
+				}
+
+
 				# Create Station and Leader
 				last_created_country = {
-					save_event_target_as = first_planet_state
 					set_graphical_culture = mammalian_01
 					create_fleet = {
-						name = "NAME_Ars_Artem"
+						name = "PLANET STATE STATION"
 						settings = { spawn_debris = no }
 						effect = {
 							set_owner = prev
 							create_ship = {
 								name = random
-								design = "NAME_Artist_Enclave_Station"
+								design = "NAME_Planet_State_Station"
 								graphical_culture = prev
 							}
 							set_location = {
@@ -98,6 +118,7 @@ event = {
 				add_building = building_institute
 				add_building = building_commercial_megaplex
 				add_building = building_commercial_megaplex
+				add_building = building_commercial_megaplex
 				add_building = building_galactic_stock_exchange
 				add_building = building_paradise_dome
 				add_building = building_hyper_entertainment_forum
@@ -106,7 +127,7 @@ event = {
 				add_building = building_fortress
 				add_building = building_planetary_shield_generator
 				while = {
-					count = 14
+					count = 15
 					add_district = district_arcology_housing
 				}
 				while = {
@@ -121,6 +142,7 @@ event = {
 					count = 200
 					create_pop = {
 						species = owner_main_species
+						ethos = { ethic = ethic_fanatic_egalitarian }
 					}
 				}
 
@@ -136,3 +158,46 @@ event = {
 # ps.4: Entering Planet State system for the first time
 
 # ps.5: First contact
+
+# ps.100: The Ecumenopolis - Main Menu
+country_event = {
+	id = ps.100
+	title = ps.100.name
+	desc = ps.100a.desc
+	location = From
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = From
+		planet_background = From
+		graphical_culture = From
+		city_level = From
+		room = From.ruler
+	}
+
+	trigger = {
+		from = {
+			is_country_type = planet_state
+			has_country_flag = ps_ecumenopolis
+		}
+		NOT = { has_country_flag = ps_ecumenopolis_diplomacy_engaged }
+		NOT = { has_country_flag = attacked_ps_ecumenopolis }
+	}
+
+	immediate = {
+		set_country_flag = ps_ecumenopolis_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ps_ecumenopolis_diplomacy_engaged
+		}
+	}
+
+	# Goodbye
+	option = {
+		name = ps.100.goodbye
+	}
+}

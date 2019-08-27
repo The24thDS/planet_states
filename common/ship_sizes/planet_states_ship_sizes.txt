@@ -1,0 +1,23 @@
+# Planet States
+
+planet_state_station = {
+	is_space_object = yes
+	graphical_culture = no
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.10
+	modifier = {
+		ship_evasion_mult = -1
+	}
+	max_hitpoints = 150000
+	combat_size_multiplier = 20
+	size_multiplier = 16
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "station" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = @build_block_radius_civilian
+
+	class = shipclass_military_station
+	is_designable = no
+}

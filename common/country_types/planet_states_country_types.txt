@@ -6,7 +6,7 @@ planet_state = {
 	show_in_contacts_list = yes
 	custom_diplomacy = yes
 	share_survey_data = no
-	needs_survey = no
+	destroys_starbases = yes
 	can_have_their_comms_shared = yes
 	observable = no
 	custom_opinion = yes
@@ -23,10 +23,16 @@ planet_state = {
 		enabled = yes
 		declare_war = no
 		colonizer = no
-		construction = no
 		internal_policies = no
+		construction = yes
 		modification = no
+		limited_construction = yes
 		tech = no
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
 	}
 
 	modules = {
@@ -34,6 +40,7 @@ planet_state = {
 		standard_event_module = {}
 		standard_leader_module = {}
 		standard_economy_module = {}
+		standard_species_rights_module = {}
 		exclusive_diplomacy_module = {
 			contact_rule = script_only
 		} # Nothing is allowed, but we need this for relationships.
@@ -44,15 +51,15 @@ planet_state = {
 		produces = {
 			energy = 1000
 			minerals = 250
-			food = 300
+			food = 100
 			alloys = 100
-			consumer_goods = 200
-			rare_crystals = 20
-			exotic_gases = 20
-			volatile_motes = 20
-			sr_dark_matter = 4
-			sr_living_metal = 4
-			sr_zro = 4
+			consumer_goods = 100
+			rare_crystals = 10
+			exotic_gases = 10
+			volatile_motes = 10
+			sr_dark_matter = 2
+			sr_living_metal = 2
+			sr_zro = 2
 			influence = 3
 		}
 	}
