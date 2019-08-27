@@ -7,6 +7,8 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
+
+		# Planet State 1: The City
 		random_system = {
 			limit = {
 				NOR = {
@@ -24,6 +26,7 @@ event = {
 				}
 			}
 
+			# Choose appropriate planet
 			random_system_planet = {
 				limit = { uninhabitable_regular_planet = yes }
 
@@ -31,7 +34,7 @@ event = {
 				set_planet_size = 24
 				change_pc = pc_city
 
-				# Create Species, Country and Fleet
+				# Create Species and Country
 				create_species = {
 					name = random
 					class = random_non_machine
@@ -50,6 +53,8 @@ event = {
 					}
 					ignore_initial_colony_error = yes
 				}
+
+				# Create Station and Leader
 				last_created_country = {
 					save_event_target_as = first_planet_state
 					set_graphical_culture = mammalian_01
@@ -87,10 +92,9 @@ event = {
 				# Add Builings, Districts, Pops
 				add_building = building_system_capital
 				add_building = building_hall_judgment
-				add_building = building_hydroponics_farm
-				add_building = building_hydroponics_farm
-				add_building = building_food_processing_facility
-				add_building = building_energy_grid
+				add_building = building_nourishment_center
+				add_building = building_nourishment_center
+				add_building = building_class_4_singularity
 				add_building = building_institute
 				add_building = building_commercial_megaplex
 				add_building = building_commercial_megaplex
@@ -98,6 +102,7 @@ event = {
 				add_building = building_paradise_dome
 				add_building = building_hyper_entertainment_forum
 				add_building = building_autocurating_vault
+				add_building = building_fortress
 				add_building = building_fortress
 				add_building = building_planetary_shield_generator
 				while = {
@@ -123,3 +128,11 @@ event = {
 		}
 	}
 }
+
+# ps.2: Planet State Yearly Border Opinion
+
+# ps.3: Add +1 opinion per year
+
+# ps.4: Entering Planet State system for the first time
+
+# ps.5: First contact
