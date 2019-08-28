@@ -1,0 +1,236 @@
+building_hydroponics_farms_complex = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_hydroponics_farm
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = { is_country_type = planet_state }
+		}
+	}
+
+	planet_modifier = {
+		planet_farmers_food_produces_mult = 0.25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_farmer_add = 25
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 25
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 40
+			volatile_motes = 2
+		}
+	}
+}
+
+building_mineral_purification_complex = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_mineral_purification_hub
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = { is_country_type = planet_state }
+		}
+	}
+
+	planet_modifier = {
+		planet_miners_minerals_produces_mult = 0.25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 25
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 25
+		}
+	}
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_robot_empire = yes
+			}
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.05
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 40
+			volatile_motes = 2
+		}
+	}
+}
+
+building_distillation_complex = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_refinery
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = { is_country_type = planet_state }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gas_refiner_add = 6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_gas_refiner_drone_add = 6
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 20
+		}
+	}
+}
+
+building_chemical_complex = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_chemical_plant
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = { is_country_type = planet_state }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_chemist_add = 6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_chemist_drone_add = 6
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 20
+		}
+	}
+}
+
+building_synthesizer_complex = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_crystal_plant
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = { is_country_type = planet_state }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_translucer_add = 6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_translucer_drone_add = 6
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 20
+		}
+	}
+}

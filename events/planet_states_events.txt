@@ -36,6 +36,7 @@ event = {
 				}
 
 				# Set Planet Size and Class
+				prevent_anomaly = yes
 				set_planet_size = 25
 				change_pc = pc_city
 
@@ -98,34 +99,31 @@ event = {
 				# Add Builings, Districts, Pops
 				add_building = building_system_capital
 				add_building = building_hall_judgment
-				add_building = building_nourishment_center
-				add_building = building_nourishment_center
-				add_building = building_class_4_singularity
+				add_building = building_hydroponics_farms_complex
+				add_building = building_hydroponics_farms_complex
+				add_building = building_mineral_purification_complex
+				add_building = building_mineral_purification_complex
+				add_building = building_distillation_complex
+				add_building = building_chemical_complex
+				add_building = building_synthesizer_complex
+				add_building = building_hospital
 				add_building = building_institute
-				add_building = building_commercial_megaplex
-				add_building = building_commercial_megaplex
-				add_building = building_commercial_megaplex
 				add_building = building_galactic_stock_exchange
-				add_building = building_paradise_dome
 				add_building = building_hyper_entertainment_forum
-				add_building = building_autocurating_vault
-				add_building = building_fortress
-				add_building = building_fortress
-				add_building = building_planetary_shield_generator
 				while = {
 					count = 15
 					add_district = district_arcology_housing
 				}
 				while = {
-					count = 4
+					count = 5
 					add_district = district_arcology_civilian_industry
 				}
 				while = {
-					count = 6
+					count = 5
 					add_district = district_arcology_leisure
 				}
 				while = {
-					count = 240
+					count = 325
 					create_pop = {
 						species = owner_main_species
 						ethos = { ethic = ethic_fanatic_egalitarian }
