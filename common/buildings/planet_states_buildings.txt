@@ -16,6 +16,7 @@ building_planet_state_capitol = {
 	}
 
 	planet_modifier = {
+		job_administrator_add = 5
 		job_enforcer_add = 10
 		planet_housing_add = 25
 		planet_amenities_add = 25
