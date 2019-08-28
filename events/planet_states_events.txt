@@ -97,33 +97,27 @@ event = {
 				set_capital = yes
 
 				# Add Builings, Districts, Pops
-				add_building = building_system_capital
+				add_building = building_planet_state_capitol
 				add_building = building_hall_judgment
+				add_building = building_anti_matter_reactor
 				add_building = building_hydroponics_farms_complex
 				add_building = building_hydroponics_farms_complex
 				add_building = building_mineral_purification_complex
 				add_building = building_mineral_purification_complex
+				add_building = building_multidimensional_printers
+				add_building = building_leisure_complex
 				add_building = building_distillation_complex
 				add_building = building_chemical_complex
 				add_building = building_synthesizer_complex
 				add_building = building_hospital
 				add_building = building_institute
 				add_building = building_galactic_stock_exchange
-				add_building = building_hyper_entertainment_forum
 				while = {
-					count = 15
+					count = 25
 					add_district = district_arcology_housing
 				}
 				while = {
-					count = 5
-					add_district = district_arcology_civilian_industry
-				}
-				while = {
-					count = 5
-					add_district = district_arcology_leisure
-				}
-				while = {
-					count = 325
+					count = 350
 					create_pop = {
 						species = owner_main_species
 						ethos = { ethic = ethic_fanatic_egalitarian }
