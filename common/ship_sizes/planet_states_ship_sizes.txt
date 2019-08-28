@@ -2,6 +2,7 @@
 
 planet_state_station = {
 	is_space_object = yes
+	entity = enclave_station_entity
 	graphical_culture = no
 	max_speed = 0.0
 	acceleration = 0.0

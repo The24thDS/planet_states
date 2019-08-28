@@ -56,7 +56,7 @@ ship_design = {
 			template = "LARGE_GAMMA_LASER"
 		}
 		component = {
-			slot = "EXTRA_LARGE_06"
+			slot = "LARGE_GUN_06"
 			template = "KINETIC_ARTILLERY_2"
 		}
 		component = {

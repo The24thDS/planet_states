@@ -5,3 +5,9 @@ on_game_start = {
 		ps.1 # Spawn Planet States
 	}
 }
+
+on_custom_diplomacy = {
+	events = {
+		ps.100
+	}
+}

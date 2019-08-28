@@ -28,11 +28,6 @@ planet_state = {
 		modification = no
 		limited_construction = yes
 		tech = no
-		modules = {
-			military_minister_module
-			foreign_minister_module
-			interior_minister_module
-		}
 	}
 
 	modules = {
@@ -54,12 +49,12 @@ planet_state = {
 			food = 100
 			alloys = 100
 			consumer_goods = 100
-			rare_crystals = 10
-			exotic_gases = 10
+			rare_crystals = 15
+			exotic_gases = 15
 			volatile_motes = 10
 			sr_dark_matter = 2
 			sr_living_metal = 2
-			sr_zro = 2
+			sr_zro = 5
 			influence = 3
 		}
 	}

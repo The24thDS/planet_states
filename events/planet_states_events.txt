@@ -24,12 +24,16 @@ event = {
 				is_bottleneck_system = yes
 				any_system_planet = {
 					uninhabitable_regular_planet = yes
+					has_anomaly = no
 				}
 			}
 
 			# Choose appropriate planet
 			random_system_planet = {
-				limit = { uninhabitable_regular_planet = yes }
+				limit = {
+					uninhabitable_regular_planet = yes
+					has_anomaly = no
+				}
 
 				# Set Planet Size and Class
 				set_planet_size = 25
@@ -55,28 +59,10 @@ event = {
 					ignore_initial_colony_error = yes
 				}
 
-				# Set Species Rights
-				last_created_species = {
-					set_citizenship_type = {
-						country = prev
-						type = citizenship_full
-						cooldown = no
-					}
-					set_military_service_type  = {
-						country = prev
-						type = military_service_full
-						cooldown = no
-					}
-					set_living_standard = {
-						country = prev
-						type = living_standard_utopian
-						cooldown = no
-					}
-				}
-
-
 				# Create Station and Leader
 				last_created_country = {
+					set_country_flag = ps_ecumenopolis
+					save_event_target_as = first_planet_state
 					set_graphical_culture = mammalian_01
 					create_fleet = {
 						name = "PLANET STATE STATION"
@@ -139,7 +125,7 @@ event = {
 					add_district = district_arcology_leisure
 				}
 				while = {
-					count = 200
+					count = 240
 					create_pop = {
 						species = owner_main_species
 						ethos = { ethic = ethic_fanatic_egalitarian }
