@@ -12,6 +12,42 @@ ship_design = {
 			template = "TITAN_LASER"
 		}
 		component = {
+			slot = "TITANIC_02"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "TITANIC_03"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "TITANIC_04"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "TITANIC_05"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "TITANIC_06"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "TITANIC_07"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "TITANIC_08"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "TITANIC_09"
+			template = "TITAN_LASER"
+		}
+		component = {
+			slot = "TITANIC_10"
+			template = "TITAN_LASER"
+		}
+		component = {
 			slot = "EXTRA_LARGE_01"
 			template = "ENERGY_LANCE_2"
 		}
@@ -33,6 +69,222 @@ ship_design = {
 		}
 		component = {
 			slot = "EXTRA_LARGE_06"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_07"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_08"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_09"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_10"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_11"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_12"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_13"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_14"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_15"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_16"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_17"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_18"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_19"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_20"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_21"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_22"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_23"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_24"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_25"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_26"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_27"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_28"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_29"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_30"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_31"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_32"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_33"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_34"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_35"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_36"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_37"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_38"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_39"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_40"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_41"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_42"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_43"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_44"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_45"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_46"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_47"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_48"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_49"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_50"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_51"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_52"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_53"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_54"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_55"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_56"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_57"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_58"
+			template = "MASS_ACCELERATOR_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_59"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "EXTRA_LARGE_60"
 			template = "MASS_ACCELERATOR_2"
 		}
 		component = {
@@ -68,6 +320,286 @@ ship_design = {
 			template = "KINETIC_ARTILLERY_2"
 		}
 		component = {
+			slot = "LARGE_GUN_09"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_10"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_11"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_12"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_13"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_14"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_15"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_16"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_17"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_18"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_19"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_20"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_21"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_22"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_23"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_24"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_25"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_26"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_27"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_28"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_29"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_30"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_31"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_32"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_33"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_34"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_35"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_36"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_37"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_38"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_39"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_40"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_41"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_42"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_43"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_44"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_45"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_46"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_47"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_48"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_49"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_50"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_51"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_52"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_53"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_54"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_55"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_56"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_57"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_58"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_59"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_60"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_61"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_62"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_63"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_64"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_65"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_66"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_67"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_68"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_69"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_70"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_71"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_72"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_73"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_74"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_75"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_76"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
+			slot = "LARGE_GUN_77"
+			template = "LARGE_GAMMA_LASER"
+		}
+		component = {
+			slot = "LARGE_GUN_78"
+			template = "KINETIC_ARTILLERY_2"
+		}
+		component = {
 			slot = "PD_01"
 			template = "POINT_DEFENCE_3"
 		}
@@ -97,6 +629,334 @@ ship_design = {
 		}
 		component = {
 			slot = "PD_08"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_09"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_10"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_11"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_12"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_13"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_14"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_15"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_16"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_17"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_18"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_19"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_20"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_21"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_22"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_23"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_24"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_25"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_26"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_27"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_28"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_29"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_30"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_31"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_32"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_33"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_34"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_35"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_36"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_37"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_38"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_39"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_40"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_41"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_42"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_43"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_44"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_45"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_46"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_47"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_48"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_49"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_50"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_51"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_52"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_53"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_54"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_55"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_56"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_57"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_58"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_59"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_60"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_61"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_62"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_63"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_64"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_65"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_66"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_67"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_68"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_69"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_70"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_71"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_72"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_73"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_74"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_75"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_76"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_77"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_78"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_79"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_80"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_81"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_82"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_83"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_84"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_85"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_86"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_87"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_88"
+			template = "FLAK_BATTERY_3"
+		}
+		component = {
+			slot = "PD_89"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_90"
 			template = "FLAK_BATTERY_3"
 		}
 		component = {
@@ -140,6 +1000,326 @@ ship_design = {
 			template = "MEDIUM_MASS_DRIVER_5"
 		}
 		component = {
+			slot = "MEDIUM_GUN_11"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_12"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_13"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_14"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_15"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_16"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_17"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_18"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_19"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_20"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_21"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_22"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_23"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_24"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_25"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_26"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_27"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_28"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_29"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_30"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_31"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_32"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_33"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_34"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_35"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_36"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_37"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_38"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_39"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_40"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_41"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_42"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_43"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_44"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_45"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_46"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_47"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_48"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_49"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_50"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_51"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_52"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_53"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_54"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_55"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_56"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_57"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_58"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_59"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_60"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_61"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_62"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_63"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_64"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_65"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_66"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_67"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_68"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_69"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_70"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_71"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_72"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_73"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_74"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_75"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_76"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_77"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_78"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_79"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_80"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_81"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_82"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_83"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_84"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_85"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_86"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_87"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_88"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "MEDIUM_GUN_89"
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_90"
+			template = "MEDIUM_MASS_DRIVER_5"
+		}
+		component = {
 			slot = "TORPEDO_01"
 			template = "SWARMER_MISSILE_2"
 		}
@@ -170,6 +1350,574 @@ ship_design = {
 		component = {
 			slot = "TORPEDO_08"
 			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_09"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_10"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_11"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_12"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_13"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_14"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_15"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_16"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_17"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_18"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_19"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_20"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_21"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_22"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_23"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_24"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_25"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_26"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_27"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_28"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_29"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_30"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_31"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_32"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_33"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_34"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_35"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_36"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_37"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_38"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_39"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_40"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_41"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_42"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_43"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_44"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_45"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_46"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_47"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_48"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_49"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_50"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_51"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_52"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_53"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_54"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_55"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_56"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_57"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_58"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_59"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_60"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_61"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_62"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_63"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_64"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_65"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_66"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_67"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_68"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_69"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_70"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_71"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_72"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_73"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_74"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_75"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_76"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_77"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_78"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_79"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_80"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_81"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_82"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_83"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_84"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_85"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_86"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_87"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_88"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_89"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "TORPEDO_90"
+			template = "SWARMER_MISSILE_2"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_05"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_06"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_07"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_08"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_09"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_10"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_11"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_12"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_13"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_14"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_15"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_16"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_17"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_18"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_19"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_20"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_21"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_22"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_23"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_24"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_25"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_26"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_27"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_28"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_29"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_30"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_31"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_32"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_33"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_34"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_35"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_36"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_37"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_38"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_39"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_40"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_41"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_42"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_43"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_44"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_45"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_46"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_47"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_48"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_49"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_50"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_51"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_52"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_53"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_54"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_55"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_56"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_57"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_58"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+		component = {
+			slot = "SMALL_GUN_59"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_60"
+			template = "SMALL_MASS_DRIVER_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_1"
@@ -213,42 +1961,682 @@ ship_design = {
 		}
 		component = {
 			slot = "LARGE_UTILITY_11"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_12"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_13"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_14"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_15"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_16"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_17"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_18"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_19"
-			template = "LARGE_DARK_MATTER_DEFLECTOR"
+			template = "LARGE_ARMOR_5"
 		}
 		component = {
 			slot = "LARGE_UTILITY_20"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_21"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_22"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_23"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_24"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_25"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_26"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_27"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_28"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_29"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_30"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_31"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_32"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_33"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_34"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_35"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_36"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_37"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_38"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_39"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_40"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_41"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_42"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_43"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_44"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_45"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_46"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_47"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_48"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_49"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_50"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_51"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_52"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_53"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_54"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_55"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_56"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_57"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_58"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_59"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_60"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_61"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_62"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_63"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_64"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_65"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_66"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_67"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_68"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_69"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_70"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_71"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_72"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_73"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_74"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_75"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_76"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_77"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_78"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_79"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_80"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_81"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_82"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_83"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_84"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_85"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_86"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_87"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_88"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_89"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_90"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_91"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_92"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_93"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_94"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_95"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_96"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_97"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_98"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_99"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_100"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_101"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_102"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_103"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_104"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_105"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_106"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_107"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_108"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_109"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_110"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_111"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_112"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_113"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_114"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_115"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_116"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_117"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_118"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_119"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_120"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_121"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_122"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_123"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_124"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_125"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_126"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_127"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_128"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_129"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_130"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_131"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_132"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_133"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_134"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_135"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_136"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_137"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_138"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_139"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_140"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_141"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_142"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_143"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_144"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_145"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_146"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_147"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_148"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_149"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_150"
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			slot = "LARGE_UTILITY_151"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_152"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_153"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_154"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_155"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_156"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_157"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_158"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_159"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_160"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_161"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_162"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_163"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_164"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_165"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_166"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_167"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_168"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_169"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_170"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_171"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_172"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_173"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_174"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_175"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_176"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_177"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_178"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_179"
+			template = "LARGE_DARK_MATTER_DEFLECTOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_180"
 			template = "LARGE_DARK_MATTER_DEFLECTOR"
 		}
 		component = {
@@ -261,6 +2649,30 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_3"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_5"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_6"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_7"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_8"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_9"
 			template = "SHIELD_BOOSTER"
 		}
 	}

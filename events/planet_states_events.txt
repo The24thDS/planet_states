@@ -105,23 +105,38 @@ event = {
 				add_building = building_mineral_purification_complex
 				add_building = building_mineral_purification_complex
 				add_building = building_multidimensional_printers
+				add_building = building_multidimensional_printers
+				add_building = building_leisure_complex
 				add_building = building_leisure_complex
 				add_building = building_distillation_complex
 				add_building = building_chemical_complex
-				add_building = building_synthesizer_complex
+				add_building = building_synthesizers_complex
 				add_building = building_galactic_stock_exchange
+				add_building = building_autocurating_vault
 				while = {
 					count = 25
 					add_district = district_arcology_housing
 				}
 				while = {
-					count = 350
+					count = 400
 					create_pop = {
 						species = owner_main_species
 						ethos = { ethic = ethic_fanatic_egalitarian }
 					}
 				}
 
+				event_target:first_planet_state = {
+					set_policy = {
+						policy = food_policy
+						option = food_policy_generous
+						cooldown = no
+					}
+					set_policy = {
+						policy = purge
+						option = purge_not_allowed
+						cooldown = no
+					}
+				}
 			}
 		}
 	}

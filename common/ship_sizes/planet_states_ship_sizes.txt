@@ -10,7 +10,7 @@ planet_state_station = {
 	modifier = {
 		ship_evasion_mult = -1
 	}
-	max_hitpoints = 150000
+	max_hitpoints = 500000
 	combat_size_multiplier = 20
 	size_multiplier = 16
 	fleet_slot_size = 16

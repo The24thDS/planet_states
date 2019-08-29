@@ -203,7 +203,7 @@ building_multidimensional_printers = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_artisan_add = 50
+			job_artisan_add = 25
 		}
 	}
 
@@ -238,7 +238,7 @@ building_leisure_complex = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_entertainer_add = 50
+			job_entertainer_add = 25
 		}
 	}
 
@@ -339,7 +339,7 @@ building_chemical_complex = {
 	}
 }
 
-building_synthesizer_complex = {
+building_synthesizers_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
