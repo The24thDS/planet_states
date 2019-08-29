@@ -1,0 +1,10 @@
+civic_planet_state = {
+	modification = no
+	potential = {
+		country_type = { value = planet_state }
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		planet_stability_add = 10
+	}
+}

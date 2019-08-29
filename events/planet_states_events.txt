@@ -1,6 +1,6 @@
 namespace = ps
 
-# ps.1: Spawn Planet States
+# ps.1: Spawn Planet States (on_game_start)
 event = {
 	id = ps.1
 	hide_window = yes
@@ -28,6 +28,8 @@ event = {
 				}
 			}
 
+			set_star_flag = planet_state
+
 			# Choose appropriate planet
 			random_system_planet = {
 				limit = {
@@ -45,13 +47,20 @@ event = {
 					name = random
 					class = random_non_machine
 					portrait = random
-					traits = random
+					traits = {
+						trait = trait_venerable
+						trait = trait_erudite
+					}
 				}
 				create_country = {
 					name = "PLANET STATE"
 					type = planet_state
 					authority = "auth_democratic"
-					civics = random
+					civics = {
+						civic = civic_planet_state
+						civic = civic_idealistic_foundation
+						civic = civic_shared_burden
+					}
 					species = last_created
 					flag = random
 					ethos = {
@@ -62,11 +71,11 @@ event = {
 
 				# Create Station and Leader
 				last_created_country = {
-					set_country_flag = ps_ecumenopolis
-					save_event_target_as = first_planet_state
+					set_country_flag = ps_egalitarian
+					save_event_target_as = target_ps_egalitarian
 					set_graphical_culture = mammalian_01
 					create_fleet = {
-						name = "PLANET STATE STATION"
+						name = "NAME_PS_Egalitarian_Fleet"
 						settings = { spawn_debris = no }
 						effect = {
 							set_owner = prev
@@ -92,8 +101,8 @@ event = {
 				}
 
 				# Set Planet State as Owner of the planet
-				set_owner = event_target:first_planet_state
-				set_controller = event_target:first_planet_state
+				set_owner = event_target:target_ps_egalitarian
+				set_controller = event_target:target_ps_egalitarian
 				set_capital = yes
 
 				# Add Builings, Districts, Pops
@@ -125,7 +134,7 @@ event = {
 					}
 				}
 
-				event_target:first_planet_state = {
+				event_target:target_ps_egalitarian = {
 					set_policy = {
 						policy = food_policy
 						option = food_policy_generous
@@ -136,21 +145,221 @@ event = {
 						option = purge_not_allowed
 						cooldown = no
 					}
+					set_policy = {
+						policy = resettlement
+						option = resettlement_not_allowed
+						cooldown = no
+					}
 				}
 			}
 		}
 	}
 }
 
-# ps.2: Planet State Yearly Border Opinion
+# ps.2: Planet State Yearly Border Opinion (on_yearly_pulse)
+event = {
+	id = ps.2
+	hide_window = yes
+	is_triggered_only = yes
 
-# ps.3: Add +1 opinion per year
+	immediate = {
+		every_country = {
+			limit = { is_country_type = planet_state }
+			country_event = { id = ps.3 }
+		}
+	}
+}
 
-# ps.4: Entering Planet State system for the first time
+# ps.3: Add +1 opinion per year (called by ps.2)
+country_event = {
+	id = ps.3
+	hide_window = yes
+	is_triggered_only = yes
 
-# ps.5: First contact
+	immediate = {
+		every_owned_fleet = {
+			limit = {
+				exists = solar_system
+				solar_system = {
+					exists = space_owner
+					space_owner = {
+						is_country_type = default
+					}
+				}
+			}
+			solar_system = {
+				space_owner = {
+					root = {
+						add_trust = {
+							who = prev
+							amount = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-# ps.100: The Ecumenopolis - Main Menu
+# ps.4: Entering Planet State system for the first time (on_entering_system_fleet)
+fleet_event = {
+	id = ps.4
+	title = ps.4.name
+	desc = ps.4.desc
+	picture = GFX_evt_star_chart
+	location = From
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			is_country_type = default
+			exists = capital_scope
+		}
+		From = {
+			has_star_flag = planet_state
+			any_system_planet = {
+				exists = owner
+				owner = {
+					is_country_type = planet_state
+					NOT = { has_communications = root.owner }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		From = {
+			random_system_planet = {
+				limit = {
+					exists = owner
+					owner = { is_country_type = planet_state }
+				}
+				owner = {
+					save_event_target_as = target_planet_state
+				}
+			}
+		}
+
+		owner = {
+			save_event_target_as = target_default_country
+			country_event = { id = story.7 days = 2}
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+	option = {
+		name = TASTY
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+
+	option = {
+		name = ps.4.a
+		trigger = { is_homicidal = no }
+	}
+
+	after = {
+		event_target:target_default_country = {
+			if = {
+				limit = {
+					is_xenophile = yes
+				}
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontactxenophile
+					min = @tier1influencecontactmin
+					max = @tier1influencecontactmax
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontact
+					min = @tier1influencecontactmin
+					max = @tier1influencecontactmax
+				}
+			}
+
+			hidden_effect = {
+				country_event = { id = ps.5 }
+			}
+		}
+	}
+}
+
+# ps.5: First contact with Planet State
+country_event = {
+	id = ps.5
+	title = ps.5.name
+	desc = {
+		trigger = {
+			event_target:target_planet_state = { has_country_flag = ps_egalitarian }
+		}
+		text = ps.5.desc.egalitarian
+	}
+	desc = {
+		trigger = {
+			event_target:target_planet_state = { has_country_flag = ps_authoritarian }
+		}
+		text = ps.5.desc.authoritarian
+	}
+	desc = {
+		trigger = {
+			event_target:target_planet_state = { has_country_flag = ps_militarist }
+		}
+		text = ps.5.desc.militarist
+	}
+	desc = {
+		trigger = {
+			event_target:target_planet_state = { has_country_flag = ps_pacifist }
+		}
+		text = ps.5.desc.pacifist
+	}
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = event_target:target_planet_state
+		planet_background = event_target:target_planet_state
+		graphical_culture = event_target:target_planet_state
+		city_level = event_target:target_planet_state
+		room = event_target:target_planet_state.ruler
+	}
+
+	option = {
+		name = ps.5.a
+		trigger = { is_homicidal = no }
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+	}
+}
+
+# ps.100: The Ecumenopolis - Main Menu (Initial)
 country_event = {
 	id = ps.100
 	title = ps.100.name
@@ -171,19 +380,19 @@ country_event = {
 	trigger = {
 		from = {
 			is_country_type = planet_state
-			has_country_flag = ps_ecumenopolis
+			has_country_flag = ps_egalitarian
 		}
-		NOT = { has_country_flag = ps_ecumenopolis_diplomacy_engaged }
-		NOT = { has_country_flag = attacked_ps_ecumenopolis }
+		NOT = { has_country_flag = ps_egalitarian_diplomacy_engaged }
+		NOT = { has_country_flag = attacked_ps_egalitarian }
 	}
 
 	immediate = {
-		set_country_flag = ps_ecumenopolis_diplomacy_engaged
+		set_country_flag = ps_egalitarian_diplomacy_engaged
 	}
 
 	after = {
 		hidden_effect = {
-			remove_country_flag = ps_ecumenopolis_diplomacy_engaged
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
 		}
 	}
 
@@ -192,3 +401,11 @@ country_event = {
 		name = ps.100.goodbye
 	}
 }
+
+# ps.101: The Ecumenopolis - Main Menu
+
+# ps.110: Resource Deal
+
+# ps.120: Hire Army
+
+# ps.130: Commercial Pact
