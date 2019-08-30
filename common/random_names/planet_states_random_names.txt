@@ -1,1 +1,114 @@
-#todo
+# Egalitarian Planet States
+
+### Prefixes
+
+empire_name_parts_list = {
+	key = "ps_egalitarian"
+	parts = {
+		"Free" = 3
+		"Autonomous" = 3
+		"Independent" = 3
+		"Autarchic" = 3
+		"Self-governing" = 3
+		"Self-directing" = 3
+	}
+}
+empire_name_parts_list = {
+	key = "ps_authoritarian"
+	parts = {
+		"Sovereign" = 3
+		"Imperial" = 3
+		"Regal" = 3
+		"Royal" = 3
+		"Princely" = 3
+		"Majestic" = 3
+		"Kingly" = 3
+		"Noble" = 3
+	}
+}
+empire_name_parts_list = {
+	key = "ps_militarist"
+	parts = {
+		"Beligerent" = 3
+		"Warmongering" = 3
+		"Hegemonic" = 3
+		"Fiery" = 3
+		"Fierce" = 3
+		"Martial" = 3
+		"Vanquishing" = 3
+	}
+}
+empire_name_parts_list = {
+	key = "ps_pacifist"
+	parts = {
+		"Peaceful" = 3
+		"Harmonious" = 3
+		"Bloodless" = 3
+		"Tranquil" = 3
+		"Friendly" = 3
+		"Serene" = 3
+	}
+}
+
+### Middle
+
+empire_name_parts_list = {
+	key = "planet_state"
+	parts = {
+		"State" = 3
+		"Planet-State" = 3
+		"Grand-City" = 3
+		"Planet" = 3
+		"World" = 3
+		"Microstate" = 3
+		"Enclave" = 3
+		"Polity" = 3
+		"Body Politic" = 3
+		"Community" = 3
+		"Nation-World" = 3
+		"Global Union" = 3
+	}
+}
+
+### Name Formats
+
+# Egalitarian
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_egalitarian"
+		}
+	}
+	format = "format.ps_egalitarian.1"
+	prefix_format = "<ps_egalitarian> <planet_state> of [This.Capital.System.GetName]"
+	noun = "[This.Capital.System.GetName]"
+	# Free State of Sol
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_egalitarian"
+		}
+	}
+	format = "format.ps_egalitarian.2"
+	prefix_format = "<ps_egalitarian> <planet_state> of [This.Capital.GetName]"
+	noun = "[This.Capital.GetName]"
+	# Free State of Earth
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_egalitarian"
+		}
+	}
+	format = "format.ps_egalitarian.3"
+	prefix_format = "[This.Capital.GetName] <ps_egalitarian> <planet_state>"
+	noun = "[This.GetSpeciesName]"
+	# Human Free State
+}
