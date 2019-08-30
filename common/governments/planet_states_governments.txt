@@ -1,1 +1,59 @@
-#todo
+gov_planet_state_egalitarian = {
+	ruler_title = RT_PS_EGALITARIAN
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_planet_state
+		has_ethic = ethic_fanatic_egalitarian
+	}
+
+	weight = {
+		base = 15000
+	}
+}
+
+gov_planet_state_authoritarian = {
+	ruler_title = RT_PS_AUTHORITARIAN
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_planet_state
+		has_ethic = ethic_fanatic_authoritarian
+	}
+
+	weight = {
+		base = 15000
+	}
+}
+
+gov_planet_state_militarist = {
+	ruler_title = RT_PS_MILITARIST
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_planet_state
+		has_ethic = ethic_fanatic_militarist
+	}
+
+	weight = {
+		base = 15000
+	}
+}
+
+gov_planet_state_pacifist = {
+	ruler_title = RT_PS_PACIFIST
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_planet_state
+		has_ethic = ethic_fanatic_pacifist
+	}
+
+	weight = {
+		base = 15000
+	}
+}

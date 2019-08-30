@@ -1,7 +1,7 @@
 # Triggers when the game starts
 on_game_start = {
 	events = {
-		ps.1 # Spawn Planet States
+		ps.1 # Spawn Planet-States
 	}
 }
 
@@ -10,14 +10,14 @@ on_game_start = {
 # From = System
 on_entering_system_fleet = {
 	events = {
-		ps.4 # Entering Planet State system for the first time
+		ps.4 # Entering Planet-State system for the first time
 	}
 }
 
 # No scope, like on_game_start
 on_yearly_pulse = {
 	events = {
-		ps.2 # Planet State Yearly Border Opinion
+		ps.2 # Planet-State Yearly Border Opinion
 	}
 }
 
@@ -27,6 +27,9 @@ on_yearly_pulse = {
 # From = source country
 on_custom_diplomacy = {
 	events = {
-		ps.100 # The Ecumenopolis
+		ps.100 # The Egalitarian
+		#ps.200 # The Authoritarian
+		#ps.300 # The Militarist
+		#ps.400 # The Pacifist
 	}
 }

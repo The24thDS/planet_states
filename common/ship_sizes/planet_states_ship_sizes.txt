@@ -1,4 +1,4 @@
-# Planet States
+# Planet-States
 
 planet_state_station = {
 	is_space_object = yes

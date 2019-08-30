@@ -1,6 +1,39 @@
 namespace = ps
 
-# ps.1: Spawn Planet States (on_game_start)
+event = {
+	id = ps.999
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:ps_authoritarian_main_species = {
+			set_citizenship_type = {
+				type = citizenship_full
+				country = event_target:target_ps_authoritarian
+			}
+			set_living_standard = {
+				type = living_standard_chemical_bliss
+				country = event_target:target_ps_authoritarian
+			}
+		}
+		event_target:ps_authoritarian_servile_species = {
+			set_citizenship_type = {
+				type = citizenship_slavery
+				country = event_target:target_ps_authoritarian
+			}
+			set_living_standard = {
+				type = living_standard_subsistence
+				country = event_target:target_ps_authoritarian
+			}
+			set_slavery_type = {
+				type = slavery_domestic
+				country = event_target:target_ps_authoritarian
+			}
+		}
+	}
+}
+
+# ps.1: Spawn Planet-States (on_game_start)
 event = {
 	id = ps.1
 	hide_window = yes
@@ -8,7 +41,7 @@ event = {
 
 	immediate = {
 
-		# Planet State 1: The Ecumenopolis
+		# Planet-State 1: The Egalitrian
 		random_system = {
 			limit = {
 				NOR = {
@@ -21,7 +54,6 @@ event = {
 					has_star_flag = marauder_system
 					has_star_flag = caravaneer_home
 				}
-				is_bottleneck_system = yes
 				any_system_planet = {
 					uninhabitable_regular_planet = yes
 					has_anomaly = no
@@ -36,127 +68,106 @@ event = {
 					uninhabitable_regular_planet = yes
 					has_anomaly = no
 				}
+				create_planet_state_egalitarian = yes
+			}
+		}
 
-				# Set Planet Size and Class
-				prevent_anomaly = yes
-				set_planet_size = 25
-				change_pc = pc_city
+		# Planet-State 2: The Authoritarian
+		random_system = {
+			limit = {
+				NOR = {
+					is_fe_cluster = yes
+					has_star_flag = empire_home_system
+					has_star_flag = empire_cluster
+					has_star_flag = enclave
+					has_star_flag = guardian
+					has_star_flag = hostile_system
+					has_star_flag = marauder_system
+					has_star_flag = caravaneer_home
+				}
+				any_system_planet = {
+					uninhabitable_regular_planet = yes
+					has_anomaly = no
+				}
+			}
 
-				# Create Species and Country
-				create_species = {
-					name = random
-					class = random_non_machine
-					portrait = random
-					traits = {
-						trait = trait_venerable
-						trait = trait_erudite
-					}
-				}
-				create_country = {
-					name = "PLANET STATE"
-					type = planet_state
-					authority = "auth_democratic"
-					civics = {
-						civic = civic_planet_state
-						civic = civic_idealistic_foundation
-						civic = civic_shared_burden
-					}
-					species = last_created
-					flag = random
-					ethos = {
-						ethic = ethic_fanatic_egalitarian
-					}
-					ignore_initial_colony_error = yes
-				}
+			set_star_flag = planet_state
 
-				# Create Station and Leader
-				last_created_country = {
-					set_country_flag = ps_egalitarian
-					save_event_target_as = target_ps_egalitarian
-					set_graphical_culture = mammalian_01
-					create_fleet = {
-						name = "NAME_PS_Egalitarian_Fleet"
-						settings = { spawn_debris = no }
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_Planet_State_Station"
-								graphical_culture = prev
-							}
-							set_location = {
-								target = prevprev
-								angle = random
-								distance = 15
-							}
-						}
-					}
-					create_leader = {
-						class = ruler
-						species = prev
-						name = random
-						skill = 5
-					}
-					set_leader = last_created_leader
+			# Choose appropriate planet
+			random_system_planet = {
+				limit = {
+					uninhabitable_regular_planet = yes
+					has_anomaly = no
 				}
+				create_planet_state_authoritarian = yes
+			}
+		}
 
-				# Set Planet State as Owner of the planet
-				set_owner = event_target:target_ps_egalitarian
-				set_controller = event_target:target_ps_egalitarian
-				set_capital = yes
+		# Planet-State 3: The Militarist
+		random_system = {
+			limit = {
+				NOR = {
+					is_fe_cluster = yes
+					has_star_flag = empire_home_system
+					has_star_flag = empire_cluster
+					has_star_flag = enclave
+					has_star_flag = guardian
+					has_star_flag = hostile_system
+					has_star_flag = marauder_system
+					has_star_flag = caravaneer_home
+				}
+				any_system_planet = {
+					uninhabitable_regular_planet = yes
+					has_anomaly = no
+				}
+			}
 
-				# Add Builings, Districts, Pops
-				add_building = building_planet_state_capitol
-				add_building = building_hall_judgment
-				add_building = building_anti_matter_reactor
-				add_building = building_hydroponics_farms_complex
-				add_building = building_hydroponics_farms_complex
-				add_building = building_mineral_purification_complex
-				add_building = building_mineral_purification_complex
-				add_building = building_multidimensional_printers
-				add_building = building_multidimensional_printers
-				add_building = building_leisure_complex
-				add_building = building_leisure_complex
-				add_building = building_distillation_complex
-				add_building = building_chemical_complex
-				add_building = building_synthesizers_complex
-				add_building = building_galactic_stock_exchange
-				add_building = building_autocurating_vault
-				while = {
-					count = 25
-					add_district = district_arcology_housing
-				}
-				while = {
-					count = 400
-					create_pop = {
-						species = owner_main_species
-						ethos = { ethic = ethic_fanatic_egalitarian }
-					}
-				}
+			set_star_flag = planet_state
 
-				event_target:target_ps_egalitarian = {
-					set_policy = {
-						policy = food_policy
-						option = food_policy_generous
-						cooldown = no
-					}
-					set_policy = {
-						policy = purge
-						option = purge_not_allowed
-						cooldown = no
-					}
-					set_policy = {
-						policy = resettlement
-						option = resettlement_not_allowed
-						cooldown = no
-					}
+			# Choose appropriate planet
+			random_system_planet = {
+				limit = {
+					uninhabitable_regular_planet = yes
+					has_anomaly = no
 				}
+				create_planet_state_militarist = yes
+			}
+		}
+
+		# Planet-State 4: The Pacifist
+		random_system = {
+			limit = {
+				NOR = {
+					is_fe_cluster = yes
+					has_star_flag = empire_home_system
+					has_star_flag = empire_cluster
+					has_star_flag = enclave
+					has_star_flag = guardian
+					has_star_flag = hostile_system
+					has_star_flag = marauder_system
+					has_star_flag = caravaneer_home
+				}
+				any_system_planet = {
+					uninhabitable_regular_planet = yes
+					has_anomaly = no
+				}
+			}
+
+			set_star_flag = planet_state
+
+			# Choose appropriate planet
+			random_system_planet = {
+				limit = {
+					uninhabitable_regular_planet = yes
+					has_anomaly = no
+				}
+				create_planet_state_pacifist = yes
 			}
 		}
 	}
 }
 
-# ps.2: Planet State Yearly Border Opinion (on_yearly_pulse)
+# ps.2: Planet-State Yearly Border Opinion (on_yearly_pulse)
 event = {
 	id = ps.2
 	hide_window = yes
@@ -201,13 +212,14 @@ country_event = {
 	}
 }
 
-# ps.4: Entering Planet State system for the first time (on_entering_system_fleet)
+# ps.4: Entering Planet-State system for the first time (on_entering_system_fleet)
 fleet_event = {
 	id = ps.4
 	title = ps.4.name
 	desc = ps.4.desc
-	picture = GFX_evt_star_chart
-	location = From
+	picture = GFX_evt_throne_room
+	show_sound = event_radio_chatter
+	location = event_target:target_planet_state
 
 	is_triggered_only = yes
 
@@ -242,6 +254,7 @@ fleet_event = {
 		}
 
 		owner = {
+			establish_communications_no_message = event_target:target_planet_state
 			save_event_target_as = target_default_country
 			country_event = { id = story.7 days = 2}
 		}
@@ -249,26 +262,20 @@ fleet_event = {
 
 	option = {
 		name = SCUM
-		trigger = {
-			has_valid_civic = civic_fanatic_purifiers
-		}
+		trigger = { owner = { has_valid_civic = civic_fanatic_purifiers } }
 	}
 	option = {
 		name = TASTY
-		trigger = {
-			has_valid_civic = civic_hive_devouring_swarm
-		}
+		trigger = { owner = { has_valid_civic = civic_hive_devouring_swarm } }
 	}
 	option = {
 		name = EXTERMINATE
-		trigger = {
-			has_valid_civic = civic_machine_terminator
-		}
+		trigger = { owner = { has_valid_civic = civic_machine_terminator } }
 	}
 
 	option = {
 		name = ps.4.a
-		trigger = { is_homicidal = no }
+		trigger = { owner = { is_homicidal = no } }
 	}
 
 	after = {
@@ -300,7 +307,7 @@ fleet_event = {
 	}
 }
 
-# ps.5: First contact with Planet State
+# ps.5: First contact with Planet-State
 country_event = {
 	id = ps.5
 	title = ps.5.name
@@ -388,6 +395,7 @@ country_event = {
 
 	immediate = {
 		set_country_flag = ps_egalitarian_diplomacy_engaged
+		From = { save_event_target_as = target_ps_egalitarian }
 	}
 
 	after = {
@@ -396,16 +404,216 @@ country_event = {
 		}
 	}
 
+	# Commerce (ps.110)
+	option = {
+		name = ps.100.a
+		trigger = { is_homicidal = no }
+		allow = {
+			custom_tooltip = {
+				fail_text = ps.100.a.alreadyhired
+				has_active_ps_egalitarian_trade_deal = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = ps.110 }
+		}
+	}
+	# Cancel trade deal
+	option = {
+		name = ps.100.ab
+		response_text = ps.100.ab.reply
+		is_dialog_only = yes
+		trigger = { has_active_ps_egalitarian_trade_deal = yes }
+		custom_tooltip = ps.100.ab.tooltip
+		hidden_effect = { remove_ps_egalitarian_trade_deal = yes }
+	}
+
+	# Soldiers (ps.120)
+	option = {
+		name = ps.100.b
+		trigger = { is_homicidal = no }
+		allow = {
+			custom_tooltip = {
+				fail_text = ps.100.b.opinion
+				event_target:target_ps_egalitarian = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = ps.100.b.alreadyhired
+				NOT = { has_country_flag = hired_ps_army }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = ps.120 }
+		}
+	}
+
+	# Commercial pact (ps.130)
+	option = {
+		name = ps.100.c
+		trigger = { is_homicidal = no }
+		allow = {
+			custom_tooltip = {
+				fail_text = ps.100.c.opinion
+				event_target:target_ps_egalitarian = {
+					trust = {
+						who = Root
+						value >= 80
+					}
+				}
+			}
+		}
+		hidden_effect = { country_event = { id = ps.130 } }
+	}
+
+	# Goodbye
+	option = {
+		name = ps.100.goodbye
+		trigger = { is_homicidal = no }
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+	}
+}
+
+# ps.101: The Ecumenopolis - Main Menu
+country_event = {
+	id = ps.100
+	title = ps.100.name
+	desc = ps.100a.desc
+	location = From
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = From
+		planet_background = From
+		graphical_culture = From
+		city_level = From
+		room = From.ruler
+	}
+
+	trigger = {
+		NOT = { has_country_flag = ps_egalitarian_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ps_egalitarian_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
+	}
+
+	# Commerce (ps.110)
+	option = {
+		name = ps.100.a
+		allow = {
+			custom_tooltip = {
+				fail_text = ps.100.a.alreadyhired
+				has_active_ps_egalitarian_trade_deal = no
+			}
+		}
+		hidden_effect = {
+			country_event = { id = ps.110 }
+		}
+	}
+	# Cancel trade deal
+	option = {
+		name = ps.100.ab
+		response_text = ps.100.ab.reply
+		is_dialog_only = yes
+		trigger = { has_active_ps_egalitarian_trade_deal = yes }
+		custom_tooltip = ps.100.ab.tooltip
+		hidden_effect = { remove_ps_egalitarian_trade_deal = yes }
+	}
+
+	# Soldiers (ps.120)
+	option = {
+		name = ps.100.b
+		allow = {
+			custom_tooltip = {
+				fail_text = ps.100.b.opinion
+				event_target:target_ps_egalitarian = {
+					trust = {
+						who = Root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = ps.100.b.alreadyhired
+				NOT = { has_country_flag = hired_ps_army }
+			}
+		}
+		hidden_effect = {
+			country_event = { id = ps.120 }
+		}
+	}
+
+	# Commercial pact (ps.130)
+	option = {
+		name = ps.100.c
+		allow = {
+			custom_tooltip = {
+				fail_text = ps.100.c.opinion
+				event_target:target_ps_egalitarian = {
+					trust = {
+						who = Root
+						value >= 80
+					}
+				}
+			}
+		}
+		hidden_effect = { country_event = { id = ps.130 } }
+	}
+
 	# Goodbye
 	option = {
 		name = ps.100.goodbye
 	}
 }
 
-# ps.101: The Ecumenopolis - Main Menu
-
 # ps.110: Resource Deal
+country_event = {
+	id = ps.110
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {}
+}
 
 # ps.120: Hire Army
+country_event = {
+	id = ps.120
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {}
+}
 
 # ps.130: Commercial Pact
+country_event = {
+	id = ps.130
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {}
+}

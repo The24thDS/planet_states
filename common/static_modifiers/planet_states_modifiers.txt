@@ -1,1 +1,15 @@
-#todo
+modifier_ps_egaliatarian_trade_deal_minerals_1 = {}
+modifier_ps_egaliatarian_trade_deal_minerals_2 = {}
+modifier_ps_egaliatarian_trade_deal_minerals_3 = {}
+modifier_ps_egaliatarian_trade_deal_minerals_4 = {}
+modifier_ps_egaliatarian_trade_deal_minerals_5 = {}
+modifier_ps_egaliatarian_trade_deal_food_1 = {}
+modifier_ps_egaliatarian_trade_deal_food_2 = {}
+modifier_ps_egaliatarian_trade_deal_food_3 = {}
+modifier_ps_egaliatarian_trade_deal_food_4 = {}
+modifier_ps_egaliatarian_trade_deal_food_5 = {}
+modifier_ps_egaliatarian_trade_deal_alloys_1 = {}
+modifier_ps_egaliatarian_trade_deal_alloys_2 = {}
+modifier_ps_egaliatarian_trade_deal_alloys_3 = {}
+modifier_ps_egaliatarian_trade_deal_alloys_4 = {}
+modifier_ps_egaliatarian_trade_deal_alloys_5 = {}

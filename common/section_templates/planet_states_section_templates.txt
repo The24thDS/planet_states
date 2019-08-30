@@ -1,4 +1,4 @@
-# Planet State Station
+# Planet-State Station
 ship_section_template = {
 	key = "station_planet_state_01_key"
 	ship_size = planet_state_station

@@ -1,4 +1,4 @@
-# Planet State Station
+# Planet-State Station
 ship_design = {
 	name = "NAME_Planet_State_Station"
 	ship_size = planet_state_station
