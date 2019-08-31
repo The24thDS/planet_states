@@ -10,14 +10,14 @@ on_game_start = {
 # From = System
 on_entering_system_fleet = {
 	events = {
-		ps.4 # Entering Planet-State system for the first time
+		ps.5 # Entering Planet-State system for the first time
 	}
 }
 
 # No scope, like on_game_start
 on_yearly_pulse = {
 	events = {
-		ps.2 # Planet-State Yearly Border Opinion
+		ps.3 # Planet-State Yearly Border Opinion
 	}
 }
 

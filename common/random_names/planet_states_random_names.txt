@@ -81,9 +81,8 @@ empire_name_format = {
 			has_government = "gov_planet_state_egalitarian"
 		}
 	}
-	format = "format.ps_egalitarian.1"
-	prefix_format = "<ps_egalitarian> <planet_state> of [This.Capital.System.GetName]"
 	noun = "[This.Capital.System.GetName]"
+	format = "<ps_egalitarian> <planet_state> of [This.Capital.System.GetName]"
 	# Free State of Sol
 }
 empire_name_format = {
@@ -94,9 +93,8 @@ empire_name_format = {
 			has_government = "gov_planet_state_egalitarian"
 		}
 	}
-	format = "format.ps_egalitarian.2"
-	prefix_format = "<ps_egalitarian> <planet_state> of [This.Capital.GetName]"
 	noun = "[This.Capital.GetName]"
+	format = "<ps_egalitarian> <planet_state> of [This.Capital.GetName]"
 	# Free State of Earth
 }
 empire_name_format = {
@@ -107,8 +105,113 @@ empire_name_format = {
 			has_government = "gov_planet_state_egalitarian"
 		}
 	}
-	format = "format.ps_egalitarian.3"
-	prefix_format = "[This.Capital.GetName] <ps_egalitarian> <planet_state>"
 	noun = "[This.GetSpeciesName]"
+	format = "[This.Capital.GetName] <ps_egalitarian> <planet_state>"
 	# Human Free State
+}
+
+# Authoritarian
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_authoritarian"
+		}
+	}
+	noun = "[This.Capital.System.GetName]"
+	format = "<ps_authoritarian> <planet_state> of [This.Capital.System.GetName]"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_authoritarian"
+		}
+	}
+	noun = "[This.Capital.GetName]"
+	format = "<ps_authoritarian> <planet_state> of [This.Capital.GetName]"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_authoritarian"
+		}
+	}
+	noun = "[This.GetSpeciesName]"
+	format = "[This.Capital.GetName] <ps_authoritarian> <planet_state>"
+	# Human Free State
+}
+
+# Militarist
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_militarist"
+		}
+	}
+	noun = "[This.Capital.System.GetName]"
+	format = "<ps_militarist> <planet_state> of [This.Capital.System.GetName]"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_militarist"
+		}
+	}
+	noun = "[This.Capital.GetName]"
+	format = "<ps_militarist> <planet_state> of [This.Capital.GetName]"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_militarist"
+		}
+	}
+	noun = "[This.GetSpeciesName]"
+	format = "[This.Capital.GetName] <ps_militarist> <planet_state>"
+}
+
+# Pacifist
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_pacifist"
+		}
+	}
+	noun = "[This.Capital.System.GetName]"
+	format = "<ps_pacifist> <planet_state> of [This.Capital.System.GetName]"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_pacifist"
+		}
+	}
+	noun = "[This.Capital.GetName]"
+	format = "<ps_pacifist> <planet_state> of [This.Capital.GetName]"
+}
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_planet_state_pacifist"
+		}
+	}
+	noun = "[This.GetSpeciesName]"
+	format = "[This.Capital.GetName] <ps_pacifist> <planet_state>"
 }

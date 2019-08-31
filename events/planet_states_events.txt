@@ -1,7 +1,44 @@
 namespace = ps
 
+# ps.1: Spawn Planet-States (on_game_start)
 event = {
-	id = ps.999
+	id = ps.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+		# Planet-State 1: The Egalitrian
+		random_system = {
+			limit = { is_appropriate_planet_state_system = yes }
+			create_planet_state_egalitarian = yes
+		}
+
+		# Planet-State 2: The Authoritarian
+		random_system = {
+			limit = { is_appropriate_planet_state_system = yes }
+			create_planet_state_authoritarian = yes
+		}
+
+		# Planet-State 3: The Militarist
+		random_system = {
+			limit = { is_appropriate_planet_state_system = yes }
+			create_planet_state_militarist = yes
+		}
+
+		# Planet-State 4: The Pacifist
+		random_system = {
+			limit = { is_appropriate_planet_state_system = yes }
+			create_planet_state_pacifist = yes
+		}
+
+		event = { id = ps.2 days = 1 }
+	}
+}
+
+# ps.2: Spawn Adjustments
+event = {
+	id = ps.2
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -33,157 +70,23 @@ event = {
 	}
 }
 
-# ps.1: Spawn Planet-States (on_game_start)
+# ps.3: Planet-State Yearly Border Opinion (on_yearly_pulse)
 event = {
-	id = ps.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-
-		# Planet-State 1: The Egalitrian
-		random_system = {
-			limit = {
-				NOR = {
-					is_fe_cluster = yes
-					has_star_flag = empire_home_system
-					has_star_flag = empire_cluster
-					has_star_flag = enclave
-					has_star_flag = guardian
-					has_star_flag = hostile_system
-					has_star_flag = marauder_system
-					has_star_flag = caravaneer_home
-				}
-				any_system_planet = {
-					uninhabitable_regular_planet = yes
-					has_anomaly = no
-				}
-			}
-
-			set_star_flag = planet_state
-
-			# Choose appropriate planet
-			random_system_planet = {
-				limit = {
-					uninhabitable_regular_planet = yes
-					has_anomaly = no
-				}
-				create_planet_state_egalitarian = yes
-			}
-		}
-
-		# Planet-State 2: The Authoritarian
-		random_system = {
-			limit = {
-				NOR = {
-					is_fe_cluster = yes
-					has_star_flag = empire_home_system
-					has_star_flag = empire_cluster
-					has_star_flag = enclave
-					has_star_flag = guardian
-					has_star_flag = hostile_system
-					has_star_flag = marauder_system
-					has_star_flag = caravaneer_home
-				}
-				any_system_planet = {
-					uninhabitable_regular_planet = yes
-					has_anomaly = no
-				}
-			}
-
-			set_star_flag = planet_state
-
-			# Choose appropriate planet
-			random_system_planet = {
-				limit = {
-					uninhabitable_regular_planet = yes
-					has_anomaly = no
-				}
-				create_planet_state_authoritarian = yes
-			}
-		}
-
-		# Planet-State 3: The Militarist
-		random_system = {
-			limit = {
-				NOR = {
-					is_fe_cluster = yes
-					has_star_flag = empire_home_system
-					has_star_flag = empire_cluster
-					has_star_flag = enclave
-					has_star_flag = guardian
-					has_star_flag = hostile_system
-					has_star_flag = marauder_system
-					has_star_flag = caravaneer_home
-				}
-				any_system_planet = {
-					uninhabitable_regular_planet = yes
-					has_anomaly = no
-				}
-			}
-
-			set_star_flag = planet_state
-
-			# Choose appropriate planet
-			random_system_planet = {
-				limit = {
-					uninhabitable_regular_planet = yes
-					has_anomaly = no
-				}
-				create_planet_state_militarist = yes
-			}
-		}
-
-		# Planet-State 4: The Pacifist
-		random_system = {
-			limit = {
-				NOR = {
-					is_fe_cluster = yes
-					has_star_flag = empire_home_system
-					has_star_flag = empire_cluster
-					has_star_flag = enclave
-					has_star_flag = guardian
-					has_star_flag = hostile_system
-					has_star_flag = marauder_system
-					has_star_flag = caravaneer_home
-				}
-				any_system_planet = {
-					uninhabitable_regular_planet = yes
-					has_anomaly = no
-				}
-			}
-
-			set_star_flag = planet_state
-
-			# Choose appropriate planet
-			random_system_planet = {
-				limit = {
-					uninhabitable_regular_planet = yes
-					has_anomaly = no
-				}
-				create_planet_state_pacifist = yes
-			}
-		}
-	}
-}
-
-# ps.2: Planet-State Yearly Border Opinion (on_yearly_pulse)
-event = {
-	id = ps.2
+	id = ps.3
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
 		every_country = {
 			limit = { is_country_type = planet_state }
-			country_event = { id = ps.3 }
+			country_event = { id = ps.4 }
 		}
 	}
 }
 
-# ps.3: Add +1 opinion per year (called by ps.2)
+# ps.4: Add +1 opinion per year (called by ps.3)
 country_event = {
-	id = ps.3
+	id = ps.4
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -212,11 +115,11 @@ country_event = {
 	}
 }
 
-# ps.4: Entering Planet-State system for the first time (on_entering_system_fleet)
+# ps.5: Entering Planet-State system for the first time (on_entering_system_fleet)
 fleet_event = {
-	id = ps.4
-	title = ps.4.name
-	desc = ps.4.desc
+	id = ps.5
+	title = ps.5.name
+	desc = ps.5.desc
 	picture = GFX_evt_throne_room
 	show_sound = event_radio_chatter
 	location = event_target:target_planet_state
@@ -274,7 +177,7 @@ fleet_event = {
 	}
 
 	option = {
-		name = ps.4.a
+		name = ps.5.a
 		trigger = { owner = { is_homicidal = no } }
 	}
 
@@ -301,39 +204,39 @@ fleet_event = {
 			}
 
 			hidden_effect = {
-				country_event = { id = ps.5 }
+				country_event = { id = ps.6 }
 			}
 		}
 	}
 }
 
-# ps.5: First contact with Planet-State
+# ps.6: First contact with Planet-State
 country_event = {
-	id = ps.5
-	title = ps.5.name
+	id = ps.6
+	title = ps.6.name
 	desc = {
 		trigger = {
 			event_target:target_planet_state = { has_country_flag = ps_egalitarian }
 		}
-		text = ps.5.desc.egalitarian
+		text = ps.6.desc.egalitarian
 	}
 	desc = {
 		trigger = {
 			event_target:target_planet_state = { has_country_flag = ps_authoritarian }
 		}
-		text = ps.5.desc.authoritarian
+		text = ps.6.desc.authoritarian
 	}
 	desc = {
 		trigger = {
 			event_target:target_planet_state = { has_country_flag = ps_militarist }
 		}
-		text = ps.5.desc.militarist
+		text = ps.6.desc.militarist
 	}
 	desc = {
 		trigger = {
 			event_target:target_planet_state = { has_country_flag = ps_pacifist }
 		}
-		text = ps.5.desc.pacifist
+		text = ps.6.desc.pacifist
 	}
 
 	is_triggered_only = yes
@@ -348,7 +251,7 @@ country_event = {
 	}
 
 	option = {
-		name = ps.5.a
+		name = ps.6.a
 		trigger = { is_homicidal = no }
 	}
 

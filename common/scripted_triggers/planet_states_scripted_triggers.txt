@@ -1,3 +1,20 @@
+is_appropriate_planet_state_system = {
+	NOR = {
+		is_fe_cluster = yes
+		has_star_flag = empire_home_system
+		has_star_flag = empire_cluster
+		has_star_flag = enclave
+		has_star_flag = guardian
+		has_star_flag = hostile_system
+		has_star_flag = marauder_system
+		has_star_flag = caravaneer_home
+	}
+	any_system_planet = {
+		uninhabitable_regular_planet = yes
+		has_anomaly = no
+	}
+}
+
 has_active_ps_egalitarian_trade_deal = {
 	OR = {
 		has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_1
