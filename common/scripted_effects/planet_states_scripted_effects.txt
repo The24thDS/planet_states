@@ -21,7 +21,6 @@ create_planet_state_egalitarian = {
 			name = random
 			class = random_non_machine
 			portrait = random
-			homeworld = THIS
 			traits = {
 				trait = trait_venerable
 				trait = trait_erudite
@@ -144,14 +143,14 @@ create_planet_state_authoritarian = {
 		set_planet_size = 25
 		change_pc = pc_nuked
 		clear_deposits = yes
-		add_deposit = d_searing_desert
-		add_deposit = d_searing_desert
-		add_deposit = d_underwater_vent
-		add_deposit = d_underwater_vent
 		add_deposit = d_submerged_ore_veins
 		add_deposit = d_submerged_ore_veins
 		add_deposit = d_submerged_ore_veins
 		add_deposit = d_submerged_ore_veins
+		add_deposit = d_lichen_fields
+		add_deposit = d_lichen_fields
+		add_deposit = d_fungal_caves
+		add_deposit = d_fungal_caves
 		add_deposit = d_lichen_fields
 		add_deposit = d_fungal_caves
 		add_deposit = d_fungal_caves
@@ -178,8 +177,8 @@ create_planet_state_authoritarian = {
 			authority = "auth_imperial"
 			civics = {
 				civic = civic_planet_state
-				civic = civic_slaver_guilds
-				civic = civic_feudal_realm
+				civic = civic_aristocratic_elite
+				civic = civic_byzantine_bureaucracy
 			}
 			species = last_created
 			flag = random
@@ -225,34 +224,33 @@ create_planet_state_authoritarian = {
 		set_capital = yes
 
 		# Add Builings, Districts, Pops
-		add_building = building_slave_major_capital
+		add_building = building_planet_state_capitol
+		add_building = building_overseer_homes
+		add_building = building_overseer_homes
+		add_building = building_slave_huts
+		add_building = building_slave_huts
+		add_building = building_slave_huts
+		add_building = building_slave_huts
+		add_building = building_slave_huts
+		add_building = building_slave_huts
 		add_building = building_anti_matter_reactor
 		add_building = building_hydroponics_farms_complex
-		add_building = building_hydroponics_farms_complex
-		add_building = building_mineral_purification_complex
 		add_building = building_mineral_purification_complex
 		add_building = building_multidimensional_printers
-		add_building = building_multidimensional_printers
-		add_building = building_leisure_complex
-		add_building = building_leisure_complex
 		add_building = building_distillation_complex
 		add_building = building_chemical_complex
 		add_building = building_synthesizers_complex
 		while = {
-			count = 5
+			count = 12
 			add_district = district_farming
 		}
 		while = {
-			count = 10
+			count = 13
 			add_district = district_mining
-		}
-		while = {
-			count = 10
-			add_district = district_generator
 		}
 
 		while = {
-			count = 50
+			count = 100
 			create_pop = {
 				species = owner_main_species
 				ethos = { ethic = ethic_fanatic_authoritarian }
@@ -274,7 +272,7 @@ create_planet_state_authoritarian = {
 			save_event_target_as = ps_authoritarian_servile_species
 		}
 		while = {
-			count = 200
+			count = 300
 			create_pop = {
 				species = event_target:ps_authoritarian_servile_species
 				ethos = { ethic = ethic_fanatic_authoritarian }
@@ -297,23 +295,30 @@ create_planet_state_militarist = {
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
-		change_pc = pc_city
+		change_pc = pc_nuked
 
 		# Create Species and Country
 		create_species = {
 			name = random
 			class = random_non_machine
 			portrait = random
+			homeworld = THIS
 			traits = {
-				trait = trait_venerable
-				trait = trait_erudite
+				trait = trait_survivor
+				trait = trait_very_strong
+				trait = trait_resilient
+				trait = trait_quarrelsome
 			}
 		}
 		create_country = {
 			name = random
 			type = planet_state
-			authority = "auth_democratic"
-			civics = random
+			authority = "auth_dictatorial"
+			civics = {
+				civic = civic_planet_state
+				civic = civic_distinguished_admiralty
+				civic = civic_warrior_culture
+			}
 			species = last_created
 			flag = random
 			ethos = {
@@ -376,31 +381,13 @@ create_planet_state_militarist = {
 		add_building = building_autocurating_vault
 		while = {
 			count = 25
-			add_district = district_arcology_housing
+			add_district = district_city
 		}
 		while = {
 			count = 400
 			create_pop = {
 				species = owner_main_species
 				ethos = { ethic = ethic_fanatic_militarist }
-			}
-		}
-
-		event_target:target_ps_militarist = {
-			set_policy = {
-				policy = food_policy
-				option = food_policy_generous
-				cooldown = no
-			}
-			set_policy = {
-				policy = purge
-				option = purge_not_allowed
-				cooldown = no
-			}
-			set_policy = {
-				policy = resettlement
-				option = resettlement_not_allowed
-				cooldown = no
 			}
 		}
 	}
@@ -420,23 +407,31 @@ create_planet_state_pacifist = {
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
-		change_pc = pc_city
+		change_pc = pc_gaia
 
 		# Create Species and Country
 		create_species = {
 			name = random
 			class = random_non_machine
 			portrait = random
+			homeworld = THIS
 			traits = {
-				trait = trait_venerable
-				trait = trait_erudite
+				trait = trait_conservational
+				trait = trait_traditional
+				trait = trait_agrarian
+				trait = trait_communal
+				trait = trait_nonadaptive
 			}
 		}
 		create_country = {
 			name = random
 			type = planet_state
-			authority = "auth_democratic"
-			civics = random
+			authority = "auth_oligarchic"
+			civics = {
+				civic = civic_planet_state
+				civic = civic_agrarian_idyll
+				civic = civic_environmentalist
+			}
 			species = last_created
 			flag = random
 			ethos = {
@@ -499,31 +494,13 @@ create_planet_state_pacifist = {
 		add_building = building_autocurating_vault
 		while = {
 			count = 25
-			add_district = district_arcology_housing
+			add_district = district_city
 		}
 		while = {
 			count = 400
 			create_pop = {
 				species = owner_main_species
 				ethos = { ethic = ethic_fanatic_pacifist }
-			}
-		}
-
-		event_target:target_ps_pacifist = {
-			set_policy = {
-				policy = food_policy
-				option = food_policy_generous
-				cooldown = no
-			}
-			set_policy = {
-				policy = purge
-				option = purge_not_allowed
-				cooldown = no
-			}
-			set_policy = {
-				policy = resettlement
-				option = resettlement_not_allowed
-				cooldown = no
 			}
 		}
 	}

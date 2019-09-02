@@ -18,6 +18,7 @@ event = {
 		random_system = {
 			limit = { is_appropriate_planet_state_system = yes }
 			create_planet_state_authoritarian = yes
+			target_ps_authoritarian = { country_event = { id = ps.3 } }
 		}
 
 		# Planet-State 3: The Militarist
@@ -31,14 +32,12 @@ event = {
 			limit = { is_appropriate_planet_state_system = yes }
 			create_planet_state_pacifist = yes
 		}
-
-		event = { id = ps.2 days = 1 }
 	}
 }
 
-# ps.2: Spawn Adjustments
-event = {
-	id = ps.2
+# ps.3: Spawn Adjustments for Authoritarian PS
+country_event = {
+	id = ps.3
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -70,23 +69,23 @@ event = {
 	}
 }
 
-# ps.3: Planet-State Yearly Border Opinion (on_yearly_pulse)
+# ps.10: Planet-State Yearly Border Opinion (on_yearly_pulse)
 event = {
-	id = ps.3
+	id = ps.10
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
 		every_country = {
 			limit = { is_country_type = planet_state }
-			country_event = { id = ps.4 }
+			country_event = { id = ps.11 }
 		}
 	}
 }
 
-# ps.4: Add +1 opinion per year (called by ps.3)
+# ps.11: Add +1 opinion per year (called by ps.3)
 country_event = {
-	id = ps.4
+	id = ps.11
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -115,11 +114,11 @@ country_event = {
 	}
 }
 
-# ps.5: Entering Planet-State system for the first time (on_entering_system_fleet)
+# ps.12: Entering Planet-State system for the first time (on_entering_system_fleet)
 fleet_event = {
-	id = ps.5
-	title = ps.5.name
-	desc = ps.5.desc
+	id = ps.12
+	title = ps.12.name
+	desc = ps.12.desc
 	picture = GFX_evt_throne_room
 	show_sound = event_radio_chatter
 	location = event_target:target_planet_state
@@ -210,33 +209,33 @@ fleet_event = {
 	}
 }
 
-# ps.6: First contact with Planet-State
+# ps.13: First contact with Planet-State
 country_event = {
-	id = ps.6
-	title = ps.6.name
+	id = ps.13
+	title = ps.13.name
 	desc = {
 		trigger = {
 			event_target:target_planet_state = { has_country_flag = ps_egalitarian }
 		}
-		text = ps.6.desc.egalitarian
+		text = ps.13.desc.egalitarian
 	}
 	desc = {
 		trigger = {
 			event_target:target_planet_state = { has_country_flag = ps_authoritarian }
 		}
-		text = ps.6.desc.authoritarian
+		text = ps.13.desc.authoritarian
 	}
 	desc = {
 		trigger = {
 			event_target:target_planet_state = { has_country_flag = ps_militarist }
 		}
-		text = ps.6.desc.militarist
+		text = ps.13.desc.militarist
 	}
 	desc = {
 		trigger = {
 			event_target:target_planet_state = { has_country_flag = ps_pacifist }
 		}
-		text = ps.6.desc.pacifist
+		text = ps.13.desc.pacifist
 	}
 
 	is_triggered_only = yes
@@ -251,7 +250,7 @@ country_event = {
 	}
 
 	option = {
-		name = ps.6.a
+		name = ps.13.a
 		trigger = { is_homicidal = no }
 	}
 
