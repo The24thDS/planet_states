@@ -23,8 +23,11 @@ create_planet_state_egalitarian = {
 			portrait = random
 			traits = {
 				trait = trait_venerable
-				trait = trait_erudite
+				trait = trait_communal
 			}
+		}
+		last_created_species = {
+			save_event_target_as = ps_egalitarian_main_species
 		}
 		create_country = {
 			name = random
@@ -147,6 +150,7 @@ create_planet_state_authoritarian = {
 		add_deposit = d_submerged_ore_veins
 		add_deposit = d_submerged_ore_veins
 		add_deposit = d_submerged_ore_veins
+		add_deposit = d_submerged_ore_veins
 		add_deposit = d_lichen_fields
 		add_deposit = d_lichen_fields
 		add_deposit = d_fungal_caves
@@ -154,7 +158,7 @@ create_planet_state_authoritarian = {
 		add_deposit = d_lichen_fields
 		add_deposit = d_fungal_caves
 		add_deposit = d_fungal_caves
-		add_modifier = { modifier = slave_colony days = -1 }
+		add_deposit = d_fungal_caves
 
 		# Create Species and Country
 		create_species = {
@@ -164,7 +168,7 @@ create_planet_state_authoritarian = {
 			homeworld = THIS
 			traits = {
 				trait = trait_survivor
-				trait = trait_robust
+				trait = trait_erudite
 				trait = trait_decadent
 			}
 		}
@@ -178,7 +182,7 @@ create_planet_state_authoritarian = {
 			civics = {
 				civic = civic_planet_state
 				civic = civic_aristocratic_elite
-				civic = civic_byzantine_bureaucracy
+				civic = civic_functional_architecture
 			}
 			species = last_created
 			flag = random
@@ -225,14 +229,13 @@ create_planet_state_authoritarian = {
 
 		# Add Builings, Districts, Pops
 		add_building = building_planet_state_capitol
-		add_building = building_overseer_homes
-		add_building = building_overseer_homes
-		add_building = building_slave_huts
-		add_building = building_slave_huts
-		add_building = building_slave_huts
-		add_building = building_slave_huts
-		add_building = building_slave_huts
-		add_building = building_slave_huts
+		add_building = building_feudal_estates
+		add_building = building_feudal_estates		add_building = building_crowded_serf_houses
+		add_building = building_crowded_serf_houses
+		add_building = building_crowded_serf_houses
+		add_building = building_crowded_serf_houses
+		add_building = building_crowded_serf_houses
+		add_building = building_crowded_serf_houses
 		add_building = building_anti_matter_reactor
 		add_building = building_hydroponics_farms_complex
 		add_building = building_mineral_purification_complex
@@ -250,7 +253,7 @@ create_planet_state_authoritarian = {
 		}
 
 		while = {
-			count = 100
+			count = 27
 			create_pop = {
 				species = owner_main_species
 				ethos = { ethic = ethic_fanatic_authoritarian }
@@ -264,17 +267,64 @@ create_planet_state_authoritarian = {
 			homeworld = THIS
 			traits = {
 				trait = trait_survivor
+				trait = trait_uplifted
+				trait = trait_presapient_proles
 				trait = trait_robust
-				trait = trait_nerve_stapled
+			}
+		}
+		last_created_species = {
+			save_event_target_as = ps_authoritarian_specialist_species
+		}
+		while = {
+			count = 53
+			create_pop = {
+				species = event_target:ps_authoritarian_specialist_species
+				ethos = { ethic = ethic_fanatic_authoritarian }
+			}
+		}
+
+		create_species = {
+			name = random
+			class = random_non_machine
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = trait_survivor
+				trait = trait_uplifted
+				trait = trait_presapient_proles
+				trait = trait_charismatic
 			}
 		}
 		last_created_species = {
 			save_event_target_as = ps_authoritarian_servile_species
 		}
 		while = {
-			count = 300
+			count = 140
 			create_pop = {
 				species = event_target:ps_authoritarian_servile_species
+				ethos = { ethic = ethic_fanatic_authoritarian }
+			}
+		}
+
+		create_species = {
+			name = random
+			class = random_non_machine
+			portrait = random
+			homeworld = THIS
+			traits = {
+				trait = trait_survivor
+				trait = trait_syncretic_proles
+				trait = trait_very_strong
+				trait = trait_nerve_stapled
+			}
+		}
+		last_created_species = {
+			save_event_target_as = ps_authoritarian_slave_species
+		}
+		while = {
+			count = 125
+			create_pop = {
+				species = event_target:ps_authoritarian_slave_species
 				ethos = { ethic = ethic_fanatic_authoritarian }
 			}
 		}

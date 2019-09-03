@@ -15,11 +15,30 @@ building_planet_state_capitol = {
 		building_major_capital
 	}
 
-	planet_modifier = {
-		job_administrator_add = 5
-		job_enforcer_add = 10
-		planet_housing_add = 25
-		planet_amenities_add = 25
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_valid_civic = civic_aristocratic_elite } }
+		}
+		modifier = {
+			job_administrator_add = 5
+			job_enforcer_add = 10
+			planet_housing_add = 25
+			planet_amenities_add = 25
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_aristocratic_elite }
+		}
+		modifier = {
+			job_noble_add = 5
+			job_enforcer_add = 10
+			planet_housing_add = 25
+			planet_amenities_add = 25
+		}
 	}
 
 	resources = {
@@ -379,6 +398,77 @@ building_synthesizers_complex = {
 		category = planet_buildings
 		upkeep = {
 			energy = 20
+		}
+	}
+}
+
+building_crowded_serf_houses = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_crude_huts
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = { is_country_type = planet_state }
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_civic = civic_aristocratic_elite } }
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 20
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 5
+		}
+	}
+}
+
+building_feudal_estates = {
+	base_buildtime = 480
+	can_build = yes
+	can_demolish = yes
+	icon = building_palace
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = { is_country_type = planet_state }
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = civic_aristocratic_elite }
+			owner = { is_regular_empire = yes }
+		}
+	}
+
+	planet_modifier = {
+		job_archduke_add = 1
+		job_duke_add = 2
+		job_count_add = 3
+		job_baron_add = 5
+		planet_housing_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 5
 		}
 	}
 }

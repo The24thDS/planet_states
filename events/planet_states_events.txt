@@ -12,13 +12,14 @@ event = {
 		random_system = {
 			limit = { is_appropriate_planet_state_system = yes }
 			create_planet_state_egalitarian = yes
+			event_target:target_ps_egalitarian = { country_event = { id = ps.2 days = 1 } }
 		}
 
 		# Planet-State 2: The Authoritarian
 		random_system = {
 			limit = { is_appropriate_planet_state_system = yes }
 			create_planet_state_authoritarian = yes
-			target_ps_authoritarian = { country_event = { id = ps.3 } }
+			event_target:target_ps_authoritarian = { country_event = { id = ps.3 days = 1 } }
 		}
 
 		# Planet-State 3: The Militarist
@@ -35,7 +36,27 @@ event = {
 	}
 }
 
-# ps.3: Spawn Adjustments for Authoritarian PS
+# ps.2: Spawn adjustments for Egalitarian PS
+country_event = {
+	id = ps.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:ps_egalitarian_main_species = {
+			set_citizenship_type = {
+				type = citizenship_full
+				country = event_target:target_ps_egalitarian
+			}
+			set_living_standard = {
+				type = living_standard_utopian
+				country = event_target:target_ps_egalitarian
+			}
+		}
+	}
+}
+
+# ps.3: Spawn adjustments for Authoritarian PS
 country_event = {
 	id = ps.3
 	hide_window = yes
@@ -52,6 +73,16 @@ country_event = {
 				country = event_target:target_ps_authoritarian
 			}
 		}
+		event_target:ps_authoritarian_specialist_species = {
+			set_citizenship_type = {
+				type = citizenship_limited
+				country = event_target:target_ps_authoritarian
+			}
+			set_living_standard = {
+				type = living_standard_stratified
+				country = event_target:target_ps_authoritarian
+			}
+		}
 		event_target:ps_authoritarian_servile_species = {
 			set_citizenship_type = {
 				type = citizenship_slavery
@@ -63,6 +94,20 @@ country_event = {
 			}
 			set_slavery_type = {
 				type = slavery_domestic
+				country = event_target:target_ps_authoritarian
+			}
+		}
+		event_target:ps_authoritarian_slave_species = {
+			set_citizenship_type = {
+				type = citizenship_slavery
+				country = event_target:target_ps_authoritarian
+			}
+			set_living_standard = {
+				type = living_standard_subsistence
+				country = event_target:target_ps_authoritarian
+			}
+			set_slavery_type = {
+				type = slavery_normal
 				country = event_target:target_ps_authoritarian
 			}
 		}
@@ -203,7 +248,7 @@ fleet_event = {
 			}
 
 			hidden_effect = {
-				country_event = { id = ps.6 }
+				country_event = { id = ps.13 }
 			}
 		}
 	}
@@ -394,7 +439,7 @@ country_event = {
 
 # ps.101: The Ecumenopolis - Main Menu
 country_event = {
-	id = ps.100
+	id = ps.101
 	title = ps.100.name
 	desc = ps.100a.desc
 	location = From
