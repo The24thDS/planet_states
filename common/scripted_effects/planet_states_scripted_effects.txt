@@ -345,7 +345,7 @@ create_planet_state_militarist = {
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
-		change_pc = pc_nuked
+		change_pc = rl_habitable_normal
 
 		# Create Species and Country
 		create_species = {
@@ -359,6 +359,9 @@ create_planet_state_militarist = {
 				trait = trait_resilient
 				trait = trait_quarrelsome
 			}
+		}
+		last_created_species = {
+			save_event_target_as = ps_militarist_main_species
 		}
 		create_country = {
 			name = random
@@ -417,27 +420,49 @@ create_planet_state_militarist = {
 		add_building = building_hall_judgment
 		add_building = building_anti_matter_reactor
 		add_building = building_hydroponics_farms_complex
-		add_building = building_hydroponics_farms_complex
-		add_building = building_mineral_purification_complex
 		add_building = building_mineral_purification_complex
 		add_building = building_multidimensional_printers
-		add_building = building_multidimensional_printers
+		add_building = building_leisure_complex
 		add_building = building_leisure_complex
 		add_building = building_leisure_complex
 		add_building = building_distillation_complex
 		add_building = building_chemical_complex
 		add_building = building_synthesizers_complex
-		add_building = building_galactic_stock_exchange
-		add_building = building_autocurating_vault
+		add_building = building_bastion
+		add_building = building_bastion
+		add_building = building_bastion
+		add_building = building_bastion
 		while = {
 			count = 25
 			add_district = district_city
 		}
 		while = {
-			count = 400
+			count = 10
 			create_pop = {
 				species = owner_main_species
 				ethos = { ethic = ethic_fanatic_militarist }
+			}
+		}
+
+		create_species = {
+			name = "NAME_Synthetic"
+			plural = "NAME_Synthetics"
+			class = ROBOT
+			namelist = this
+			portrait = "default_robot"
+			traits = {
+				trait = "trait_mechanical"
+				trait = "trait_robot_efficient_processors"
+				trait = "trait_robot_loyalty_circuits"
+			}
+		}
+		last_created_species = {
+			save_event_target_as = ps_militarist_robot_species
+		}
+		while = {
+			count = 200
+			create_pop = {
+				species = event_target:ps_militarist_robot_species
 			}
 		}
 	}
@@ -458,6 +483,24 @@ create_planet_state_pacifist = {
 		prevent_anomaly = yes
 		set_planet_size = 25
 		change_pc = pc_gaia
+		clear_deposits
+		add_deposit = d_buzzing_plains
+		add_deposit = d_searing_desert
+		add_deposit = d_frozen_gas_lake
+		add_deposit = d_underwater_vent
+		add_deposit = d_tempestous_mountain
+		add_deposit = d_prosperous_mesa
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_mineral_striations
+		add_deposit = d_rich_mountain
+		add_deposit = d_submerged_ore_veins
+		add_deposit = d_natural_farmland
+		add_deposit = d_bountiful_plains
+		add_deposit = d_lush_jungle
+		add_deposit = d_fertile_lands
+		add_deposit = d_black_soil
+		add_deposit = d_teeming_reef
+		add_deposit = d_alien_pets_deposit
 
 		# Create Species and Country
 		create_species = {
@@ -543,11 +586,19 @@ create_planet_state_pacifist = {
 		add_building = building_galactic_stock_exchange
 		add_building = building_autocurating_vault
 		while = {
-			count = 25
-			add_district = district_city
+			count = 10
+			add_district = district_farming
 		}
 		while = {
-			count = 400
+			count = 10
+			add_district = district_mining
+		}
+		while = {
+			count = 5
+			add_district = district_generator
+		}
+		while = {
+			count = 75
 			create_pop = {
 				species = owner_main_species
 				ethos = { ethic = ethic_fanatic_pacifist }

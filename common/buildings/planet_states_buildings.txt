@@ -27,7 +27,6 @@ building_planet_state_capitol = {
 			planet_amenities_add = 25
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -75,7 +74,6 @@ building_anti_matter_reactor = {
 			job_technician_add = 25
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -121,7 +119,6 @@ building_hydroponics_farms_complex = {
 			job_farmer_add = 25
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -157,6 +154,17 @@ building_mineral_purification_complex = {
 	planet_modifier = {
 		planet_miners_minerals_produces_mult = 0.25
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_robot_empire = yes
+			}
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.05
+		}
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -167,7 +175,6 @@ building_mineral_purification_complex = {
 			job_miner_add = 25
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -175,19 +182,6 @@ building_mineral_purification_complex = {
 		}
 		modifier = {
 			job_mining_drone_add = 25
-		}
-	}
-
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_robot_empire = yes
-			}
-		}
-		modifier = {
-			planet_miners_minerals_produces_mult = 0.05
 		}
 	}
 
@@ -225,7 +219,6 @@ building_multidimensional_printers = {
 			job_artisan_add = 25
 		}
 	}
-
 	resources = {
 		category = planet_buildings
 		upkeep = {
@@ -254,10 +247,25 @@ building_leisure_complex = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_civic = civic_warrior_culture }
+			}
 		}
 		modifier = {
 			job_entertainer_add = 25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_civic = civic_warrior_culture
+			}
+		}
+		modifier = {
+			job_duelist_add = 25
 		}
 	}
 
