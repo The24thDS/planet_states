@@ -616,7 +616,7 @@ create_planet_state_pacifist = {
 	}
 }
 
-# Trade Deals
+# Remove Egalitarian PS Trade Deals
 remove_ps_egalitarian_trade_deal = {
 	if = {
 		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_1 }
@@ -638,6 +638,10 @@ remove_ps_egalitarian_trade_deal = {
 		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_5 }
 		remove_modifier = modifier_ps_egalitarian_trade_deal_5
 	}
+}
+# Remove Egalitarian PS Trade Deals + Pact
+remove_all_ps_egalitarian_deals = {
+	remove_ps_egalitarian_trade_deal = yes
 	if = {
 		limit = { has_modifier = modifier_ps_egalitarian_commercial_pact }
 		remove_modifier = modifier_ps_egalitarian_commercial_pact

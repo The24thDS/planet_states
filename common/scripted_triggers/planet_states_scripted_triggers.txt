@@ -23,6 +23,11 @@ has_active_ps_egalitarian_trade_deal = {
 		has_modifier = modifier_ps_egalitarian_trade_deal_3
 		has_modifier = modifier_ps_egalitarian_trade_deal_4
 		has_modifier = modifier_ps_egalitarian_trade_deal_5
+	}
+}
+has_any_active_ps_egalitarian_deal = {
+	OR = {
+		has_active_ps_egalitarian_trade_deal = yes
 		has_modifier = modifier_ps_egalitarian_commercial_pact
 	}
 }

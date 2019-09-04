@@ -571,10 +571,6 @@ country_event = {
 			modifier = modifier_ps_egalitarian_trade_deal_1
 		}
 		hidden_effect = {
-			set_relation_flag = {
-				who = event_target:target_ps_egalitarian
-				flag = ps_egalitarian_trade_deal_hired
-			}
 			country_event = { id = ps.111 }
 			event_target:target_ps_egalitarian = {
 				add_trust = {
@@ -598,10 +594,6 @@ country_event = {
 			modifier = modifier_ps_egalitarian_trade_deal_2
 		}
 		hidden_effect = {
-			set_relation_flag = {
-				who = event_target:target_ps_egalitarian
-				flag = ps_egalitarian_trade_deal
-			}
 			country_event = { id = ps.111 }
 			event_target:target_ps_egalitarian = {
 				add_trust = {
@@ -625,10 +617,6 @@ country_event = {
 			modifier = modifier_ps_egalitarian_trade_deal_3
 		}
 		hidden_effect = {
-			set_relation_flag = {
-				who = event_target:target_ps_egalitarian
-				flag = ps_egalitarian_trade_deal
-			}
 			country_event = { id = ps.111 }
 			event_target:target_ps_egalitarian = {
 				add_trust = {
@@ -652,10 +640,6 @@ country_event = {
 			modifier = modifier_ps_egalitarian_trade_deal_4
 		}
 		hidden_effect = {
-			set_relation_flag = {
-				who = event_target:target_ps_egalitarian
-				flag = ps_egalitarian_trade_deal
-			}
 			country_event = { id = ps.111 }
 			event_target:target_ps_egalitarian = {
 				add_trust = {
@@ -679,10 +663,6 @@ country_event = {
 			modifier = modifier_ps_egalitarian_trade_deal_5
 		}
 		hidden_effect = {
-			set_relation_flag = {
-				who = event_target:target_ps_egalitarian
-				flag = ps_egalitarian_trade_deal
-			}
 			country_event = { id = ps.111 }
 			event_target:target_ps_egalitarian = {
 				add_trust = {
@@ -789,10 +769,6 @@ country_event = {
 					amount = 20
 				}
 			}
-			set_relation_flag = {
-				who = event_target:target_ps_egalitarian
-				flag = ps_egalitarian_commercial_pact_hired
-			}
 		}
 	}
 
@@ -841,7 +817,7 @@ event = {
 	}
 }
 
-# ps.1001: Egalitarian Ps destroyed (Destroyer)
+# ps.1001: Egalitarian PS destroyed (Destroyer)
 country_event = {
 	id = ps.1001
 	title = ps.1001.name
@@ -868,28 +844,28 @@ country_event = {
 	desc = {
 		text = ps.1002.a.desc
 		trigger = {
-			has_active_ps_egalitarian_trade_deal = no
+			has_any_active_ps_egalitarian_deal = no
 			has_communications = event_target:ps_egalitarian_destroyer
 		}
 	}
 	desc = {
 		text = ps.1002.b.desc
 		trigger = {
-			has_active_ps_egalitarian_trade_deal = no
+			has_any_active_ps_egalitarian_deal = no
 			NOT = { has_communications = event_target:ps_egalitarian_destroyer }
 		}
 	}
 	desc = {
 		text = ps.1002.c.desc
 		trigger = {
-			has_active_ps_egalitarian_trade_deal = yes
+			has_any_active_ps_egalitarian_deal = yes
 			has_communications = event_target:ps_egalitarian_destroyer
 		}
 	}
 	desc = {
 		text = ps.1002.d.desc
 		trigger = {
-			has_active_ps_egalitarian_trade_deal = yes
+			has_any_active_ps_egalitarian_deal = yes
 			NOT = { has_communications = event_target:ps_egalitarian_destroyer }
 		}
 	}
@@ -899,5 +875,150 @@ country_event = {
 
 	is_triggered_only = yes
 
-	immediate = {}
+	immediate = {
+		if = {
+			limit = {
+				has_any_active_ps_egalitarian_deal = yes
+				is_ai = yes
+			}
+			add_opinion_modifier = {
+				who = event_target:ps_egalitarian_destroyer
+				modifier = opinion_destroyed_ps_egalitarian_trade
+			}
+		}
+		if = {
+			limit = {
+				has_any_active_ps_egalitarian_deal = yes
+				is_ai = yes
+			}
+			add_opinion_modifier = {
+				who = event_target:ps_egalitarian_destroyer
+				modifier = opinion_destroyed_ps_egalitarian
+			}
+		}
+	}
+
+	after = {
+		remove_all_ps_egalitarian_deals = yes
+	}
+
+	option  = {
+		name = ps.1002.a
+		trigger = {
+			has_any_active_ps_egalitarian_deal = no
+		}
+	}
+	option = {
+		name = ps.1002.b
+		trigger = {
+			has_any_active_ps_egalitarian_deal = yes
+		}
+	}
+}
+
+# ps.1003: Attacked Egalitarian PS (Hidden)
+country_event = {
+	id = ps.1003
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		From = { has_country_flag = ps_egalitarian }
+	}
+
+	immediate = {
+		From = {
+			save_event_target_as = target_ps_egalitarian
+			add_trust = {
+				who = Root
+				amount = -100
+			}
+		}
+		set_country_flag = attacked_ps_egalitarian
+		if = {
+			limit = { has_any_active_ps_egalitarian_deal = yes }
+			remove_all_ps_egalitarian_deals = yes
+			country_event = { id = ps.1004 }
+		}
+	}
+}
+
+# ps.1004: Attacked Egalitarian PS - Agreements Terminated
+country_event = {
+	id = ps.1004
+	title = ps.1004.name
+	desc = ps.1004.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = event_target:target_ps_egalitarian
+		planet_background = event_target:target_ps_egalitarian
+		graphical_culture = event_target:target_ps_egalitarian
+		city_level = event_target:target_ps_egalitarian
+		room = event_target:target_ps_egalitarian.ruler
+	}
+
+	option = {
+		name = ps.1004.a
+	}
+}
+
+# ps.1005: Attacked Egalitarian PS - Refuses Communications
+country_event = {
+	id = ps.1005
+	title = ps.1005.name
+	desc = ps.1005.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	force_open = yes
+
+	picture_event_data = {
+		portrait = event_target:target_ps_egalitarian
+		planet_background = event_target:target_ps_egalitarian
+		graphical_culture = event_target:target_ps_egalitarian
+		city_level = event_target:target_ps_egalitarian
+		room = event_target:target_ps_egalitarian.ruler
+	}
+
+	trigger = {
+		From = {
+			is_country_type = planet_state
+			has_country_flag = ps_egalitarian
+		}
+		has_country_flag = attacked_ps_egalitarian
+		NOT = { has_country_flag = ps_egalitarian_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = ps_egalitarian_diplomacy_engaged
+		From = { save_event_target_as = target_ps_egalitarian }
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+	}
+	option = {
+		name = ps.1005.a
+		trigger = { is_homicidal = no }
+		default_hide_option = yes
+	}
 }
