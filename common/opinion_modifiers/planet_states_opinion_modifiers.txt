@@ -1,0 +1,67 @@
+opinion_destroyed_ps_egalitarian = {
+	opinion = {
+		base = -15
+	}
+	decay = {
+		base = 2
+	}
+}
+opinion_destroyed_ps_egalitarian_trade = {
+	opinion = {
+		base = -30
+	}
+	decay = {
+		base = 2
+	}
+}
+
+opinion_destroyed_ps_authoritarian = {
+	opinion = {
+		base = -15
+	}
+	decay = {
+		base = 2
+	}
+}
+opinion_destroyed_ps_authoritarian_trade = {
+	opinion = {
+		base = -30
+	}
+	decay = {
+		base = 2
+	}
+}
+
+opinion_destroyed_ps_militarist = {
+	opinion = {
+		base = -15
+	}
+	decay = {
+		base = 2
+	}
+}
+opinion_destroyed_ps_militarist_trade = {
+	opinion = {
+		base = -30
+	}
+	decay = {
+		base = 2
+	}
+}
+
+opinion_destroyed_ps_pacifist = {
+	opinion = {
+		base = -15
+	}
+	decay = {
+		base = 2
+	}
+}
+opinion_destroyed_ps_pacifist_trade = {
+	opinion = {
+		base = -30
+	}
+	decay = {
+		base = 2
+	}
+}

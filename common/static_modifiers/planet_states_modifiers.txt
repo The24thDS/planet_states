@@ -1,3 +1,4 @@
+# Egalitarian PS modifiers
 modifier_ps_egalitarian_trade_deal_1 = {
 	country_base_consumer_goods_produces_add = 10
 	country_base_alloys_produces_add = -10
@@ -19,5 +20,80 @@ modifier_ps_egalitarian_trade_deal_5 = {
 	country_base_alloys_produces_add = -50
 }
 modifier_ps_egalitarian_commercial_pact = {
+	trade_value_mult = 0.05
+}
+
+# Authoritarian PS modifiers
+modifier_ps_authoritarian_trade_deal_1 = {
+	country_base_minerals_produces_add = 10
+	country_base_food_produces_add = -10
+}
+modifier_ps_authoritarian_trade_deal_2 = {
+	country_base_minerals_produces_add = 20
+	country_base_food_produces_add = -20
+}
+modifier_ps_authoritarian_trade_deal_3 = {
+	country_base_minerals_produces_add = 30
+	country_base_food_produces_add = -30
+}
+modifier_ps_authoritarian_trade_deal_4 = {
+	country_base_minerals_produces_add = 40
+	country_base_food_produces_add = -40
+}
+modifier_ps_authoritarian_trade_deal_5 = {
+	country_base_minerals_produces_add = 50
+	country_base_food_produces_add = -50
+}
+modifier_ps_authoritarian_commercial_pact = {
+	trade_value_mult = 0.05
+}
+
+# Militarist PS modifiers
+modifier_ps_militarist_trade_deal_1 = {
+	country_base_minerals_produces_add = 10
+	country_base_food_produces_add = -10
+}
+modifier_ps_militarist_trade_deal_2 = {
+	country_base_minerals_produces_add = 20
+	country_base_food_produces_add = -20
+}
+modifier_ps_militarist_trade_deal_3 = {
+	country_base_minerals_produces_add = 30
+	country_base_food_produces_add = -30
+}
+modifier_ps_militarist_trade_deal_4 = {
+	country_base_minerals_produces_add = 40
+	country_base_food_produces_add = -40
+}
+modifier_ps_militarist_trade_deal_5 = {
+	country_base_minerals_produces_add = 50
+	country_base_food_produces_add = -50
+}
+modifier_ps_militarist_commercial_pact = {
+	trade_value_mult = 0.05
+}
+
+# Authoritarian PS modifiers
+modifier_ps_pacifist_trade_deal_1 = {
+	country_base_food_produces_add = 10
+	country_base_minerals_produces_add = -10
+}
+modifier_ps_pacifist_trade_deal_2 = {
+	country_base_food_produces_add = 20
+	country_base_minerals_produces_add = -20
+}
+modifier_ps_pacifist_trade_deal_3 = {
+	country_base_food_produces_add = 30
+	country_base_minerals_produces_add = -30
+}
+modifier_ps_pacifist_trade_deal_4 = {
+	country_base_food_produces_add = 40
+	country_base_minerals_produces_add = -40
+}
+modifier_ps_pacifist_trade_deal_5 = {
+	country_base_food_produces_add = 50
+	country_base_minerals_produces_add = -50
+}
+modifier_ps_pacifist_commercial_pact = {
 	trade_value_mult = 0.05
 }

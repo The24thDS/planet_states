@@ -647,3 +647,99 @@ remove_all_ps_egalitarian_deals = {
 		remove_modifier = modifier_ps_egalitarian_commercial_pact
 	}
 }
+
+# Remove Authoritarian PS Trade Deals
+remove_ps_authoritarian_trade_deal = {
+	if = {
+		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_1 }
+		remove_modifier = modifier_ps_authoritarian_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_2 }
+		remove_modifier = modifier_ps_authoritarian_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_3 }
+		remove_modifier = modifier_ps_authoritarian_trade_deal_3
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_4 }
+		remove_modifier = modifier_ps_authoritarian_trade_deal_4
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_5 }
+		remove_modifier = modifier_ps_authoritarian_trade_deal_5
+	}
+}
+# Remove Authoritarian PS Trade Deals + Pact
+remove_all_ps_authoritarian_deals = {
+	remove_ps_authoritarian_trade_deal = yes
+	if = {
+		limit = { has_modifier = modifier_ps_authoritarian_commercial_pact }
+		remove_modifier = modifier_ps_authoritarian_commercial_pact
+	}
+}
+
+# Remove Militarist PS Trade Deals
+remove_ps_militarist_trade_deal = {
+	if = {
+		limit = { has_modifier = modifier_ps_militarist_trade_deal_1 }
+		remove_modifier = modifier_ps_militarist_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_militarist_trade_deal_2 }
+		remove_modifier = modifier_ps_militarist_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_militarist_trade_deal_3 }
+		remove_modifier = modifier_ps_militarist_trade_deal_3
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_militarist_trade_deal_4 }
+		remove_modifier = modifier_ps_militarist_trade_deal_4
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_militarist_trade_deal_5 }
+		remove_modifier = modifier_ps_militarist_trade_deal_5
+	}
+}
+# Remove Militarist PS Trade Deals + Pact
+remove_all_ps_militarist_deals = {
+	remove_ps_militarist_trade_deal = yes
+	if = {
+		limit = { has_modifier = modifier_ps_militarist_commercial_pact }
+		remove_modifier = modifier_ps_militarist_commercial_pact
+	}
+}
+
+# Remove Pacifist PS Trade Deals
+remove_ps_pacifist_trade_deal = {
+	if = {
+		limit = { has_modifier = modifier_ps_pacifist_trade_deal_1 }
+		remove_modifier = modifier_ps_pacifist_trade_deal_1
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_pacifist_trade_deal_2 }
+		remove_modifier = modifier_ps_pacifist_trade_deal_2
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_pacifist_trade_deal_3 }
+		remove_modifier = modifier_ps_pacifist_trade_deal_3
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_pacifist_trade_deal_4 }
+		remove_modifier = modifier_ps_pacifist_trade_deal_4
+	}
+	if = {
+		limit = { has_modifier = modifier_ps_pacifist_trade_deal_5 }
+		remove_modifier = modifier_ps_pacifist_trade_deal_5
+	}
+}
+# Remove Pacifist PS Trade Deals + Pact
+remove_all_ps_pacifist_deals = {
+	remove_ps_pacifist_trade_deal = yes
+	if = {
+		limit = { has_modifier = modifier_ps_pacifist_commercial_pact }
+		remove_modifier = modifier_ps_pacifist_commercial_pact
+	}
+}

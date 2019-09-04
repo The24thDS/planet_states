@@ -28,19 +28,37 @@ on_yearly_pulse = {
 on_custom_diplomacy = {
 	events = {
 		ps.100 # The Egalitarian
-		#ps.200 # The Authoritarian
-		#ps.300 # The Militarist
-		#ps.400 # The Pacifist
+		ps.1005 # Attacked Egalitarian PS
+		ps.200 # The Authoritarian
+		ps.2005 # Attacked Authoritarian PS
+		ps.300 # The Militarist
+		ps.3005 # Attacked Militarist PS
+		ps.400 # The Pacifist
+		ps.4005 # Attacked Pacifist PS
 	}
 }
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		ps.1003 # Attacked Egalitarian PS
+		ps.2003 # Attacked Authoritarian PS
+		ps.3003 # Attacked Militarist PS
+		ps.4003 # Attacked Pacifist PS
+	}
+}
+
 
 #This = destroyed country
 #From = optional, destroyer (country)
 on_country_destroyed = {
 	events = {
 		ps.1000 # Egalitarian PS destroyed (HIDDEN)
-		#ps.2000
-		#ps.3000
-		#ps.4000
+		ps.2000 # Authoritarian PS destroyed (HIDDEN)
+		ps.3000 # Militarist PS destroyed (HIDDEN)
+		ps.4000 # Pacifist PS destroyed (HIDDEN)
 	}
 }
