@@ -18,20 +18,11 @@ is_appropriate_planet_state_system = {
 
 has_active_ps_egalitarian_trade_deal = {
 	OR = {
-		has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_1
-		has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_2
-		has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_3
-		has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_4
-		has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_5
-		has_modifier = modifier_ps_egaliatarian_trade_deal_food_1
-		has_modifier = modifier_ps_egaliatarian_trade_deal_food_2
-		has_modifier = modifier_ps_egaliatarian_trade_deal_food_3
-		has_modifier = modifier_ps_egaliatarian_trade_deal_food_4
-		has_modifier = modifier_ps_egaliatarian_trade_deal_food_5
-		has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_1
-		has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_2
-		has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_3
-		has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_4
-		has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_5
+		has_modifier = modifier_ps_egalitarian_trade_deal_1
+		has_modifier = modifier_ps_egalitarian_trade_deal_2
+		has_modifier = modifier_ps_egalitarian_trade_deal_3
+		has_modifier = modifier_ps_egalitarian_trade_deal_4
+		has_modifier = modifier_ps_egalitarian_trade_deal_5
+		has_modifier = modifier_ps_egalitarian_commercial_pact
 	}
 }

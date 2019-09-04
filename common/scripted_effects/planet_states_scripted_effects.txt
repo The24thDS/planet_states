@@ -619,63 +619,27 @@ create_planet_state_pacifist = {
 # Trade Deals
 remove_ps_egalitarian_trade_deal = {
 	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_1 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_minerals_1
+		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_1 }
+		remove_modifier = modifier_ps_egalitarian_trade_deal_1
 	}
 	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_2 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_minerals_2
+		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_2 }
+		remove_modifier = modifier_ps_egalitarian_trade_deal_2
 	}
 	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_3 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_minerals_3
+		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_3 }
+		remove_modifier = modifier_ps_egalitarian_trade_deal_3
 	}
 	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_4 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_minerals_4
+		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_4 }
+		remove_modifier = modifier_ps_egalitarian_trade_deal_4
 	}
 	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_minerals_5 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_minerals_5
+		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_5 }
+		remove_modifier = modifier_ps_egalitarian_trade_deal_5
 	}
 	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_food_1 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_food_1
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_food_2 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_food_2
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_food_3 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_food_3
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_food_4 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_food_4
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_food_5 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_food_5
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_1 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_alloys_1
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_2 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_alloys_2
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_3 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_alloys_3
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_4 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_alloys_4
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egaliatarian_trade_deal_alloys_5 }
-		remove_modifier = modifier_ps_egaliatarian_trade_deal_alloys_5
+		limit = { has_modifier = modifier_ps_egalitarian_commercial_pact }
+		remove_modifier = modifier_ps_egalitarian_commercial_pact
 	}
 }

@@ -33,3 +33,14 @@ on_custom_diplomacy = {
 		#ps.400 # The Pacifist
 	}
 }
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		ps.1000 # Egalitarian PS destroyed (HIDDEN)
+		#ps.2000
+		#ps.3000
+		#ps.4000
+	}
+}

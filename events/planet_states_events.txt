@@ -351,11 +351,11 @@ country_event = {
 	diplomatic = yes
 
 	picture_event_data = {
-		portrait = From
-		planet_background = From
-		graphical_culture = From
-		city_level = From
-		room = From.ruler
+		portrait = event_target:target_ps_egalitarian
+		planet_background = event_target:target_ps_egalitarian
+		graphical_culture = event_target:target_ps_egalitarian
+		city_level = event_target:target_ps_egalitarian
+		room = event_target:target_ps_egalitarian.ruler
 	}
 
 	trigger = {
@@ -402,7 +402,7 @@ country_event = {
 		hidden_effect = { remove_ps_egalitarian_trade_deal = yes }
 	}
 
-	# Soldiers (ps.120)
+	# Commercial pact (ps.120)
 	option = {
 		name = ps.100.b
 		trigger = { is_homicidal = no }
@@ -426,24 +426,6 @@ country_event = {
 		}
 	}
 
-	# Commercial pact (ps.130)
-	option = {
-		name = ps.100.c
-		trigger = { is_homicidal = no }
-		allow = {
-			custom_tooltip = {
-				fail_text = ps.100.c.opinion
-				event_target:target_ps_egalitarian = {
-					trust = {
-						who = Root
-						value >= 80
-					}
-				}
-			}
-		}
-		hidden_effect = { country_event = { id = ps.130 } }
-	}
-
 	# Goodbye
 	option = {
 		name = ps.100.goodbye
@@ -464,7 +446,7 @@ country_event = {
 	}
 }
 
-# ps.101: The Ecumenopolis - Main Menu
+# ps.101: Egalitarian PS - Main Menu
 country_event = {
 	id = ps.101
 	title = ps.100.name
@@ -475,11 +457,11 @@ country_event = {
 	diplomatic = yes
 
 	picture_event_data = {
-		portrait = From
-		planet_background = From
-		graphical_culture = From
-		city_level = From
-		room = From.ruler
+		portrait = event_target:target_ps_egalitarian
+		planet_background = event_target:target_ps_egalitarian
+		graphical_culture = event_target:target_ps_egalitarian
+		city_level = event_target:target_ps_egalitarian
+		room = event_target:target_ps_egalitarian.ruler
 	}
 
 	trigger = {
@@ -519,7 +501,7 @@ country_event = {
 		hidden_effect = { remove_ps_egalitarian_trade_deal = yes }
 	}
 
-	# Soldiers (ps.120)
+	# Commercial pact (ps.120)
 	option = {
 		name = ps.100.b
 		allow = {
@@ -542,23 +524,6 @@ country_event = {
 		}
 	}
 
-	# Commercial pact (ps.130)
-	option = {
-		name = ps.100.c
-		allow = {
-			custom_tooltip = {
-				fail_text = ps.100.c.opinion
-				event_target:target_ps_egalitarian = {
-					trust = {
-						who = Root
-						value >= 80
-					}
-				}
-			}
-		}
-		hidden_effect = { country_event = { id = ps.130 } }
-	}
-
 	# Goodbye
 	option = {
 		name = ps.100.goodbye
@@ -568,25 +533,370 @@ country_event = {
 # ps.110: Resource Deal
 country_event = {
 	id = ps.110
-	hide_window = yes
-	is_triggered_only = yes
+	title = ps.110.name
+	desc = ps.110.desc
 
-	immediate = {}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = event_target:target_ps_egalitarian
+		planet_background = event_target:target_ps_egalitarian
+		graphical_culture = event_target:target_ps_egalitarian
+		city_level = event_target:target_ps_egalitarian
+		room = event_target:target_ps_egalitarian.ruler
+	}
+
+	immediate = {
+		set_country_flag = ps_egalitarian_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
+	}
+
+	# 10 CG for 10 Alloys
+	option = {
+		name = ps.110.a
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ps_egalitarian }
+			}
+		}
+		add_resource = { energy = -1000 }
+		add_modifier = {
+			modifier = modifier_ps_egalitarian_trade_deal_1
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:target_ps_egalitarian
+				flag = ps_egalitarian_trade_deal_hired
+			}
+			country_event = { id = ps.111 }
+			event_target:target_ps_egalitarian = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+	# 20 CG for 20 Alloys
+	option = {
+		name = ps.110.a
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ps_egalitarian }
+			}
+		}
+		add_resource = { energy = -2000 }
+		add_modifier = {
+			modifier = modifier_ps_egalitarian_trade_deal_2
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:target_ps_egalitarian
+				flag = ps_egalitarian_trade_deal
+			}
+			country_event = { id = ps.111 }
+			event_target:target_ps_egalitarian = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+	# 30 CG for 30 Alloys
+	option = {
+		name = ps.110.a
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 3000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ps_egalitarian }
+			}
+		}
+		add_resource = { energy = -3000 }
+		add_modifier = {
+			modifier = modifier_ps_egalitarian_trade_deal_3
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:target_ps_egalitarian
+				flag = ps_egalitarian_trade_deal
+			}
+			country_event = { id = ps.111 }
+			event_target:target_ps_egalitarian = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+	# 40 CG for 40 Alloys
+	option = {
+		name = ps.110.a
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 4000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ps_egalitarian }
+			}
+		}
+		add_resource = { energy = -4000 }
+		add_modifier = {
+			modifier = modifier_ps_egalitarian_trade_deal_4
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:target_ps_egalitarian
+				flag = ps_egalitarian_trade_deal
+			}
+			country_event = { id = ps.111 }
+			event_target:target_ps_egalitarian = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+	# 50 CG for 50 Alloys
+	option = {
+		name = ps.110.a
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			hidden_trigger = {
+				NOT = { has_country_flag = attacked_ps_egalitarian }
+			}
+		}
+		add_resource = { energy = -5000 }
+		add_modifier = {
+			modifier = modifier_ps_egalitarian_trade_deal_5
+		}
+		hidden_effect = {
+			set_relation_flag = {
+				who = event_target:target_ps_egalitarian
+				flag = ps_egalitarian_trade_deal
+			}
+			country_event = { id = ps.111 }
+			event_target:target_ps_egalitarian = {
+				add_trust = {
+					who = Root
+					amount = 20
+				}
+			}
+		}
+	}
+
+	# Back to the main menu
+	option = {
+		name = ps.110.back
+		hidden_effect = {
+			country_event = { id = ps.101 }
+		}
+	}
+	# End
+	option = {
+		name = ps.100.goodbye
+		default_hide_option = yes
+	}
 }
 
-# ps.120: Hire Army
+# ps.111: Resource Deal - Answer
+country_event = {
+	id = ps.111
+	title = ps.110.name
+	desc = ps.111.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = event_target:target_ps_egalitarian
+		planet_background = event_target:target_ps_egalitarian
+		graphical_culture = event_target:target_ps_egalitarian
+		city_level = event_target:target_ps_egalitarian
+		room = event_target:target_ps_egalitarian.ruler
+	}
+
+	immediate = {
+		set_country_flag = ps_egalitarian_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
+	}
+
+	# Back to the main menu
+	option = {
+		name = ps.110.back
+		hidden_effect = {
+			country_event = { id = ps.101 }
+		}
+	}
+	# End
+	option = {
+		name = ps.100.goodbye
+		default_hide_option = yes
+	}
+}
+
+# ps.120: Commercial Pact
 country_event = {
 	id = ps.120
-	hide_window = yes
-	is_triggered_only = yes
+	title = ps.120.name
+	desc = ps.120.desc
 
-	immediate = {}
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = event_target:target_ps_egalitarian
+		planet_background = event_target:target_ps_egalitarian
+		graphical_culture = event_target:target_ps_egalitarian
+		city_level = event_target:target_ps_egalitarian
+		room = event_target:target_ps_egalitarian.ruler
+	}
+
+	immediate = {
+		set_country_flag = ps_egalitarian_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = ps.120.a
+		response_text = ps.120.a.reply
+		custom_tooltip = opinion50
+		add_modifier = {
+			modifier = modifier_ps_egalitarian_commercial_pact
+		}
+		hidden_effect = {
+			event_target:target_ps_egalitarian = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_relation_flag = {
+				who = event_target:target_ps_egalitarian
+				flag = ps_egalitarian_commercial_pact_hired
+			}
+		}
+	}
+
+	# Back to the main menu
+	option = {
+		name = ps.110.back
+		hidden_effect = {
+			country_event = { id = ps.101 }
+		}
+	}
+	# End
+	option = {
+		name = ps.100.goodbye
+		default_hide_option = yes
+	}
 }
 
-# ps.130: Commercial Pact
-country_event = {
-	id = ps.130
+# ps.1000: Egalitarian PS destroyed (HIDDEN) (called by on_country_destroyed)
+event = {
+	id = ps.1000
 	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = planet_state
+		has_country_flag = ps_egalitarian
+	}
+
+	immediate = {
+		capital_scope = {
+			save_event_target_as = ps_egalitarian_capital
+		}
+		From = {
+			country_event = { id = ps.1001 }
+			save_event_target_as = ps_egalitarian_destroyer
+		}
+		every_country = {
+			limit = {
+				has_communications = Root
+				NOT = { is_country = event_target:ps_egalitarian_destroyer }
+				is_country_type = default
+			}
+			country_event = { id = ps.1002 }
+		}
+	}
+}
+
+# ps.1001: Egalitarian Ps destroyed (Destroyer)
+country_event = {
+	id = ps.1001
+	title = ps.1001.name
+	desc = ps.1001.desc
+	picture = GFX_evt_space_debris
+	location = event_target:ps_egalitarian_capital
+	show_sound = event_ship_bridge
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = destroyed_ps_egalitarian
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# ps.1002: Egalitarian PS Destroyed
+country_event = {
+	id = ps.1002
+	title = ps.1002.name
+	desc = {
+		text = ps.1002.a.desc
+		trigger = {
+			has_active_ps_egalitarian_trade_deal = no
+			has_communications = event_target:ps_egalitarian_destroyer
+		}
+	}
+	desc = {
+		text = ps.1002.b.desc
+		trigger = {
+			has_active_ps_egalitarian_trade_deal = no
+			NOT = { has_communications = event_target:ps_egalitarian_destroyer }
+		}
+	}
+	desc = {
+		text = ps.1002.c.desc
+		trigger = {
+			has_active_ps_egalitarian_trade_deal = yes
+			has_communications = event_target:ps_egalitarian_destroyer
+		}
+	}
+	desc = {
+		text = ps.1002.d.desc
+		trigger = {
+			has_active_ps_egalitarian_trade_deal = yes
+			NOT = { has_communications = event_target:ps_egalitarian_destroyer }
+		}
+	}
+	picture = GFX_evt_exploding_ship
+	location = event_target:ps_egalitarian_capital
+	show_sound = event_ship_explosion
+
 	is_triggered_only = yes
 
 	immediate = {}

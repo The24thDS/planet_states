@@ -1,15 +1,23 @@
-modifier_ps_egaliatarian_trade_deal_minerals_1 = {}
-modifier_ps_egaliatarian_trade_deal_minerals_2 = {}
-modifier_ps_egaliatarian_trade_deal_minerals_3 = {}
-modifier_ps_egaliatarian_trade_deal_minerals_4 = {}
-modifier_ps_egaliatarian_trade_deal_minerals_5 = {}
-modifier_ps_egaliatarian_trade_deal_food_1 = {}
-modifier_ps_egaliatarian_trade_deal_food_2 = {}
-modifier_ps_egaliatarian_trade_deal_food_3 = {}
-modifier_ps_egaliatarian_trade_deal_food_4 = {}
-modifier_ps_egaliatarian_trade_deal_food_5 = {}
-modifier_ps_egaliatarian_trade_deal_alloys_1 = {}
-modifier_ps_egaliatarian_trade_deal_alloys_2 = {}
-modifier_ps_egaliatarian_trade_deal_alloys_3 = {}
-modifier_ps_egaliatarian_trade_deal_alloys_4 = {}
-modifier_ps_egaliatarian_trade_deal_alloys_5 = {}
+modifier_ps_egalitarian_trade_deal_1 = {
+	country_base_consumer_goods_produces_add = 10
+	country_base_alloys_produces_add = -10
+}
+modifier_ps_egalitarian_trade_deal_2 = {
+	country_base_consumer_goods_produces_add = 20
+	country_base_alloys_produces_add = -20
+}
+modifier_ps_egalitarian_trade_deal_3 = {
+	country_base_consumer_goods_produces_add = 30
+	country_base_alloys_produces_add = -30
+}
+modifier_ps_egalitarian_trade_deal_4 = {
+	country_base_consumer_goods_produces_add = 40
+	country_base_alloys_produces_add = -40
+}
+modifier_ps_egalitarian_trade_deal_5 = {
+	country_base_consumer_goods_produces_add = 50
+	country_base_alloys_produces_add = -50
+}
+modifier_ps_egalitarian_commercial_pact = {
+	trade_value_mult = 0.05
+}
