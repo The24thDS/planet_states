@@ -8,6 +8,7 @@ is_appropriate_planet_state_system = {
 		has_star_flag = hostile_system
 		has_star_flag = marauder_system
 		has_star_flag = caravaneer_home
+		has_star_flag = primitive_system
 	}
 	any_system_planet = {
 		uninhabitable_regular_planet = yes

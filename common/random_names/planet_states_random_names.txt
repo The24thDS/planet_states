@@ -60,7 +60,6 @@ empire_name_parts_list = {
 		"Grand-City" = 3
 		"Planet" = 3
 		"World" = 3
-		"Microstate" = 3
 		"Enclave" = 3
 		"Polity" = 3
 		"Body Politic" = 3
@@ -106,7 +105,7 @@ empire_name_format = {
 		}
 	}
 	noun = "[This.GetSpeciesName]"
-	format = "[This.Capital.GetName] <ps_egalitarian> <planet_state>"
+	format = "[This.GetSpeciesName] <ps_egalitarian> <planet_state>"
 	# Human Free State
 }
 
@@ -142,7 +141,7 @@ empire_name_format = {
 		}
 	}
 	noun = "[This.GetSpeciesName]"
-	format = "[This.Capital.GetName] <ps_authoritarian> <planet_state>"
+	format = "[This.GetSpeciesName] <ps_authoritarian> <planet_state>"
 	# Human Free State
 }
 
@@ -178,7 +177,7 @@ empire_name_format = {
 		}
 	}
 	noun = "[This.GetSpeciesName]"
-	format = "[This.Capital.GetName] <ps_militarist> <planet_state>"
+	format = "[This.GetSpeciesName] <ps_militarist> <planet_state>"
 }
 
 # Pacifist
@@ -213,5 +212,5 @@ empire_name_format = {
 		}
 	}
 	noun = "[This.GetSpeciesName]"
-	format = "[This.Capital.GetName] <ps_pacifist> <planet_state>"
+	format = "[This.GetSpeciesName] <ps_pacifist> <planet_state>"
 }

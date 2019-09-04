@@ -26,6 +26,7 @@ event = {
 		random_system = {
 			limit = { is_appropriate_planet_state_system = yes }
 			create_planet_state_militarist = yes
+			event_target:target_ps_militarist = { country_event = { id = ps.4 days = 1 } }
 		}
 
 		# Planet-State 4: The Pacifist
@@ -109,6 +110,32 @@ country_event = {
 			set_slavery_type = {
 				type = slavery_normal
 				country = event_target:target_ps_authoritarian
+			}
+		}
+	}
+}
+
+# ps.4: Spawn adjustments for Militarist PS
+country_event = {
+	id = ps.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:ps_militarist_main_species = {
+			set_citizenship_type = {
+				type = citizenship_full
+				country = event_target:target_ps_militarist
+			}
+			set_living_standard = {
+				type = living_standard_good
+				country = event_target:target_ps_militarist
+			}
+		}
+		event_target:ps_militarist_robot_species = {
+			set_military_service_type = {
+				type = military_service_none
+				country = event_target:target_ps_militarist
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-building_planet_state_capitol = {
+building_ps_capitol = {
 	capital = yes
 	can_build = no
 	can_demolish = yes
@@ -48,7 +48,7 @@ building_planet_state_capitol = {
 	}
 }
 
-building_anti_matter_reactor = {
+building_ps_anti_matter_reactor = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -93,7 +93,7 @@ building_anti_matter_reactor = {
 	}
 }
 
-building_hydroponics_farms_complex = {
+building_ps_hydroponics_farms_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -138,7 +138,7 @@ building_hydroponics_farms_complex = {
 	}
 }
 
-building_mineral_purification_complex = {
+building_ps_mineral_purification_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -194,7 +194,7 @@ building_mineral_purification_complex = {
 	}
 }
 
-building_multidimensional_printers = {
+building_ps_multidimensional_printers = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -228,7 +228,7 @@ building_multidimensional_printers = {
 	}
 }
 
-building_leisure_complex = {
+building_ps_leisure_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -278,7 +278,7 @@ building_leisure_complex = {
 	}
 }
 
-building_distillation_complex = {
+building_ps_distillation_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -322,7 +322,7 @@ building_distillation_complex = {
 	}
 }
 
-building_chemical_complex = {
+building_ps_chemical_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -366,7 +366,7 @@ building_chemical_complex = {
 	}
 }
 
-building_synthesizers_complex = {
+building_ps_synthesizers_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -410,7 +410,7 @@ building_synthesizers_complex = {
 	}
 }
 
-building_crowded_serf_houses = {
+building_ps_crowded_serf_houses = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -444,7 +444,7 @@ building_crowded_serf_houses = {
 	}
 }
 
-building_feudal_estates = {
+building_ps_feudal_manor = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
@@ -477,6 +477,52 @@ building_feudal_estates = {
 		category = planet_buildings
 		upkeep = {
 			energy = 5
+		}
+	}
+}
+
+building_ps_bastion = {
+	base_buildtime = 480
+	can_build = yes
+	planetary_ftl_inhibitor = yes
+	can_demolish = yes
+	icon = building_fortress
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = { is_country_type = planet_state }
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 10
+		}
+	}
+	triggered_planet_modifier {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = 10
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 5
+			volatile_motes = 2
 		}
 	}
 }
