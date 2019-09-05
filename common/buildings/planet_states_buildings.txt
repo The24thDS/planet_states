@@ -93,11 +93,11 @@ building_ps_anti_matter_reactor = {
 	}
 }
 
-building_ps_hydroponics_farms_complex = {
+building_ps_aeroponics_farms_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
-	icon = building_hydroponics_farm
+	icon = building_aeroponics_farm
 
 	potential = {
 		custom_tooltip = {
@@ -444,7 +444,7 @@ building_ps_crowded_serf_houses = {
 	}
 }
 
-building_ps_feudal_manor = {
+building_ps_manorial_lands = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes

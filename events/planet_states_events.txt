@@ -155,7 +155,7 @@ event = {
 	}
 }
 
-# ps.11: Add +1 opinion per year (called by ps.3)
+# ps.11: Add +1 opinion per year (called by ps.10)
 country_event = {
 	id = ps.11
 	hide_window = yes
