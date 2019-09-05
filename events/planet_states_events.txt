@@ -230,7 +230,7 @@ fleet_event = {
 		owner = {
 			establish_communications_no_message = event_target:target_planet_state
 			save_event_target_as = target_default_country
-			country_event = { id = story.7 days = 2}
+			country_event = { id = story.7 days = 2 }
 		}
 	}
 
@@ -248,7 +248,7 @@ fleet_event = {
 	}
 
 	option = {
-		name = ps.5.a
+		name = ps.12.a
 		trigger = { owner = { is_homicidal = no } }
 	}
 
