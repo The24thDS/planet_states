@@ -1,0 +1,120 @@
+
+#Root = country, attacker
+#This = country, target
+#This rule is a condition for taking hostile actions towards neutral targets. Such as landing troops or attacking their fleets
+can_take_hostile_actions = {
+	if = {
+		limit = {
+			ROOT = {
+				has_policy_flag = first_contact_attack_not_allowed
+			}
+			NOT = {
+				is_hostile = ROOT
+				has_communications = ROOT
+			}
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_FIRST_CONTACT_PROTOCOL"
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				NOT = { has_country_flag = hostile_to_nomads }
+				ROOT = {
+					is_country_type = nomad
+				}
+			}
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_FIRST_CONTACT_PROTOCOL"
+			always = no
+		}
+	}
+	else_if = {
+		#attacking primitives with non-interference
+		limit = {
+			ROOT = {
+				is_country_type = default
+				OR = {
+					has_policy_flag = interference_passive
+					has_policy_flag = interference_active
+				}
+			}
+			is_primitive = yes
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_NATIVE_INTERFERENCE"
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			is_primitive = yes
+			ROOT = { is_country_type = default }
+			capital_scope = {
+				root = {
+					NOT = {
+						any_planet_within_border = {
+							is_same_value = prevprev
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = ""
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { is_subject_type = satrapy }
+			is_country_type = faction
+			root = {
+				any_owned_planet = {
+					exists = controller
+					controller = {
+						is_same_value = prevprevprev
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = ""
+			always = yes
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { is_subject_type = satrapy }
+		}
+		custom_tooltip = {
+			text = "CAN_TAKE_HOSTILE_ACTION_SATRAPY"
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
+			is_country_type = planet_state
+			ROOT = { is_country_type = default }
+			capital_scope = {
+				root = {
+					NOT = {
+						any_planet_within_border = {
+							is_same_value = prevprev
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = ""
+			always = no
+		}
+	}
+	else = {
+		always = yes
+	}
+}

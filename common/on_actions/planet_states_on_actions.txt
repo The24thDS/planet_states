@@ -14,10 +14,24 @@ on_entering_system_fleet = {
 	}
 }
 
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		ps.15 # No More Energy - Trades Canceled
+	}
+}
+
 # No scope, like on_game_start
 on_yearly_pulse = {
 	events = {
 		ps.10 # Planet-State Yearly Border Opinion
+	}
+}
+
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		ps.14 # Resource Deal yearly opinion
 	}
 }
 
@@ -51,14 +65,17 @@ on_entering_battle = {
 	}
 }
 
-
-#This = destroyed country
-#From = optional, destroyer (country)
-on_country_destroyed = {
+# Triggers country_event for the attacker upon victory
+# (Before controller is switched)
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+# IDENTITIES: attacker is the side that "IsHostile" to
+# the planet controller; e.g. spawned monster armies
+# are attackers, but if they win and the player attempts
+# to retake the planet, the player is the attacker
+on_planet_attackers_win = {
 	events = {
-		ps.1000 # Egalitarian PS destroyed (HIDDEN)
-		ps.2000 # Authoritarian PS destroyed (HIDDEN)
-		ps.3000 # Militarist PS destroyed (HIDDEN)
-		ps.4000 # Pacifist PS destroyed (HIDDEN)
+		ps.16 # Planet-State Conquered (HIDDEN)
 	}
 }

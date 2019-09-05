@@ -340,6 +340,177 @@ country_event = {
 	}
 }
 
+# ps.14: Resource Deal yearly opinion (on_yearly_pulse_country)
+country_event = {
+	id = ps.14
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_any_active_ps_egalitarian_deal = yes
+			has_any_active_ps_authoritarian_deal = yes
+			has_any_active_ps_militarist_deal = yes
+			has_any_active_ps_pacifist_deal = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_any_active_ps_egalitarian_deal = yes }
+			every_country = {
+				limit = { has_country_flag = ps_egalitarian }
+				add_trust = {
+					who = Root
+					amount = 2
+				}
+			}
+		}
+		if = {
+			limit = { has_any_active_ps_authoritarian_deal = yes }
+			every_country = {
+				limit = { has_country_flag = ps_authoritarian }
+				add_trust = {
+					who = Root
+					amount = 2
+				}
+			}
+		}
+		if = {
+			limit = { has_any_active_ps_militarist_deal = yes }
+			every_country = {
+				limit = { has_country_flag = ps_militarist }
+				add_trust = {
+					who = Root
+					amount = 2
+				}
+			}
+		}
+		if = {
+			limit = { has_any_active_ps_pacifist_deal = yes }
+			every_country = {
+				limit = { has_country_flag = ps_pacifist }
+				add_trust = {
+					who = Root
+					amount = 2
+				}
+			}
+		}
+	}
+}
+
+# ps.15: No More Energy - Trades Canceled (on_monthly_pulse_country)
+country_event = {
+	id = ps.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+		resource_stockpile_compare = { resource = energy value <= 0 }
+		OR = {
+			has_active_ps_egalitarian_trade_deal = yes
+			has_active_ps_authoritarian_trade_deal = yes
+			has_active_ps_militarist_trade_deal = yes
+			has_active_ps_pacifist_trade_deal = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_active_ps_egalitarian_trade_deal = yes }
+			remove_ps_egalitarian_trade_deal = yes
+			every_country = {
+				limit = { has_country_flag = ps_egalitarian }
+				add_trust = {
+					who = Root
+					amount = -20
+				}
+			}
+		}
+		if = {
+			limit = { has_active_ps_authoritarian_trade_deal = yes }
+			remove_ps_authoritarian_trade_deal = yes
+			every_country = {
+				limit = { has_country_flag = ps_authoritarian }
+				add_trust = {
+					who = Root
+					amount = -20
+				}
+			}
+		}
+		if = {
+			limit = { has_active_ps_militarist_trade_deal = yes }
+			remove_ps_militarist_trade_deal = yes
+			every_country = {
+				limit = { has_country_flag = ps_militarist }
+				add_trust = {
+					who = Root
+					amount = -20
+				}
+			}
+		}
+		if = {
+			limit = { has_active_ps_pacifist_trade_deal = yes }
+			remove_ps_pacifist_trade_deal = yes
+			every_country = {
+				limit = { has_country_flag = ps_pacifist }
+				add_trust = {
+					who = Root
+					amount = -20
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				NOR = {
+					has_active_xuracorp_trade = yes
+					has_active_riggan_trade = yes
+					has_active_muutagan_trade = yes
+				}
+			}
+			country_event = { id = leviathans.171 }
+		}
+	}
+}
+
+# ps.16: Planet-State Conquered (HIDDEN) (on_planet_attackers_win)
+country_event = {
+	id = ps.16
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		From = { is_country_type = planet_state }
+		is_country_type = default
+	}
+
+	immediate = {
+		From = { save_event_target_as = target_planet_state }
+		FromFrom = { save_event_target_as = target_planet_state_capital }
+
+		if = {
+			limit = { From = { has_country_flag = ps_egalitarian } }
+			country_event = { id = ps.1000 }
+		}
+		if = {
+			limit = { From = { has_country_flag = ps_authoritarian } }
+			country_event = { id = ps.2000 }
+		}
+		if = {
+			limit = { From = { has_country_flag = ps_militarist } }
+			country_event = { id = ps.3000 }
+		}
+		if = {
+			limit = { From = { has_country_flag = ps_pacifist } }
+			country_event = { id = ps.4000 }
+		}
+	}
+}
+
 # ps.100: Egalitarian PS - Main Menu (Initial)
 country_event = {
 	id = ps.100
@@ -378,7 +549,7 @@ country_event = {
 		}
 	}
 
-	# Commerce (ps.110)
+	# Resource deal (ps.110)
 	option = {
 		name = ps.100.a
 		trigger = { is_homicidal = no }
@@ -478,7 +649,7 @@ country_event = {
 		}
 	}
 
-	# Commerce (ps.110)
+	# Resource Deal (ps.110)
 	option = {
 		name = ps.100.a
 		allow = {
@@ -557,7 +728,7 @@ country_event = {
 		}
 	}
 
-	# 10 CG for 10 Alloys
+	# 10 CG for 20 Energys
 	option = {
 		name = ps.110.a
 		allow = {
@@ -572,15 +743,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.111 }
-			event_target:target_ps_egalitarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 20 CG for 20 Alloys
+	# 20 CG for 40 Energy
 	option = {
 		name = ps.110.a
 		allow = {
@@ -595,15 +760,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.111 }
-			event_target:target_ps_egalitarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 30 CG for 30 Alloys
+	# 30 CG for 60 Energy
 	option = {
 		name = ps.110.a
 		allow = {
@@ -618,15 +777,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.111 }
-			event_target:target_ps_egalitarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 40 CG for 40 Alloys
+	# 40 CG for 80 Energy
 	option = {
 		name = ps.110.a
 		allow = {
@@ -641,15 +794,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.111 }
-			event_target:target_ps_egalitarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 50 CG for 50 Alloys
+	# 50 CG for 100 Energy
 	option = {
 		name = ps.110.a
 		allow = {
@@ -664,12 +811,6 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.111 }
-			event_target:target_ps_egalitarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
 
@@ -787,29 +928,20 @@ country_event = {
 	}
 }
 
-# ps.1000: Egalitarian PS destroyed (HIDDEN) (called by on_country_destroyed)
+# ps.1000: Egalitarian PS destroyed (HIDDEN)
 event = {
 	id = ps.1000
 	hide_window = yes
 
 	is_triggered_only = yes
 
-	trigger = {
-		is_country_type = planet_state
-		has_country_flag = ps_egalitarian
-	}
-
 	immediate = {
-		capital_scope = {
-			save_event_target_as = ps_egalitarian_capital
-		}
-		From = {
-			country_event = { id = ps.1001 }
-			save_event_target_as = ps_egalitarian_destroyer
-		}
+		country_event = { id = ps.1001 }
+		save_event_target_as = ps_egalitarian_destroyer
+
 		every_country = {
 			limit = {
-				has_communications = Root
+				has_communications = event_target:target_planet_state
 				NOT = { is_country = event_target:ps_egalitarian_destroyer }
 				is_country_type = default
 			}
@@ -824,13 +956,28 @@ country_event = {
 	title = ps.1001.name
 	desc = ps.1001.desc
 	picture = GFX_evt_space_debris
-	location = event_target:ps_egalitarian_capital
+	location = event_target:target_planet_state_capital
 	show_sound = event_ship_bridge
 
 	is_triggered_only = yes
 
 	immediate = {
 		set_country_flag = destroyed_ps_egalitarian
+		if = {
+			limit = { is_regular_empire = yes }
+			event_target:target_planet_state_capital = {
+				add_modifier = {
+					modifier = planet_lost_autonomy
+					years = 10
+				}
+				set_owner = Root
+			}
+		}
+		else = {
+			event_target:target_planet_state_capital = {
+				set_owner = Root
+			}
+		}
 	}
 
 	option = {
@@ -871,7 +1018,7 @@ country_event = {
 		}
 	}
 	picture = GFX_evt_exploding_ship
-	location = event_target:ps_egalitarian_capital
+	location = event_target:target_planet_state_capital
 	show_sound = event_ship_explosion
 
 	is_triggered_only = yes
@@ -917,7 +1064,7 @@ country_event = {
 	}
 }
 
-# ps.1003: Attacked Egalitarian PS (Hidden)
+# ps.1003: Attacked Egalitarian PS (Hidden) (on_entering_battle)
 country_event = {
 	id = ps.1003
 	hide_window = yes
@@ -967,7 +1114,7 @@ country_event = {
 	}
 }
 
-# ps.1005: Attacked Egalitarian PS - Refuses Communications
+# ps.1005: Attacked Egalitarian PS - Refuses Communications (on_custom_diplomacy)
 country_event = {
 	id = ps.1005
 	title = ps.1005.name
@@ -1062,7 +1209,7 @@ country_event = {
 		}
 	}
 
-	# Trade deal (ps.210)
+	# Resource Deal (ps.210)
 	option = {
 		name = ps.200.a
 		trigger = { is_homicidal = no }
@@ -1162,7 +1309,7 @@ country_event = {
 		}
 	}
 
-	# Trade deal (ps.210)
+	# Resource deal (ps.210)
 	option = {
 		name = ps.200.a
 		allow = {
@@ -1241,7 +1388,7 @@ country_event = {
 		}
 	}
 
-	# 10 Minerals for 10 Food
+	# 10 Minerals for 10 Energy
 	option = {
 		name = ps.210.a
 		allow = {
@@ -1256,15 +1403,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.211 }
-			event_target:target_ps_authoritarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 20 Minerals for 20 Food
+	# 20 Minerals for 20 Energy
 	option = {
 		name = ps.210.a
 		allow = {
@@ -1279,15 +1420,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.211 }
-			event_target:target_ps_authoritarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 30 Minerals for 30 Food
+	# 30 Minerals for 30 Energy
 	option = {
 		name = ps.210.a
 		allow = {
@@ -1302,15 +1437,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.211 }
-			event_target:target_ps_authoritarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 40 Minerals for 40 Food
+	# 40 Minerals for 40 Energy
 	option = {
 		name = ps.210.a
 		allow = {
@@ -1325,15 +1454,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.211 }
-			event_target:target_ps_authoritarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 50 Minerals for 50 Food
+	# 50 Minerals for 50 Energy
 	option = {
 		name = ps.210.a
 		allow = {
@@ -1348,12 +1471,6 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.211 }
-			event_target:target_ps_authoritarian = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
 
@@ -1371,7 +1488,7 @@ country_event = {
 	}
 }
 
-# ps.111: Resource Deal - Answer
+# ps.211: Resource Deal - Answer
 country_event = {
 	id = ps.211
 	title = ps.210.name
@@ -1470,29 +1587,20 @@ country_event = {
 	}
 }
 
-# ps.2000: Authoritarian PS destroyed (HIDDEN) (called by on_country_destroyed)
+# ps.2000: Authoritarian PS destroyed (HIDDEN)
 event = {
 	id = ps.2000
 	hide_window = yes
 
 	is_triggered_only = yes
 
-	trigger = {
-		is_country_type = planet_state
-		has_country_flag = ps_authoritarian
-	}
-
 	immediate = {
-		capital_scope = {
-			save_event_target_as = ps_authoritarian_capital
-		}
-		From = {
-			country_event = { id = ps.2001 }
-			save_event_target_as = ps_authoritarian_destroyer
-		}
+		country_event = { id = ps.2001 }
+		save_event_target_as = ps_authoritarian_destroyer
+
 		every_country = {
 			limit = {
-				has_communications = Root
+				has_communications = event_target:target_planet_state
 				NOT = { is_country = event_target:ps_authoritarian_destroyer }
 				is_country_type = default
 			}
@@ -1507,13 +1615,28 @@ country_event = {
 	title = ps.2001.name
 	desc = ps.2001.desc
 	picture = GFX_evt_space_debris
-	location = event_target:ps_authoritarian_capital
+	location = event_target:target_planet_state_capital
 	show_sound = event_ship_bridge
 
 	is_triggered_only = yes
 
 	immediate = {
 		set_country_flag = destroyed_ps_authoritarian
+		if = {
+			limit = { is_regular_empire = yes }
+			event_target:target_planet_state_capital = {
+				add_modifier = {
+					modifier = planet_lost_autonomy
+					years = 10
+				}
+				set_owner = Root
+			}
+		}
+		else = {
+			event_target:target_planet_state_capital = {
+				set_owner = Root
+			}
+		}
 	}
 
 	option = {
@@ -1554,7 +1677,7 @@ country_event = {
 		}
 	}
 	picture = GFX_evt_exploding_ship
-	location = event_target:ps_authoritarian_capital
+	location = event_target:target_planet_state_capital
 	show_sound = event_ship_explosion
 
 	is_triggered_only = yes
@@ -1600,7 +1723,7 @@ country_event = {
 	}
 }
 
-# ps.2003: Attacked Authoritarian PS (Hidden)
+# ps.2003: Attacked Authoritarian PS (Hidden) (on_entering_battle)
 country_event = {
 	id = ps.2003
 	hide_window = yes
@@ -1745,7 +1868,7 @@ country_event = {
 		}
 	}
 
-	# Commerce (ps.310)
+	# Resource deal (ps.310)
 	option = {
 		name = ps.300.a
 		trigger = { is_homicidal = no }
@@ -1845,7 +1968,7 @@ country_event = {
 		}
 	}
 
-	# Commerce (ps.310)
+	# Resource Deal (ps.310)
 	option = {
 		name = ps.300.a
 		allow = {
@@ -1924,7 +2047,7 @@ country_event = {
 		}
 	}
 
-	# 10 CG for 10 Alloys
+	# 10 Alloys for 40 Energy
 	option = {
 		name = ps.310.a
 		allow = {
@@ -1939,15 +2062,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.311 }
-			event_target:target_ps_militarist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 20 CG for 20 Alloys
+	# 20 Alloys for 80 Energy
 	option = {
 		name = ps.310.a
 		allow = {
@@ -1962,15 +2079,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.311 }
-			event_target:target_ps_militarist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 30 CG for 30 Alloys
+	# 30 Alloys for 120 Energy
 	option = {
 		name = ps.310.a
 		allow = {
@@ -1985,15 +2096,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.311 }
-			event_target:target_ps_militarist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 40 CG for 40 Alloys
+	# 40 Alloys for 160 Energy
 	option = {
 		name = ps.310.a
 		allow = {
@@ -2008,15 +2113,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.311 }
-			event_target:target_ps_militarist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 50 CG for 50 Alloys
+	# 50 Alloys for 200 Energy
 	option = {
 		name = ps.310.a
 		allow = {
@@ -2031,12 +2130,6 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.311 }
-			event_target:target_ps_militarist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
 
@@ -2153,29 +2246,20 @@ country_event = {
 	}
 }
 
-# ps.3000: Militarist PS destroyed (HIDDEN) (called by on_country_destroyed)
+# ps.3000: Militarist PS destroyed (HIDDEN)
 event = {
 	id = ps.3000
 	hide_window = yes
 
 	is_triggered_only = yes
 
-	trigger = {
-		is_country_type = planet_state
-		has_country_flag = ps_militarist
-	}
-
 	immediate = {
-		capital_scope = {
-			save_event_target_as = ps_militarist_capital
-		}
-		From = {
-			country_event = { id = ps.3001 }
-			save_event_target_as = ps_militarist_destroyer
-		}
+		country_event = { id = ps.3001 }
+		save_event_target_as = ps_militarist_destroyer
+
 		every_country = {
 			limit = {
-				has_communications = Root
+				has_communications = event_target:target_planet_state
 				NOT = { is_country = event_target:ps_militarist_destroyer }
 				is_country_type = default
 			}
@@ -2190,13 +2274,28 @@ country_event = {
 	title = ps.3001.name
 	desc = ps.3001.desc
 	picture = GFX_evt_space_debris
-	location = event_target:ps_militarist_capital
+	location = event_target:target_planet_state_capital
 	show_sound = event_ship_bridge
 
 	is_triggered_only = yes
 
 	immediate = {
 		set_country_flag = destroyed_ps_militarist
+		if = {
+			limit = { is_regular_empire = yes }
+			event_target:target_planet_state_capital = {
+				add_modifier = {
+					modifier = planet_lost_autonomy
+					years = 10
+				}
+				set_owner = Root
+			}
+		}
+		else = {
+			event_target:target_planet_state_capital = {
+				set_owner = Root
+			}
+		}
 	}
 
 	option = {
@@ -2237,7 +2336,7 @@ country_event = {
 		}
 	}
 	picture = GFX_evt_exploding_ship
-	location = event_target:ps_militarist_capital
+	location = event_target:target_planet_state_capital
 	show_sound = event_ship_explosion
 
 	is_triggered_only = yes
@@ -2283,7 +2382,7 @@ country_event = {
 	}
 }
 
-# ps.3003: Attacked Militarist PS (Hidden)
+# ps.3003: Attacked Militarist PS (Hidden) (on_entering_battle)
 country_event = {
 	id = ps.3003
 	hide_window = yes
@@ -2428,7 +2527,7 @@ country_event = {
 		}
 	}
 
-	# Commerce (ps.410)
+	# Resource deal (ps.410)
 	option = {
 		name = ps.400.a
 		trigger = { is_homicidal = no }
@@ -2528,7 +2627,7 @@ country_event = {
 		}
 	}
 
-	# Commerce (ps.410)
+	# Resource deal (ps.410)
 	option = {
 		name = ps.400.a
 		allow = {
@@ -2607,7 +2706,7 @@ country_event = {
 		}
 	}
 
-	# 10 CG for 10 Alloys
+	# 10 Food for 10 Energy
 	option = {
 		name = ps.410.a
 		allow = {
@@ -2622,15 +2721,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.411 }
-			event_target:target_ps_pacifist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 20 CG for 20 Alloys
+	# 20 Food for 20 Energy
 	option = {
 		name = ps.410.a
 		allow = {
@@ -2645,15 +2738,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.411 }
-			event_target:target_ps_pacifist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 30 CG for 30 Alloys
+	# 30 Food for 30 Energy
 	option = {
 		name = ps.410.a
 		allow = {
@@ -2668,15 +2755,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.411 }
-			event_target:target_ps_pacifist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 40 CG for 40 Alloys
+	# 40 Food for 40 Energy
 	option = {
 		name = ps.410.a
 		allow = {
@@ -2691,15 +2772,9 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.411 }
-			event_target:target_ps_pacifist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
-	# 50 CG for 50 Alloys
+	# 50 Food for 50 Energy
 	option = {
 		name = ps.410.a
 		allow = {
@@ -2714,12 +2789,6 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ps.411 }
-			event_target:target_ps_pacifist = {
-				add_trust = {
-					who = Root
-					amount = 20
-				}
-			}
 		}
 	}
 
@@ -2836,29 +2905,20 @@ country_event = {
 	}
 }
 
-# ps.4000: Pacifist PS destroyed (HIDDEN) (called by on_country_destroyed)
+# ps.4000: Pacifist PS destroyed (HIDDEN)
 event = {
 	id = ps.4000
 	hide_window = yes
 
 	is_triggered_only = yes
 
-	trigger = {
-		is_country_type = planet_state
-		has_country_flag = ps_pacifist
-	}
-
 	immediate = {
-		capital_scope = {
-			save_event_target_as = ps_pacifist_capital
-		}
-		From = {
-			country_event = { id = ps.4001 }
-			save_event_target_as = ps_pacifist_destroyer
-		}
+		country_event = { id = ps.4001 }
+		save_event_target_as = ps_pacifist_destroyer
+
 		every_country = {
 			limit = {
-				has_communications = Root
+				has_communications = event_target:target_planet_state
 				NOT = { is_country = event_target:ps_pacifist_destroyer }
 				is_country_type = default
 			}
@@ -2873,13 +2933,28 @@ country_event = {
 	title = ps.4001.name
 	desc = ps.4001.desc
 	picture = GFX_evt_space_debris
-	location = event_target:ps_pacifist_capital
+	location = event_target:target_planet_state_capital
 	show_sound = event_ship_bridge
 
 	is_triggered_only = yes
 
 	immediate = {
 		set_country_flag = destroyed_ps_pacifist
+		if = {
+			limit = { is_regular_empire = yes }
+			event_target:target_planet_state_capital = {
+				add_modifier = {
+					modifier = planet_lost_autonomy
+					years = 10
+				}
+				set_owner = Root
+			}
+		}
+		else = {
+			event_target:target_planet_state_capital = {
+				set_owner = Root
+			}
+		}
 	}
 
 	option = {
@@ -2920,7 +2995,7 @@ country_event = {
 		}
 	}
 	picture = GFX_evt_exploding_ship
-	location = event_target:ps_pacifist_capital
+	location = event_target:target_planet_state_capital
 	show_sound = event_ship_explosion
 
 	is_triggered_only = yes
@@ -2966,7 +3041,7 @@ country_event = {
 	}
 }
 
-# ps.4003: Attacked Pacifist PS (Hidden)
+# ps.4003: Attacked Pacifist PS (Hidden) (on_entering_battle)
 country_event = {
 	id = ps.4003
 	hide_window = yes
