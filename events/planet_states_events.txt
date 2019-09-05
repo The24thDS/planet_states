@@ -480,7 +480,6 @@ country_event = {
 country_event = {
 	id = ps.16
 	hide_window = yes
-
 	is_triggered_only = yes
 
 	trigger = {
@@ -1118,7 +1117,7 @@ country_event = {
 country_event = {
 	id = ps.1005
 	title = ps.1005.name
-	desc = ps.1005.desc
+	desc = ps.1005a.desc
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1777,7 +1776,7 @@ country_event = {
 country_event = {
 	id = ps.2005
 	title = ps.2005.name
-	desc = ps.2005.desc
+	desc = ps.2005a.desc
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2436,7 +2435,7 @@ country_event = {
 country_event = {
 	id = ps.3005
 	title = ps.3005.name
-	desc = ps.3005.desc
+	desc = ps.3005a.desc
 
 	is_triggered_only = yes
 	diplomatic = yes
