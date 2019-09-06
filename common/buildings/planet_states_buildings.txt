@@ -97,7 +97,7 @@ building_ps_aeroponics_farms_complex = {
 	base_buildtime = 480
 	can_build = yes
 	can_demolish = yes
-	icon = building_aeroponics_farm
+	icon = building_hydroponics_farm
 
 	potential = {
 		custom_tooltip = {

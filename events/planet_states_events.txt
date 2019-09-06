@@ -519,6 +519,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
+	force_open = yes
 
 	picture_event_data = {
 		portrait = event_target:target_ps_egalitarian
@@ -599,20 +600,33 @@ country_event = {
 	# Goodbye
 	option = {
 		name = ps.100.goodbye
+		default_hide_option = yes
 		trigger = { is_homicidal = no }
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
 	}
 
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
 	}
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
 	}
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
 	}
 }
 
@@ -697,6 +711,10 @@ country_event = {
 	# Goodbye
 	option = {
 		name = ps.100.goodbye
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = ps_egalitarian_diplomacy_engaged
+		}
 	}
 }
 
@@ -746,7 +764,7 @@ country_event = {
 	}
 	# 20 CG for 40 Energy
 	option = {
-		name = ps.110.a
+		name = ps.110.b
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 2000 }
 			hidden_trigger = {
@@ -763,7 +781,7 @@ country_event = {
 	}
 	# 30 CG for 60 Energy
 	option = {
-		name = ps.110.a
+		name = ps.110.c
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
@@ -780,7 +798,7 @@ country_event = {
 	}
 	# 40 CG for 80 Energy
 	option = {
-		name = ps.110.a
+		name = ps.110.d
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
@@ -797,7 +815,7 @@ country_event = {
 	}
 	# 50 CG for 100 Energy
 	option = {
-		name = ps.110.a
+		name = ps.110.e
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
@@ -1179,6 +1197,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
+	force_open = yes
 
 	picture_event_data = {
 		portrait = event_target:target_ps_authoritarian
@@ -1259,20 +1278,33 @@ country_event = {
 	# Goodbye
 	option = {
 		name = ps.200.goodbye
+		default_hide_option = yes
 		trigger = { is_homicidal = no }
+		hidden_effect = {
+			remove_country_flag = ps_authoritarian_diplomacy_engaged
+		}
 	}
 
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		hidden_effect = {
+			remove_country_flag = ps_authoritarian_diplomacy_engaged
+		}
 	}
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		hidden_effect = {
+			remove_country_flag = ps_authoritarian_diplomacy_engaged
+		}
 	}
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
+		hidden_effect = {
+			remove_country_flag = ps_authoritarian_diplomacy_engaged
+		}
 	}
 }
 
@@ -1357,6 +1389,10 @@ country_event = {
 	# Goodbye
 	option = {
 		name = ps.200.goodbye
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = ps_authoritarian_diplomacy_engaged
+		}
 	}
 }
 
@@ -1406,7 +1442,7 @@ country_event = {
 	}
 	# 20 Minerals for 20 Energy
 	option = {
-		name = ps.210.a
+		name = ps.210.b
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 2000 }
 			hidden_trigger = {
@@ -1423,7 +1459,7 @@ country_event = {
 	}
 	# 30 Minerals for 30 Energy
 	option = {
-		name = ps.210.a
+		name = ps.210.c
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
@@ -1440,7 +1476,7 @@ country_event = {
 	}
 	# 40 Minerals for 40 Energy
 	option = {
-		name = ps.210.a
+		name = ps.210.d
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
@@ -1457,7 +1493,7 @@ country_event = {
 	}
 	# 50 Minerals for 50 Energy
 	option = {
-		name = ps.210.a
+		name = ps.210.e
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
@@ -1611,8 +1647,8 @@ event = {
 # ps.2001: Authoritarian PS destroyed (Destroyer)
 country_event = {
 	id = ps.2001
-	title = ps.2001.name
-	desc = ps.2001.desc
+	title = ps.1001.name
+	desc = ps.1001.desc
 	picture = GFX_evt_space_debris
 	location = event_target:target_planet_state_capital
 	show_sound = event_ship_bridge
@@ -1646,30 +1682,30 @@ country_event = {
 # ps.2002: Authoritarian PS Destroyed
 country_event = {
 	id = ps.2002
-	title = ps.2002.name
+	title = ps.1002.name
 	desc = {
-		text = ps.2002.a.desc
+		text = ps.1002.a.desc
 		trigger = {
 			has_any_active_ps_authoritarian_deal = no
 			has_communications = event_target:ps_authoritarian_destroyer
 		}
 	}
 	desc = {
-		text = ps.2002.b.desc
+		text = ps.1002.b.desc
 		trigger = {
 			has_any_active_ps_authoritarian_deal = no
 			NOT = { has_communications = event_target:ps_authoritarian_destroyer }
 		}
 	}
 	desc = {
-		text = ps.2002.c.desc
+		text = ps.1002.c.desc
 		trigger = {
 			has_any_active_ps_authoritarian_deal = yes
 			has_communications = event_target:ps_authoritarian_destroyer
 		}
 	}
 	desc = {
-		text = ps.2002.d.desc
+		text = ps.1002.d.desc
 		trigger = {
 			has_any_active_ps_authoritarian_deal = yes
 			NOT = { has_communications = event_target:ps_authoritarian_destroyer }
@@ -1709,13 +1745,13 @@ country_event = {
 	}
 
 	option  = {
-		name = ps.2002.a
+		name = ps.1002.a
 		trigger = {
 			has_any_active_ps_authoritarian_deal = no
 		}
 	}
 	option = {
-		name = ps.2002.b
+		name = ps.1002.b
 		trigger = {
 			has_any_active_ps_authoritarian_deal = yes
 		}
@@ -1838,6 +1874,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
+	force_open = yes
 
 	picture_event_data = {
 		portrait = event_target:target_ps_militarist
@@ -1918,20 +1955,33 @@ country_event = {
 	# Goodbye
 	option = {
 		name = ps.300.goodbye
+		default_hide_option = yes
 		trigger = { is_homicidal = no }
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 }
 
@@ -2016,6 +2066,10 @@ country_event = {
 	# Goodbye
 	option = {
 		name = ps.300.goodbye
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 }
 
@@ -2065,7 +2119,7 @@ country_event = {
 	}
 	# 20 Alloys for 80 Energy
 	option = {
-		name = ps.310.a
+		name = ps.310.b
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 2000 }
 			hidden_trigger = {
@@ -2082,7 +2136,7 @@ country_event = {
 	}
 	# 30 Alloys for 120 Energy
 	option = {
-		name = ps.310.a
+		name = ps.310.c
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
@@ -2099,7 +2153,7 @@ country_event = {
 	}
 	# 40 Alloys for 160 Energy
 	option = {
-		name = ps.310.a
+		name = ps.310.d
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
@@ -2116,7 +2170,7 @@ country_event = {
 	}
 	# 50 Alloys for 200 Energy
 	option = {
-		name = ps.310.a
+		name = ps.310.e
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
@@ -2270,8 +2324,8 @@ event = {
 # ps.3001: Militarist PS destroyed (Destroyer)
 country_event = {
 	id = ps.3001
-	title = ps.3001.name
-	desc = ps.3001.desc
+	title = ps.1001.name
+	desc = ps.1001.desc
 	picture = GFX_evt_space_debris
 	location = event_target:target_planet_state_capital
 	show_sound = event_ship_bridge
@@ -2305,30 +2359,30 @@ country_event = {
 # ps.3002: Militarist PS Destroyed
 country_event = {
 	id = ps.3002
-	title = ps.3002.name
+	title = ps.1002.name
 	desc = {
-		text = ps.3002.a.desc
+		text = ps.1002.a.desc
 		trigger = {
 			has_any_active_ps_militarist_deal = no
 			has_communications = event_target:ps_militarist_destroyer
 		}
 	}
 	desc = {
-		text = ps.3002.b.desc
+		text = ps.1002.b.desc
 		trigger = {
 			has_any_active_ps_militarist_deal = no
 			NOT = { has_communications = event_target:ps_militarist_destroyer }
 		}
 	}
 	desc = {
-		text = ps.3002.c.desc
+		text = ps.1002.c.desc
 		trigger = {
 			has_any_active_ps_militarist_deal = yes
 			has_communications = event_target:ps_militarist_destroyer
 		}
 	}
 	desc = {
-		text = ps.3002.d.desc
+		text = ps.1002.d.desc
 		trigger = {
 			has_any_active_ps_militarist_deal = yes
 			NOT = { has_communications = event_target:ps_militarist_destroyer }
@@ -2368,13 +2422,13 @@ country_event = {
 	}
 
 	option  = {
-		name = ps.3002.a
+		name = ps.1002.a
 		trigger = {
 			has_any_active_ps_militarist_deal = no
 		}
 	}
 	option = {
-		name = ps.3002.b
+		name = ps.1002.b
 		trigger = {
 			has_any_active_ps_militarist_deal = yes
 		}
@@ -2497,6 +2551,7 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
+	force_open = yes
 
 	picture_event_data = {
 		portrait = event_target:target_ps_pacifist
@@ -2577,20 +2632,33 @@ country_event = {
 	# Goodbye
 	option = {
 		name = ps.400.goodbye
+		default_hide_option = yes
 		trigger = { is_homicidal = no }
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 
 	option = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 }
 
@@ -2675,6 +2743,10 @@ country_event = {
 	# Goodbye
 	option = {
 		name = ps.400.goodbye
+		default_hide_option = yes
+		hidden_effect = {
+			remove_country_flag = ps_militarist_diplomacy_engaged
+		}
 	}
 }
 
@@ -2724,7 +2796,7 @@ country_event = {
 	}
 	# 20 Food for 20 Energy
 	option = {
-		name = ps.410.a
+		name = ps.410.b
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 2000 }
 			hidden_trigger = {
@@ -2741,7 +2813,7 @@ country_event = {
 	}
 	# 30 Food for 30 Energy
 	option = {
-		name = ps.410.a
+		name = ps.410.c
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
@@ -2758,7 +2830,7 @@ country_event = {
 	}
 	# 40 Food for 40 Energy
 	option = {
-		name = ps.410.a
+		name = ps.410.d
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
@@ -2775,7 +2847,7 @@ country_event = {
 	}
 	# 50 Food for 50 Energy
 	option = {
-		name = ps.410.a
+		name = ps.410.e
 		allow = {
 			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
@@ -2929,8 +3001,8 @@ event = {
 # ps.4001: Pacifist PS destroyed (Destroyer)
 country_event = {
 	id = ps.4001
-	title = ps.4001.name
-	desc = ps.4001.desc
+	title = ps.1001.name
+	desc = ps.1001.desc
 	picture = GFX_evt_space_debris
 	location = event_target:target_planet_state_capital
 	show_sound = event_ship_bridge
@@ -2964,30 +3036,30 @@ country_event = {
 # ps.4002: Pacifist PS Destroyed
 country_event = {
 	id = ps.4002
-	title = ps.4002.name
+	title = ps.1002.name
 	desc = {
-		text = ps.4002.a.desc
+		text = ps.1002.a.desc
 		trigger = {
 			has_any_active_ps_pacifist_deal = no
 			has_communications = event_target:ps_pacifist_destroyer
 		}
 	}
 	desc = {
-		text = ps.4002.b.desc
+		text = ps.1002.b.desc
 		trigger = {
 			has_any_active_ps_pacifist_deal = no
 			NOT = { has_communications = event_target:ps_pacifist_destroyer }
 		}
 	}
 	desc = {
-		text = ps.4002.c.desc
+		text = ps.1002.c.desc
 		trigger = {
 			has_any_active_ps_pacifist_deal = yes
 			has_communications = event_target:ps_pacifist_destroyer
 		}
 	}
 	desc = {
-		text = ps.4002.d.desc
+		text = ps.1002.d.desc
 		trigger = {
 			has_any_active_ps_pacifist_deal = yes
 			NOT = { has_communications = event_target:ps_pacifist_destroyer }
@@ -3027,13 +3099,13 @@ country_event = {
 	}
 
 	option  = {
-		name = ps.4002.a
+		name = ps.1002.a
 		trigger = {
 			has_any_active_ps_pacifist_deal = no
 		}
 	}
 	option = {
-		name = ps.4002.b
+		name = ps.1002.b
 		trigger = {
 			has_any_active_ps_pacifist_deal = yes
 		}
@@ -3094,7 +3166,7 @@ country_event = {
 country_event = {
 	id = ps.4005
 	title = ps.4005.name
-	desc = ps.4005.desc
+	desc = ps.4005a.desc
 
 	is_triggered_only = yes
 	diplomatic = yes

@@ -449,6 +449,7 @@ create_planet_state_militarist = {
 			plural = "NAME_Synthetics"
 			class = ROBOT
 			portrait = "default_robot"
+			namelist = random
 			traits = {
 				trait = "trait_mechanical"
 				trait = "trait_robot_efficient_processors"
