@@ -17,7 +17,7 @@ on_entering_system_fleet = {
 # this = country
 on_monthly_pulse_country = {
 	events = {
-		ps.15 # No More Energy - Trades Canceled
+		ps.18 # No More Energy - Trades Canceled
 	}
 }
 
@@ -31,7 +31,7 @@ on_yearly_pulse = {
 # this = country
 on_yearly_pulse_country = {
 	events = {
-		ps.14 # Resource Deal yearly opinion
+		ps.17 # Resource Deal yearly opinion
 	}
 }
 
@@ -76,6 +76,6 @@ on_entering_battle = {
 # to retake the planet, the player is the attacker
 on_planet_attackers_win = {
 	events = {
-		ps.16 # Planet-State Conquered (HIDDEN)
+		ps.19 # Planet-State Conquered (HIDDEN)
 	}
 }

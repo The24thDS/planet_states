@@ -275,40 +275,52 @@ fleet_event = {
 			}
 
 			hidden_effect = {
-				country_event = { id = ps.13 }
+				if = {
+					limit = {
+						event_target:target_planet_state = {
+							has_country_flag = ps_egalitarian
+						}
+					}
+					country_event = { id = ps.13 }
+					break = yes
+				}
+				if = {
+					limit = {
+						event_target:target_planet_state = {
+							has_country_flag = ps_authoritarian
+						}
+					}
+					country_event = { id = ps.14 }
+					break = yes
+				}
+				if = {
+					limit = {
+						event_target:target_planet_state = {
+							has_country_flag = ps_militarist
+						}
+					}
+					country_event = { id = ps.15 }
+					break = yes
+				}
+				if = {
+					limit = {
+						event_target:target_planet_state = {
+							has_country_flag = ps_pacifist
+						}
+					}
+					country_event = { id = ps.16 }
+					break = yes
+				}
 			}
 		}
 	}
 }
 
-# ps.13: First contact with Planet-State
+# ps.13: First contact with Egalitarian Planet-State
 country_event = {
 	id = ps.13
 	title = ps.13.name
-	desc = {
-		trigger = {
-			event_target:target_planet_state = { has_country_flag = ps_egalitarian }
-		}
-		text = ps.13.desc.egalitarian
-	}
-	desc = {
-		trigger = {
-			event_target:target_planet_state = { has_country_flag = ps_authoritarian }
-		}
-		text = ps.13.desc.authoritarian
-	}
-	desc = {
-		trigger = {
-			event_target:target_planet_state = { has_country_flag = ps_militarist }
-		}
-		text = ps.13.desc.militarist
-	}
-	desc = {
-		trigger = {
-			event_target:target_planet_state = { has_country_flag = ps_pacifist }
-		}
-		text = ps.13.desc.pacifist
-	}
+	desc = ps.13.desc
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -318,7 +330,112 @@ country_event = {
 		planet_background = event_target:target_planet_state
 		graphical_culture = event_target:target_planet_state
 		city_level = event_target:target_planet_state
-		room = event_target:target_planet_state.ruler
+		room = personality_federation_builders_room
+	}
+
+	option = {
+		name = ps.13.a
+		trigger = { is_homicidal = no }
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+	}
+}
+# ps.14: First contact with Authoritarian Planet-State
+country_event = {
+	id = ps.14
+	title = ps.14.name
+	desc = ps.14.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = event_target:target_planet_state
+		planet_background = event_target:target_planet_state
+		graphical_culture = event_target:target_planet_state
+		city_level = event_target:target_planet_state
+		room = personality_decadent_hierarchy_room
+	}
+
+	option = {
+		name = ps.13.a
+		trigger = { is_homicidal = no }
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+	}
+}
+# ps.15: First contact with Militarist Planet-State
+country_event = {
+	id = ps.15
+	title = ps.15.name
+	desc = ps.15.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = event_target:target_planet_state
+		planet_background = event_target:target_planet_state
+		graphical_culture = event_target:target_planet_state
+		city_level = event_target:target_planet_state
+		room = personality_honorbound_warriors_room
+	}
+
+	option = {
+		name = ps.13.a
+		trigger = { is_homicidal = no }
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+	}
+	option = {
+		name = TASTY
+		trigger = { has_valid_civic = civic_hive_devouring_swarm }
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = { has_valid_civic = civic_machine_terminator }
+	}
+}
+# ps.16: First contact with Pacifist Planet-State
+country_event = {
+	id = ps.16
+	title = ps.16.name
+	desc = ps.16.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = event_target:target_planet_state
+		planet_background = event_target:target_planet_state
+		graphical_culture = event_target:target_planet_state
+		city_level = event_target:target_planet_state
+		room = personality_spiritual_seekers_room
 	}
 
 	option = {
@@ -340,9 +457,9 @@ country_event = {
 	}
 }
 
-# ps.14: Resource Deal yearly opinion (on_yearly_pulse_country)
+# ps.17: Resource Deal yearly opinion (on_yearly_pulse_country)
 country_event = {
-	id = ps.14
+	id = ps.17
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -400,9 +517,9 @@ country_event = {
 	}
 }
 
-# ps.15: No More Energy - Trades Canceled (on_monthly_pulse_country)
+# ps.18: No More Energy - Trades Canceled (on_monthly_pulse_country)
 country_event = {
-	id = ps.15
+	id = ps.18
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -476,9 +593,9 @@ country_event = {
 	}
 }
 
-# ps.16: Planet-State Conquered (HIDDEN) (on_planet_attackers_win)
+# ps.19: Planet-State Conquered (HIDDEN) (on_planet_attackers_win)
 country_event = {
-	id = ps.16
+	id = ps.19
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -526,7 +643,7 @@ country_event = {
 		planet_background = event_target:target_ps_egalitarian
 		graphical_culture = event_target:target_ps_egalitarian
 		city_level = event_target:target_ps_egalitarian
-		room = event_target:target_ps_egalitarian.ruler
+		room = personality_federation_builders_room
 	}
 
 	trigger = {
@@ -645,7 +762,7 @@ country_event = {
 		planet_background = event_target:target_ps_egalitarian
 		graphical_culture = event_target:target_ps_egalitarian
 		city_level = event_target:target_ps_egalitarian
-		room = event_target:target_ps_egalitarian.ruler
+		room = personality_federation_builders_room
 	}
 
 	trigger = {
@@ -732,7 +849,7 @@ country_event = {
 		planet_background = event_target:target_ps_egalitarian
 		graphical_culture = event_target:target_ps_egalitarian
 		city_level = event_target:target_ps_egalitarian
-		room = event_target:target_ps_egalitarian.ruler
+		room = personality_federation_builders_room
 	}
 
 	immediate = {
@@ -864,7 +981,7 @@ country_event = {
 		planet_background = event_target:target_ps_egalitarian
 		graphical_culture = event_target:target_ps_egalitarian
 		city_level = event_target:target_ps_egalitarian
-		room = event_target:target_ps_egalitarian.ruler
+		room = personality_federation_builders_room
 	}
 
 	immediate = {
@@ -905,7 +1022,7 @@ country_event = {
 		planet_background = event_target:target_ps_egalitarian
 		graphical_culture = event_target:target_ps_egalitarian
 		city_level = event_target:target_ps_egalitarian
-		room = event_target:target_ps_egalitarian.ruler
+		room = personality_federation_builders_room
 	}
 
 	immediate = {
@@ -1129,7 +1246,7 @@ country_event = {
 		planet_background = event_target:target_ps_egalitarian
 		graphical_culture = event_target:target_ps_egalitarian
 		city_level = event_target:target_ps_egalitarian
-		room = event_target:target_ps_egalitarian.ruler
+		room = personality_federation_builders_room
 	}
 
 	option = {
@@ -1152,7 +1269,7 @@ country_event = {
 		planet_background = event_target:target_ps_egalitarian
 		graphical_culture = event_target:target_ps_egalitarian
 		city_level = event_target:target_ps_egalitarian
-		room = event_target:target_ps_egalitarian.ruler
+		room = personality_federation_builders_room
 	}
 
 	trigger = {
@@ -1210,7 +1327,7 @@ country_event = {
 		planet_background = event_target:target_ps_authoritarian
 		graphical_culture = event_target:target_ps_authoritarian
 		city_level = event_target:target_ps_authoritarian
-		room = event_target:target_ps_authoritarian.ruler
+		room = personality_decadent_hierarchy_room
 	}
 
 	trigger = {
@@ -1329,7 +1446,7 @@ country_event = {
 		planet_background = event_target:target_ps_authoritarian
 		graphical_culture = event_target:target_ps_authoritarian
 		city_level = event_target:target_ps_authoritarian
-		room = event_target:target_ps_authoritarian.ruler
+		room = personality_decadent_hierarchy_room
 	}
 
 	trigger = {
@@ -1416,7 +1533,7 @@ country_event = {
 		planet_background = event_target:target_ps_authoritarian
 		graphical_culture = event_target:target_ps_authoritarian
 		city_level = event_target:target_ps_authoritarian
-		room = event_target:target_ps_authoritarian.ruler
+		room = personality_decadent_hierarchy_room
 	}
 
 	immediate = {
@@ -1548,7 +1665,7 @@ country_event = {
 		planet_background = event_target:target_ps_authoritarian
 		graphical_culture = event_target:target_ps_authoritarian
 		city_level = event_target:target_ps_authoritarian
-		room = event_target:target_ps_authoritarian.ruler
+		room = personality_decadent_hierarchy_room
 	}
 
 	immediate = {
@@ -1589,7 +1706,7 @@ country_event = {
 		planet_background = event_target:target_ps_authoritarian
 		graphical_culture = event_target:target_ps_authoritarian
 		city_level = event_target:target_ps_authoritarian
-		room = event_target:target_ps_authoritarian.ruler
+		room = personality_decadent_hierarchy_room
 	}
 
 	immediate = {
@@ -1812,7 +1929,7 @@ country_event = {
 		planet_background = event_target:target_ps_authoritarian
 		graphical_culture = event_target:target_ps_authoritarian
 		city_level = event_target:target_ps_authoritarian
-		room = event_target:target_ps_authoritarian.ruler
+		room = personality_decadent_hierarchy_room
 	}
 
 	option = {
@@ -1835,7 +1952,7 @@ country_event = {
 		planet_background = event_target:target_ps_authoritarian
 		graphical_culture = event_target:target_ps_authoritarian
 		city_level = event_target:target_ps_authoritarian
-		room = event_target:target_ps_authoritarian.ruler
+		room = personality_decadent_hierarchy_room
 	}
 
 	trigger = {
@@ -1893,7 +2010,7 @@ country_event = {
 		planet_background = event_target:target_ps_militarist
 		graphical_culture = event_target:target_ps_militarist
 		city_level = event_target:target_ps_militarist
-		room = event_target:target_ps_militarist.ruler
+		room = personality_honorbound_warriors_room
 	}
 
 	trigger = {
@@ -2012,7 +2129,7 @@ country_event = {
 		planet_background = event_target:target_ps_militarist
 		graphical_culture = event_target:target_ps_militarist
 		city_level = event_target:target_ps_militarist
-		room = event_target:target_ps_militarist.ruler
+		room = personality_honorbound_warriors_room
 	}
 
 	trigger = {
@@ -2099,7 +2216,7 @@ country_event = {
 		planet_background = event_target:target_ps_militarist
 		graphical_culture = event_target:target_ps_militarist
 		city_level = event_target:target_ps_militarist
-		room = event_target:target_ps_militarist.ruler
+		room = personality_honorbound_warriors_room
 	}
 
 	immediate = {
@@ -2231,7 +2348,7 @@ country_event = {
 		planet_background = event_target:target_ps_militarist
 		graphical_culture = event_target:target_ps_militarist
 		city_level = event_target:target_ps_militarist
-		room = event_target:target_ps_militarist.ruler
+		room = personality_honorbound_warriors_room
 	}
 
 	immediate = {
@@ -2272,7 +2389,7 @@ country_event = {
 		planet_background = event_target:target_ps_militarist
 		graphical_culture = event_target:target_ps_militarist
 		city_level = event_target:target_ps_militarist
-		room = event_target:target_ps_militarist.ruler
+		room = personality_honorbound_warriors_room
 	}
 
 	immediate = {
@@ -2495,7 +2612,7 @@ country_event = {
 		planet_background = event_target:target_ps_militarist
 		graphical_culture = event_target:target_ps_militarist
 		city_level = event_target:target_ps_militarist
-		room = event_target:target_ps_militarist.ruler
+		room = personality_honorbound_warriors_room
 	}
 
 	option = {
@@ -2518,7 +2635,7 @@ country_event = {
 		planet_background = event_target:target_ps_militarist
 		graphical_culture = event_target:target_ps_militarist
 		city_level = event_target:target_ps_militarist
-		room = event_target:target_ps_militarist.ruler
+		room = personality_honorbound_warriors_room
 	}
 
 	trigger = {
@@ -2576,7 +2693,7 @@ country_event = {
 		planet_background = event_target:target_ps_pacifist
 		graphical_culture = event_target:target_ps_pacifist
 		city_level = event_target:target_ps_pacifist
-		room = event_target:target_ps_pacifist.ruler
+		room = personality_spiritual_seekers_room
 	}
 
 	trigger = {
@@ -2695,7 +2812,7 @@ country_event = {
 		planet_background = event_target:target_ps_pacifist
 		graphical_culture = event_target:target_ps_pacifist
 		city_level = event_target:target_ps_pacifist
-		room = event_target:target_ps_pacifist.ruler
+		room = personality_spiritual_seekers_room
 	}
 
 	trigger = {
@@ -2782,7 +2899,7 @@ country_event = {
 		planet_background = event_target:target_ps_pacifist
 		graphical_culture = event_target:target_ps_pacifist
 		city_level = event_target:target_ps_pacifist
-		room = event_target:target_ps_pacifist.ruler
+		room = personality_spiritual_seekers_room
 	}
 
 	immediate = {
@@ -2914,7 +3031,7 @@ country_event = {
 		planet_background = event_target:target_ps_pacifist
 		graphical_culture = event_target:target_ps_pacifist
 		city_level = event_target:target_ps_pacifist
-		room = event_target:target_ps_pacifist.ruler
+		room = personality_spiritual_seekers_room
 	}
 
 	immediate = {
@@ -2955,7 +3072,7 @@ country_event = {
 		planet_background = event_target:target_ps_pacifist
 		graphical_culture = event_target:target_ps_pacifist
 		city_level = event_target:target_ps_pacifist
-		room = event_target:target_ps_pacifist.ruler
+		room = personality_spiritual_seekers_room
 	}
 
 	immediate = {
@@ -3178,7 +3295,7 @@ country_event = {
 		planet_background = event_target:target_ps_pacifist
 		graphical_culture = event_target:target_ps_pacifist
 		city_level = event_target:target_ps_pacifist
-		room = event_target:target_ps_pacifist.ruler
+		room = personality_spiritual_seekers_room
 	}
 
 	option = {
@@ -3201,7 +3318,7 @@ country_event = {
 		planet_background = event_target:target_ps_pacifist
 		graphical_culture = event_target:target_ps_pacifist
 		city_level = event_target:target_ps_pacifist
-		room = event_target:target_ps_pacifist.ruler
+		room = personality_spiritual_seekers_room
 	}
 
 	trigger = {
