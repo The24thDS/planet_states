@@ -1,8 +1,8 @@
-This mod adds a bunch of independent, sovereign planets for you to intereact with (or conquer), callend Planet-States.
+This mod adds a bunch of independent, sovereign planets for you to interact with (or conquer), called Planet-States.
 
 They can be thought of as Enclaves With Steroids: you can create a starbase in the system they are on, make some resource deals and get positive opinion with them if they are in your borders. Alternatively, they could also be seen as Micro Fallen Empires: the Planet-State Station that protects the planet is quite powerful and they posses quite advanced technology and awesome buildings - making their conquest quite profitable.
 
-[url=https://github.com/lpslucasps/new_enclaves]Fork me on Github![/url]
+[url=https://github.com/lpslucasps/planet_states]Fork me on Github![/url]
 [url=https://www.patreon.com/lpslucasps]Fund me on Patreon![/url]
 
 Right now the mod adds four Planet-States:
@@ -14,7 +14,11 @@ Right now the mod adds four Planet-States:
 
 If you have a high enough opinion with a Planet-State, you can sign a Commercial Pact with them. Each Commercial Pact gives you +5% Trade Value.
 
+The planets are generated at the game start (I use the "on_game_start" pulse, instead of system initializers, in case you're wondering), so you'll have to start a new game to spawn them.
+
 [h1]COMPATIBILITY[/h1]
+
+[b]Ironman compatible. NOT achievements compatible.[/b]
 
 I overwrote the game rule "can_take_hostile_actions". It should be compatible with any mod that doesn't overwrite the same rule.
 
