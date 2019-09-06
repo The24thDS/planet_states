@@ -10,6 +10,7 @@
   ps.13.desc.militarist: "Another little race has reached the stars, huh?\n\nWe are the §Y[target_planet_state.GetName]§!, a warrior nation only interested in training our soldiers. Training for what, you ask? The next intergalactic crisis that will destroy all life in the universe, of course. It tends to happen every few millenia. Judging by the recent influx of newcomers to the galactic stage, I would say we have about 200 years until the next crisis. Exciting, right?\n\nUntil then, do whatever you want with this system. Just leave our warriors alone. We have much training to do."
   ps.13.desc.pacifist: "Warm regards from the §Y[target_planet_state.GetName]§!, new friend.\n\nWe are a simple, peaceful society of farmers that wish no more than to live in harmony with nature. I'm sure our presence will bring nothing but benefits for you. That is, if you notice us at all."
   ps.13.a: "Well met."
+  ps.yearly.opinion: "+2 £opinion£ Opinion per year"
   # ps.100: Egalitarian PS - Main Menu (Initial)
   ps.100.name: "[target_ps_egalitarian.GetName]"
   ps.100a.desc: "Ah, it's the [This.GetName]. How may we help you today?"

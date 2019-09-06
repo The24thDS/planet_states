@@ -758,6 +758,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_1
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.111 }
 		}
@@ -775,6 +776,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_2
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.111 }
 		}
@@ -792,6 +794,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_3
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.111 }
 		}
@@ -809,6 +812,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_4
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.111 }
 		}
@@ -826,6 +830,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_5
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.111 }
 		}
@@ -921,6 +926,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_commercial_pact
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			event_target:target_ps_egalitarian = {
 				add_trust = {
@@ -1436,6 +1442,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_1
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.211 }
 		}
@@ -1453,6 +1460,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_2
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.211 }
 		}
@@ -1470,6 +1478,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_3
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.211 }
 		}
@@ -1487,6 +1496,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_4
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.211 }
 		}
@@ -1504,6 +1514,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_5
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.211 }
 		}
@@ -1598,6 +1609,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_commercial_pact
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			event_target:target_ps_authoritarian = {
 				add_trust = {
@@ -2113,6 +2125,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_1
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.311 }
 		}
@@ -2130,6 +2143,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_2
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.311 }
 		}
@@ -2147,6 +2161,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_3
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.311 }
 		}
@@ -2164,6 +2179,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_4
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.311 }
 		}
@@ -2181,6 +2197,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_5
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.311 }
 		}
@@ -2275,6 +2292,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_militarist_commercial_pact
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			event_target:target_ps_militarist = {
 				add_trust = {
@@ -2790,6 +2808,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_1
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.411 }
 		}
@@ -2807,6 +2826,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_2
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.411 }
 		}
@@ -2824,6 +2844,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_3
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.411 }
 		}
@@ -2841,6 +2862,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_4
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.411 }
 		}
@@ -2858,6 +2880,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_5
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			country_event = { id = ps.411 }
 		}
@@ -2952,6 +2975,7 @@ country_event = {
 		add_modifier = {
 			modifier = modifier_ps_pacifist_commercial_pact
 		}
+		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			event_target:target_ps_pacifist = {
 				add_trust = {
