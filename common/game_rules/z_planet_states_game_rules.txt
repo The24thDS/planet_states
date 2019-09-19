@@ -114,6 +114,19 @@ can_take_hostile_actions = {
 			always = no
 		}
 	}
+	else_if = {
+		limit = {
+			is_country_type = planet_state
+			ROOT = {
+				OR = {
+					is_country_type = dormant_marauders
+					is_country_type = ruined_marauders
+					is_country_type = awakened_marauders
+				}
+			}
+		}
+		always = no
+	}
 	else = {
 		always = yes
 	}
