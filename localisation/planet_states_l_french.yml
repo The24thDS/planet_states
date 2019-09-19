@@ -89,6 +89,10 @@
   modifier_ps_pacifist_trade_deal_5: "Pacifist Planet-State Trade Deal (£food£ x50)"
   mod_country_base_consumer_goods_produces_add: "Monthly £consumer_goods£ Consumer Goods"
   mod_country_base_alloys_produces_add: "Monthly £alloys£ Alloys:"
+  modifier_ps_egalitarian_commercial_pact: "Planet-State Commercial Pact (Egalitarian)"
+  modifier_ps_authoritarian_commercial_pact: "Planet-State Commercial Pact (Authoritarian)"
+  modifier_ps_militarist_commercial_pact: "Planet-State Commercial Pact (Militarist)"
+  modifier_ps_pacifist_commercial_pact: "Planet-State Commercial Pact (Pacifist)"
   # Opinion Modifiers
   opinion_destroyed_ps_egalitarian: "Destroyed Planet-State"
   opinion_destroyed_ps_egalitarian_trade: "Destroyed Planet-State we had deals with"
@@ -98,4 +102,3 @@
   opinion_destroyed_ps_militarist_trade: "$opinion_destroyed_ps_egalitarian_trade$"
   opinion_destroyed_ps_pacifist: "$opinion_destroyed_ps_egalitarian$"
   opinion_destroyed_ps_pacifist_trade: "$opinion_destroyed_ps_egalitarian_trade$"
-  
