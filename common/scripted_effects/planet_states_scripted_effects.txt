@@ -74,6 +74,11 @@ create_planet_state_egalitarian = {
 				skill = 5
 			}
 			set_leader = last_created_leader
+
+			add_modifier = {
+				modifier = closed_economy
+				days = -1
+			}
 		}
 
 		# Set Planet-State as Owner of the planet
@@ -226,6 +231,10 @@ create_planet_state_authoritarian = {
 		set_owner = event_target:target_ps_authoritarian
 		set_controller = event_target:target_ps_authoritarian
 		set_capital = yes
+		add_modifier = {
+			modifier = planet_closed_economy
+			days = -1
+		}
 
 		# Add Builings, Districts, Pops
 		add_building = building_ps_capitol
@@ -414,6 +423,10 @@ create_planet_state_militarist = {
 		set_owner = event_target:target_ps_militarist
 		set_controller = event_target:target_ps_militarist
 		set_capital = yes
+		add_modifier = {
+			modifier = planet_closed_economy
+			days = -1
+		}
 
 		# Add Builings, Districts, Pops
 		add_building = building_ps_capitol
@@ -577,6 +590,10 @@ create_planet_state_pacifist = {
 		set_owner = event_target:target_ps_pacifist
 		set_controller = event_target:target_ps_pacifist
 		set_capital = yes
+		add_modifier = {
+			modifier = planet_closed_economy
+			days = -1
+		}
 
 		# Add Builings, Districts, Pops
 		add_building = building_ps_capitol

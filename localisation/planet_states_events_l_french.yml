@@ -20,7 +20,8 @@
   ps.100.ab.reply: "Of course, that won't be a problem. Anything else?"
   ps.100.ab.tooltip: "This will terminate our current Consumer Goods trade deal with the §Y[target_ps_egalitarian.GetName]§!."
   ps.100.b: "Let's sign a commercial pact."
-  ps.100.b.opinion: "Requires the §Y[target_ps_egalitarian.GetName]§! to have:\n£opinion£ Opinion +50"
+  ps.100.b.system: "We must have a starbase on the Planet-State's star system."
+  ps.100.b.opinion: "Requires the §Y[target_ps_egalitarian.GetName]§! to have:\n£opinion£ Opinion +100"
   ps.100.b.alreadyhired: "We already signed a commercial pact with the §Y[target_ps_egalitarian.GetName]§!."
   ps.100.goodbye: "Until next time."
   # ps.110: Resource Deal
@@ -167,4 +168,3 @@
   ps.4005.name: "[target_ps_authoritarian.GetName]"
   ps.4005a.desc: "You have forever stolen our peace. Even if we destroy you, how will we ever be able to trust another nation again?"
   ps.4005.a: "End communications."
-  

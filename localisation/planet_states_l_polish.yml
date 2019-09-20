@@ -66,7 +66,9 @@
   mod_job_baron_add: "Archduke Jobs"
   # Static Modifiers
   planet_lost_autonomy: "Lost Autonomy"
-  planet_lost_autonomy_desc: "This was a former sovereign Planet-State. Its inhabitants have a fierce sense of independency, only waiting for the appropriate moment to take it back."
+  planet_lost_autonomy_desc: "This is a former sovereign Planet-State. Its inhabitants have a fierce sense of independency, only waiting for the appropriate moment to take it back."
+  modifier_ps_closed_economy: "Closed Economy"
+  modifier_ps_closed_economy_desc: "This Planet-State is not in a Commercial Pact with the system's owner."
   modifier_ps_egalitarian_trade_deal_1: "Egalitarian Planet-State Trade Deal (£consumer_goods£ x10)"
   modifier_ps_egalitarian_trade_deal_2: "Egalitarian Planet-State Trade Deal (£consumer_goods£ x20)"
   modifier_ps_egalitarian_trade_deal_3: "Egalitarian Planet-State Trade Deal (£consumer_goods£ x30)"

@@ -696,11 +696,21 @@ country_event = {
 		trigger = { is_homicidal = no }
 		allow = {
 			custom_tooltip = {
+				fail_text = ps.100.b.system
+				event_target:target_ps_egalitarian.capital_scope.solar_system = {
+					space_owner = {
+						is_same_value = Root
+					}
+				}
+			}
+		}
+		allow = {
+			custom_tooltip = {
 				fail_text = ps.100.b.opinion
 				event_target:target_ps_egalitarian = {
 					trust = {
 						who = Root
-						value >= 50
+						value >= 100
 					}
 				}
 			}
@@ -807,11 +817,21 @@ country_event = {
 		name = ps.100.b
 		allow = {
 			custom_tooltip = {
+				fail_text = ps.100.b.system
+				event_target:target_ps_egalitarian.capital_scope.solar_system = {
+					space_owner = {
+						is_same_value = Root
+					}
+				}
+			}
+		}
+		allow = {
+			custom_tooltip = {
 				fail_text = ps.100.b.opinion
 				event_target:target_ps_egalitarian = {
 					trust = {
 						who = Root
-						value >= 50
+						value >= 100
 					}
 				}
 			}
@@ -1046,10 +1066,7 @@ country_event = {
 		custom_tooltip = ps.yearly.opinion
 		hidden_effect = {
 			event_target:target_ps_egalitarian = {
-				add_trust = {
-					who = root
-					amount = 20
-				}
+				remove_modifier = modifier_ps_closed_economy
 			}
 		}
 	}
@@ -1108,7 +1125,7 @@ country_event = {
 			event_target:target_planet_state_capital = {
 				add_modifier = {
 					modifier = planet_lost_autonomy
-					years = 10
+					days = 3600
 				}
 				set_owner = Root
 			}
@@ -1224,6 +1241,17 @@ country_event = {
 			}
 		}
 		set_country_flag = attacked_ps_egalitarian
+		if = {
+			limit = {
+				has_modifier = modifier_ps_egalitarian_commercial_pact
+			}
+			From = {
+				add_modifier = {
+					modifier = modifier_ps_closed_economy
+					days = -1
+				}
+			}
+		}
 		if = {
 			limit = { has_any_active_ps_egalitarian_deal = yes }
 			remove_all_ps_egalitarian_deals = yes
