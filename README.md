@@ -1,6 +1,6 @@
 # Planet-States
 
-This mod adds a bunch of independent, sovereign planets for you to intereact with (or conquer), callend Planet-States.
+This mod adds independent and sovereign planets for you to intereact with (or conquer), called Planet-States.
 
 They can be thought of as Enclaves With Steroids: you can create a starbase in the system they are on, make some resource deals and get positive opinion with them if they are in your borders. Alternatively, they could also be seen as Micro Fallen Empires: the Planet-State Station that protects the planet is quite powerful and they posses quite advanced technology and awesome buildings - making their conquest quite profitable.
 
@@ -15,11 +15,3 @@ If you have a high enough opinion with a Planet-State, you can sign a Commercial
 # Compatibility
 
 I overwrite the game rule "can_take_hostile_actions". It should be compatible with any mod that doesn't overwrite the same rule.
-
-# FAQ
-
-**Why didn't you just add those Planet-States to your New Enclaves mod?**
-Although they have a similar function, the code behind the Planet-States is quite different, so I thought it would be better to make another mod just for them.
-
-**Are you going to add new Planet-States?**
-For now I'll focus on improving the ones that already exist. If I have a cool idea about another one, maybe in the future.
