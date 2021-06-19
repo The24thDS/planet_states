@@ -1,12 +1,10 @@
-# Planet-State Station
+#Planet-State Station
 ship_design = {
 	name = "NAME_Planet_State_Station"
 	ship_size = planet_state_station
-
 	section = {
 		template = "station_planet_state_01_key"
 		slot = "mid"
-
 		component = {
 			slot = "TITANIC_01"
 			template = "TITAN_LASER"

@@ -6,7 +6,7 @@ can_take_hostile_actions = {
 	if = {
 		limit = {
 			ROOT = {
-				has_policy_flag = first_contact_attack_not_allowed
+				NOT = { has_policy_flag = first_contact_attack_allowed }
 			}
 			NOT = {
 				is_hostile = ROOT

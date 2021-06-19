@@ -102,3 +102,4 @@
   opinion_destroyed_ps_militarist_trade: "$opinion_destroyed_ps_egalitarian_trade$"
   opinion_destroyed_ps_pacifist: "$opinion_destroyed_ps_egalitarian$"
   opinion_destroyed_ps_pacifist_trade: "$opinion_destroyed_ps_egalitarian_trade$"
+  opinion50: "+50 £opinion£ Opinion"

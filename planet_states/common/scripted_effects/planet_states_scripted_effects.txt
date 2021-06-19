@@ -1,21 +1,17 @@
 # Create Planet-States
-
 # Create Egalitarian Planet-State. Called from System scope.
 create_planet_state_egalitarian = {
 	set_star_flag = planet_state
-
 	# Choose planet
 	random_system_planet = {
 		limit = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
-
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
 		change_pc = pc_city
-
 		# Create Species and Country
 		create_species = {
 			name = random
@@ -38,21 +34,22 @@ create_planet_state_egalitarian = {
 				civic = civic_idealistic_foundation
 				civic = civic_shared_burden
 			}
-			species = last_created
+			species = last_created_species
 			flag = random
 			ethos = {
 				ethic = ethic_fanatic_egalitarian
 			}
 			ignore_initial_colony_error = yes
 		}
-
 		# Create Station and Leader
 		last_created_country = {
 			set_country_flag = ps_egalitarian
 			save_event_target_as = target_ps_egalitarian
 			create_fleet = {
 				name = "NAME_PS_Egalitarian_Fleet"
-				settings = { spawn_debris = no }
+				settings = {
+					spawn_debris = no
+				}
 				effect = {
 					set_owner = prev
 					create_ship = {
@@ -69,18 +66,16 @@ create_planet_state_egalitarian = {
 			}
 			create_leader = {
 				class = ruler
-				species = prev
+				species = last_created_species
 				name = random
 				skill = 5
 			}
 			set_leader = last_created_leader
 		}
-
 		# Set Planet-State as Owner of the planet
 		set_owner = event_target:target_ps_egalitarian
 		set_controller = event_target:target_ps_egalitarian
 		set_capital = yes
-
 		# Add Builings, Districts, Pops
 		add_building = building_ps_capitol
 		add_building = building_hall_judgment
@@ -106,16 +101,12 @@ create_planet_state_egalitarian = {
 			count = 400
 			create_pop = {
 				species = owner_main_species
-				ethos = { ethic = ethic_fanatic_egalitarian }
+				ethos = {
+					ethic = ethic_fanatic_egalitarian
+				}
 			}
 		}
-
 		event_target:target_ps_egalitarian = {
-			set_policy = {
-				policy = food_policy
-				option = food_policy_generous
-				cooldown = no
-			}
 			set_policy = {
 				policy = purge
 				option = purge_not_allowed
@@ -133,14 +124,12 @@ create_planet_state_egalitarian = {
 # Create Authoritarian Planet-State. Called from planet scope.
 create_planet_state_authoritarian = {
 	set_star_flag = planet_state
-
 	# Choose planet
 	random_system_planet = {
 		limit = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
-
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
@@ -159,7 +148,6 @@ create_planet_state_authoritarian = {
 		add_deposit = d_fungal_caves
 		add_deposit = d_fungal_caves
 		add_deposit = d_fungal_caves
-
 		# Create Species and Country
 		create_species = {
 			name = random
@@ -184,21 +172,22 @@ create_planet_state_authoritarian = {
 				civic = civic_aristocratic_elite
 				civic = civic_functional_architecture
 			}
-			species = last_created
+			species = last_created_species
 			flag = random
 			ethos = {
 				ethic = ethic_fanatic_authoritarian
 			}
 			ignore_initial_colony_error = yes
 		}
-
 		# Create Station and Leader
 		last_created_country = {
 			set_country_flag = ps_authoritarian
 			save_event_target_as = target_ps_authoritarian
 			create_fleet = {
 				name = "NAME_PS_Authoritarian_Fleet"
-				settings = { spawn_debris = no }
+				settings = {
+					spawn_debris = no
+				}
 				effect = {
 					set_owner = prev
 					create_ship = {
@@ -215,18 +204,16 @@ create_planet_state_authoritarian = {
 			}
 			create_leader = {
 				class = ruler
-				species = prev
+				species = last_created_species
 				name = random
 				skill = 5
 			}
 			set_leader = last_created_leader
 		}
-
 		# Set Planet-State as Owner of the planet
 		set_owner = event_target:target_ps_authoritarian
 		set_controller = event_target:target_ps_authoritarian
 		set_capital = yes
-
 		# Add Builings, Districts, Pops
 		add_building = building_ps_capitol
 		add_building = building_ps_manorial_lands
@@ -252,15 +239,15 @@ create_planet_state_authoritarian = {
 			count = 13
 			add_district = district_mining
 		}
-
 		while = {
 			count = 27
 			create_pop = {
 				species = owner_main_species
-				ethos = { ethic = ethic_fanatic_authoritarian }
+				ethos = {
+					ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
-
 		create_species = {
 			name = random
 			class = random_non_machine
@@ -280,10 +267,11 @@ create_planet_state_authoritarian = {
 			count = 53
 			create_pop = {
 				species = event_target:ps_authoritarian_specialist_species
-				ethos = { ethic = ethic_fanatic_authoritarian }
+				ethos = {
+					ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
-
 		create_species = {
 			name = random
 			class = random_non_machine
@@ -303,10 +291,11 @@ create_planet_state_authoritarian = {
 			count = 140
 			create_pop = {
 				species = event_target:ps_authoritarian_servile_species
-				ethos = { ethic = ethic_fanatic_authoritarian }
+				ethos = {
+					ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
-
 		create_species = {
 			name = random
 			class = random_non_machine
@@ -326,7 +315,9 @@ create_planet_state_authoritarian = {
 			count = 125
 			create_pop = {
 				species = event_target:ps_authoritarian_slave_species
-				ethos = { ethic = ethic_fanatic_authoritarian }
+				ethos = {
+					ethic = ethic_fanatic_authoritarian
+				}
 			}
 		}
 	}
@@ -335,19 +326,16 @@ create_planet_state_authoritarian = {
 # Create Militarist Planet-State. Called from planet scope.
 create_planet_state_militarist = {
 	set_star_flag = planet_state
-
 	# Choose planet
 	random_system_planet = {
 		limit = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
-
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
 		change_pc = rl_habitable_normal
-
 		# Create Species and Country
 		create_species = {
 			name = random
@@ -372,21 +360,22 @@ create_planet_state_militarist = {
 				civic = civic_distinguished_admiralty
 				civic = civic_warrior_culture
 			}
-			species = last_created
+			species = last_created_species
 			flag = random
 			ethos = {
 				ethic = ethic_fanatic_militarist
 			}
 			ignore_initial_colony_error = yes
 		}
-
 		# Create Station and Leader
 		last_created_country = {
 			set_country_flag = ps_militarist
 			save_event_target_as = target_ps_militarist
 			create_fleet = {
 				name = "NAME_PS_Militarist_Fleet"
-				settings = { spawn_debris = no }
+				settings = {
+					spawn_debris = no
+				}
 				effect = {
 					set_owner = prev
 					create_ship = {
@@ -403,18 +392,16 @@ create_planet_state_militarist = {
 			}
 			create_leader = {
 				class = ruler
-				species = prev
+				species = last_created_species
 				name = random
 				skill = 5
 			}
 			set_leader = last_created_leader
 		}
-
 		# Set Planet-State as Owner of the planet
 		set_owner = event_target:target_ps_militarist
 		set_controller = event_target:target_ps_militarist
 		set_capital = yes
-
 		# Add Builings, Districts, Pops
 		add_building = building_ps_capitol
 		add_building = building_ps_anti_matter_reactor
@@ -440,10 +427,11 @@ create_planet_state_militarist = {
 			count = 85
 			create_pop = {
 				species = owner_main_species
-				ethos = { ethic = ethic_fanatic_militarist }
+				ethos = {
+					ethic = ethic_fanatic_militarist
+				}
 			}
 		}
-
 		create_species = {
 			name = "NAME_Synthetic"
 			plural = "NAME_Synthetics"
@@ -471,14 +459,12 @@ create_planet_state_militarist = {
 # Create Pacifist Planet-State. Called from planet scope.
 create_planet_state_pacifist = {
 	set_star_flag = planet_state
-
 	# Choose planet
 	random_system_planet = {
 		limit = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
-
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
@@ -511,7 +497,6 @@ create_planet_state_pacifist = {
 		add_deposit = d_alien_pets_deposit
 		add_deposit = d_alien_pets_deposit
 		add_deposit = d_alien_pets_deposit
-
 		# Create Species and Country
 		create_species = {
 			name = random
@@ -535,21 +520,22 @@ create_planet_state_pacifist = {
 				civic = civic_agrarian_idyll
 				civic = civic_environmentalist
 			}
-			species = last_created
+			species = last_created_species
 			flag = random
 			ethos = {
 				ethic = ethic_fanatic_pacifist
 			}
 			ignore_initial_colony_error = yes
 		}
-
 		# Create Station and Leader
 		last_created_country = {
 			set_country_flag = ps_pacifist
 			save_event_target_as = target_ps_pacifist
 			create_fleet = {
 				name = "NAME_PS_Pacifist_Fleet"
-				settings = { spawn_debris = no }
+				settings = {
+					spawn_debris = no
+				}
 				effect = {
 					set_owner = prev
 					create_ship = {
@@ -566,18 +552,16 @@ create_planet_state_pacifist = {
 			}
 			create_leader = {
 				class = ruler
-				species = prev
+				species = last_created_species
 				name = random
 				skill = 5
 			}
 			set_leader = last_created_leader
 		}
-
 		# Set Planet-State as Owner of the planet
 		set_owner = event_target:target_ps_pacifist
 		set_controller = event_target:target_ps_pacifist
 		set_capital = yes
-
 		# Add Builings, Districts, Pops
 		add_building = building_ps_capitol
 		add_building = building_hall_judgment
@@ -602,16 +586,15 @@ create_planet_state_pacifist = {
 		while = {
 			count = 10
 			add_district = district_mining
-		}
-		while = {
-			count = 10
 			add_district = district_generator
 		}
 		while = {
 			count = 126
 			create_pop = {
 				species = owner_main_species
-				ethos = { ethic = ethic_fanatic_pacifist }
+				ethos = {
+					ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 	}
@@ -619,128 +602,93 @@ create_planet_state_pacifist = {
 
 # Remove Egalitarian PS Trade Deals
 remove_ps_egalitarian_trade_deal = {
-	if = {
-		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_1 }
-		remove_modifier = modifier_ps_egalitarian_trade_deal_1
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_2 }
-		remove_modifier = modifier_ps_egalitarian_trade_deal_2
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_3 }
-		remove_modifier = modifier_ps_egalitarian_trade_deal_3
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_4 }
-		remove_modifier = modifier_ps_egalitarian_trade_deal_4
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_egalitarian_trade_deal_5 }
-		remove_modifier = modifier_ps_egalitarian_trade_deal_5
+	remove_planet_state_trade_deal_modifier = {
+		TYPE = "egalitarian"
 	}
 }
+
 # Remove Egalitarian PS Trade Deals + Pact
 remove_all_ps_egalitarian_deals = {
 	remove_ps_egalitarian_trade_deal = yes
 	if = {
-		limit = { has_modifier = modifier_ps_egalitarian_commercial_pact }
+		limit = {
+			has_modifier = modifier_ps_egalitarian_commercial_pact
+		}
 		remove_modifier = modifier_ps_egalitarian_commercial_pact
 	}
 }
 
 # Remove Authoritarian PS Trade Deals
 remove_ps_authoritarian_trade_deal = {
-	if = {
-		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_1 }
-		remove_modifier = modifier_ps_authoritarian_trade_deal_1
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_2 }
-		remove_modifier = modifier_ps_authoritarian_trade_deal_2
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_3 }
-		remove_modifier = modifier_ps_authoritarian_trade_deal_3
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_4 }
-		remove_modifier = modifier_ps_authoritarian_trade_deal_4
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_authoritarian_trade_deal_5 }
-		remove_modifier = modifier_ps_authoritarian_trade_deal_5
+	remove_planet_state_trade_deal_modifier = {
+		TYPE = "authoritarian"
 	}
 }
+
 # Remove Authoritarian PS Trade Deals + Pact
 remove_all_ps_authoritarian_deals = {
 	remove_ps_authoritarian_trade_deal = yes
 	if = {
-		limit = { has_modifier = modifier_ps_authoritarian_commercial_pact }
+		limit = {
+			has_modifier = modifier_ps_authoritarian_commercial_pact
+		}
 		remove_modifier = modifier_ps_authoritarian_commercial_pact
 	}
 }
 
 # Remove Militarist PS Trade Deals
 remove_ps_militarist_trade_deal = {
-	if = {
-		limit = { has_modifier = modifier_ps_militarist_trade_deal_1 }
-		remove_modifier = modifier_ps_militarist_trade_deal_1
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_militarist_trade_deal_2 }
-		remove_modifier = modifier_ps_militarist_trade_deal_2
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_militarist_trade_deal_3 }
-		remove_modifier = modifier_ps_militarist_trade_deal_3
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_militarist_trade_deal_4 }
-		remove_modifier = modifier_ps_militarist_trade_deal_4
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_militarist_trade_deal_5 }
-		remove_modifier = modifier_ps_militarist_trade_deal_5
+	remove_planet_state_trade_deal_modifier = {
+		TYPE = "militarist"
 	}
 }
+
 # Remove Militarist PS Trade Deals + Pact
 remove_all_ps_militarist_deals = {
 	remove_ps_militarist_trade_deal = yes
 	if = {
-		limit = { has_modifier = modifier_ps_militarist_commercial_pact }
+		limit = {
+			has_modifier = modifier_ps_militarist_commercial_pact
+		}
 		remove_modifier = modifier_ps_militarist_commercial_pact
 	}
 }
 
 # Remove Pacifist PS Trade Deals
 remove_ps_pacifist_trade_deal = {
-	if = {
-		limit = { has_modifier = modifier_ps_pacifist_trade_deal_1 }
-		remove_modifier = modifier_ps_pacifist_trade_deal_1
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_pacifist_trade_deal_2 }
-		remove_modifier = modifier_ps_pacifist_trade_deal_2
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_pacifist_trade_deal_3 }
-		remove_modifier = modifier_ps_pacifist_trade_deal_3
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_pacifist_trade_deal_4 }
-		remove_modifier = modifier_ps_pacifist_trade_deal_4
-	}
-	if = {
-		limit = { has_modifier = modifier_ps_pacifist_trade_deal_5 }
-		remove_modifier = modifier_ps_pacifist_trade_deal_5
+	remove_planet_state_trade_deal_modifier = {
+		TYPE = "pacifist"
 	}
 }
+
 # Remove Pacifist PS Trade Deals + Pact
 remove_all_ps_pacifist_deals = {
 	remove_ps_pacifist_trade_deal = yes
 	if = {
-		limit = { has_modifier = modifier_ps_pacifist_commercial_pact }
+		limit = {
+			has_modifier = modifier_ps_pacifist_commercial_pact
+		}
 		remove_modifier = modifier_ps_pacifist_commercial_pact
+	}
+}
+
+remove_planet_state_trade_deal_modifier = {
+	switch = {
+		trigger = has_modifier
+		modifier_ps_$TYPE$_trade_deal_1 = {
+			remove_modifier = modifier_ps_$TYPE$_trade_deal_1
+		}
+		modifier_ps_$TYPE$_trade_deal_2 = {
+			remove_modifier = modifier_ps_$TYPE$_trade_deal_2
+		}
+		modifier_ps_$TYPE$_trade_deal_3 = {
+			remove_modifier = modifier_ps_$TYPE$_trade_deal_3
+		}
+		modifier_ps_$TYPE$_trade_deal_4 = {
+			remove_modifier = modifier_ps_$TYPE$_trade_deal_4
+		}
+		modifier_ps_$TYPE$_trade_deal_5 = {
+			remove_modifier = modifier_ps_$TYPE$_trade_deal_5
+		}
 	}
 }

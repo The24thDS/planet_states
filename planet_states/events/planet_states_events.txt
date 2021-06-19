@@ -1069,7 +1069,7 @@ country_event = {
 }
 
 # ps.1000: Egalitarian PS destroyed (HIDDEN)
-event = {
+country_event = {
 	id = ps.1000
 	hide_window = yes
 
@@ -1752,7 +1752,7 @@ country_event = {
 }
 
 # ps.2000: Authoritarian PS destroyed (HIDDEN)
-event = {
+country_event = {
 	id = ps.2000
 	hide_window = yes
 
@@ -2435,7 +2435,7 @@ country_event = {
 }
 
 # ps.3000: Militarist PS destroyed (HIDDEN)
-event = {
+country_event = {
 	id = ps.3000
 	hide_window = yes
 
@@ -3118,7 +3118,7 @@ country_event = {
 }
 
 # ps.4000: Pacifist PS destroyed (HIDDEN)
-event = {
+country_event = {
 	id = ps.4000
 	hide_window = yes
 
