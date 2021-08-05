@@ -3,7 +3,6 @@ planet_state = {
 	sub_title = "COUNTRY_PLANET_STATE"
 	sub_title_desc = "COUNTRY_PLANET_STATE_DESC"
 
-	show_in_contacts_list = yes
 	custom_diplomacy = yes
 	share_survey_data = no
 	destroys_starbases = yes
@@ -17,6 +16,8 @@ planet_state = {
 		needs_border_access = no
 		generate_borders = no
 		needs_colony = yes
+		primitive = no
+		intel_effects_surveyed = no
 	}
 
 	ai = {
@@ -36,8 +37,7 @@ planet_state = {
 		standard_leader_module = {}
 		standard_economy_module = {}
 		standard_species_rights_module = {}
-		exclusive_diplomacy_module = {
-		} # Nothing is allowed, but we need this for relationships.
+		exclusive_diplomacy_module = { } # Nothing is allowed, but we need this for relationships.
 	}
 
 	resources = {

@@ -42,6 +42,9 @@ archduke = {
 			planet_amenities_add = -1
 		}
 	}
+	weight = {
+		weight = @ruler_job_weight
+	}
 }
 duke = {
 	category = ruler
@@ -86,6 +89,9 @@ duke = {
 		modifier = {
 			planet_amenities_add = -1
 		}
+	}
+	weight = {
+		weight = @ruler_job_weight
 	}
 }
 count = {
@@ -132,6 +138,9 @@ count = {
 			planet_amenities_add = -1
 		}
 	}
+	weight = {
+		weight = @ruler_job_weight
+	}
 }
 baron = {
 	category = ruler
@@ -176,5 +185,8 @@ baron = {
 		modifier = {
 			planet_amenities_add = -1
 		}
+	}
+	weight = {
+		weight = @ruler_job_weight
 	}
 }

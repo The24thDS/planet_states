@@ -354,7 +354,7 @@ country_event = {
 # ps.14: First contact with Authoritarian Planet-State
 country_event = {
 	id = ps.14
-	title = ps.14.name
+	title = ps.13.name
 	desc = ps.14.desc
 
 	is_triggered_only = yes
@@ -389,7 +389,7 @@ country_event = {
 # ps.15: First contact with Militarist Planet-State
 country_event = {
 	id = ps.15
-	title = ps.15.name
+	title = ps.13.name
 	desc = ps.15.desc
 
 	is_triggered_only = yes
@@ -424,7 +424,7 @@ country_event = {
 # ps.16: First contact with Pacifist Planet-State
 country_event = {
 	id = ps.16
-	title = ps.16.name
+	title = ps.13.name
 	desc = ps.16.desc
 
 	is_triggered_only = yes
