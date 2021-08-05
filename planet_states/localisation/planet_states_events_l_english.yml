@@ -1,9 +1,8 @@
 ﻿l_english:
-  # ps.12: Entering Planet-State system for the first time (on_entering_system_fleet)
-  ps.12.name: "Planet-State - Communications Established"
-  ps.12.desc: "As soon as we entered the §Y[From.GetName]§! System we received a communication from a nearby planet. Apparently, it is not only inhabited, but also by a fairly advanced society at that."
-  ps.12.a: "Interesting."
-  # ps.13: First contact with Planet-State
+  # First contact with Planet-State
+  fcsum_planet_state_1: "We discovered that the §H[This.ContactCountry.GetName]§! are based around a single planet in the §H[This.System.GetName]§! system."
+  planet_state_first_contact.1.desc: "We have picked up readings of unknown nature. The signals seem to follow some kind of repeating syntax which could indicate sapient origin. It should be investigated further. They seem to be concentrated around a single planet, though it is unclear whether this forms part of a larger spacefaring civilization."
+  planet_state_first_contact.5.desc: "After successfully translating their language, we have established communications with the independent Planet State of the §H[This.ContactCountry.GetRealName]§!."
   ps.13.name: "First Contact With [target_planet_state.GetName]"
   ps.13.desc: "Salutations, comrade. Welcome to the §Y[target_planet_state.GetName]§!.\n\nOur little communal utopia has seen many, many empires come and go. Hopefully your stay in the galactic board will be more permament.\n\nOur only interest is the welfare of our citizens. As long as you don't put their liberty and prosperity in risk, I'm sure we peacefully share this system."
   ps.14.desc: "You are in the august presence of [target_planet_state.Ruler.GetTitle] [target_planet_state.Ruler.GetName], ruler of the §Y[target_planet_state.GetName]§!.\n\n[target_planet_state.capital_scope.GetName] is mine by birthright. All of its inhabitants are my rightful subjects, whose I'm sworn to protect. Mays our two kingdoms prosper and coexist for as long as those facts stand true."
