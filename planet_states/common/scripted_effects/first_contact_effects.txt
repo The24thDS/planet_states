@@ -1,0 +1,1516 @@
+# This will get messy.
+
+# No XP for first contact, envoys don't gain anything for leveling up.
+# @FIRST_CONTACT_XP_0_INSIGHT = 10
+# @FIRST_CONTACT_XP_1_INSIGHT = 25
+# @FIRST_CONTACT_XP_2_INSIGHT = 40
+
+# first_contact scope. Putting here so it's easy to find again
+set_first_contact_starting_stage = {
+	custom_tooltip = start_first_contact
+	hidden_effect = {
+		owner = {
+			set_timed_country_flag = {
+				flag = recent_first_contact_process_started
+				years = 20
+			}
+		}
+		if = {
+			limit = {
+				contact_country = {
+					OR = {
+						is_country_type = default
+						is_country_type = prikki
+					}
+				}
+			}
+			set_first_contact_stage = default_stage_1
+		}
+		else = { #had to leave default country type out of the switch, because "default" in switches means "fallback" :D
+			contact_country = {
+				switch = {
+					trigger = is_country_type
+					enclave = {
+						setup_first_contact_path = { TYPE = enclave }
+						country_event = { id = leviathans.97 days = 720 random = 360 } #they'll establish contact if you aren't quick enough
+					}
+					tiyanki = { setup_first_contact_path = { TYPE = tiyanki } }
+					tiyanki_garrison = { setup_first_contact_path = { TYPE = tiyanki } }
+					amoeba = { setup_first_contact_path = { TYPE = amoeba } }
+					amoeba_borderless = { setup_first_contact_path = { TYPE = amoeba } }
+					amoeba_garrison = { setup_first_contact_path = { TYPE = amoeba } }
+					amoeba_faction = { setup_first_contact_path = { TYPE = amoeba } }
+					crystal = { setup_first_contact_path = { TYPE = crystals } }
+					crystal_faction = { setup_first_contact_path = { TYPE = crystals } }
+					drone = { setup_first_contact_path = { TYPE = drones } }
+					drone_faction = { setup_first_contact_path = { TYPE = drones } }
+					dormant_marauders = { setup_first_contact_path = { TYPE = marauders } }
+					pirate = { setup_first_contact_path = { TYPE = pirates } }
+					neutral_faction = { setup_first_contact_path = { TYPE = pirates } }
+					caravaneer_fleet = {
+						setup_first_contact_path = { TYPE = caravaneers }
+						if = {
+							limit = {
+								exists = event_target:caravaneer_fleet1_country
+								is_same_value = event_target:caravaneer_fleet1_country
+							}
+							root.owner = { country_event = { id = cara.1020 days = 720 random = 360 } }
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet2_country
+								is_same_value = event_target:caravaneer_fleet2_country
+							}
+							root.owner = { country_event = { id = cara.2020 days = 720 random = 360 } }
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet3_country
+								is_same_value = event_target:caravaneer_fleet3_country
+							}
+							root.owner = { country_event = { id = cara.3020 days = 720 random = 360 } }
+						}
+					}
+					caravaneer_home = { setup_first_contact_path = { TYPE = caravaneers } }
+					cloud = { setup_first_contact_path = { TYPE = void_clouds } }
+					nomad = { setup_first_contact_path = { TYPE = nomad } }
+					default = {
+						root = { fire_on_action = { on_action = on_first_contact_stage_1_no_path } }
+					# 	root = {
+					# 		log_error = "No valid first contact path for encounter with [This.ContactCountry.GetName] (country type: [This.ContactCountry.GetCountryType])"
+					# 	}
+					}
+				}
+			}
+		}
+	}
+}
+
+setup_first_contact_path = {
+	root = {
+		set_first_contact_stage = $TYPE$_stage_1
+		set_first_contact_flag = $TYPE$_first_contact
+	}
+}
+
+# first_contact scope. Effects to opinion and stuff from stages before the last may be applied here, TBD.
+finish_first_contact_effect = {
+	owner = {
+		set_country_flag = first_contact_completed@root.contact_country
+	}
+	if = {
+		limit = {
+			exists = reverse_first_contact
+		}
+		hidden_effect = {
+			contact_country = {
+				create_message = {
+					type = MESSAGE_FIRST_CONTACT_ABORTED_THEY_COMPLETED
+					localization = MESSAGE_FIRST_CONTACT_ABORTED_THEY_COMPLETED_DESC
+					days = 30
+					target = root.owner.capital_scope
+					variable = {
+						type = name
+						localization = COUNTRY
+						scope = root.reverse_first_contact
+					}
+				}
+			}
+			reverse_first_contact = {
+				if = {
+					limit = { is_current_first_contact_stage = default_end_stage_hostile_no_crew }
+					owner = {
+						country_event = { id = first_contact.1100 days = 30 random = 5 }
+					}
+				}
+				else_if = {
+					limit = { is_current_first_contact_stage = default_end_stage_hostile_with_vivisection }
+					owner = {
+						country_event = { id = first_contact.1105 days = 30 random = 5 }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew_easy
+							is_current_first_contact_stage = default_end_stage_hostile_with_crew_hard
+						}
+					}
+					owner = {
+						country_event = { id = first_contact.1110 days = 30 random = 5 }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			contact_country = { is_country_type = default }
+			NOT = { has_first_contact_flag = hostile_first_contact_attempted }
+		}
+		owner = {
+			if = {
+				limit = {
+					has_policy_flag = first_contact_proactive
+				}
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontactxenophile
+					min = @tier2influencecontactminxenophile
+					max = @tier2influencecontactmaxxenophile
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontact
+					min = @tier2influencecontactmin
+					max = @tier2influencecontactmax
+				}
+			}
+		}
+		hidden_effect = {
+			owner = { country_event = { id = tutorial.2006 } }
+			contact_country = {
+				country_event = { id = tutorial.63 }
+			}
+			if = {
+				limit = {
+					contact_country = {
+						has_policy_flag = first_contact_proactive
+					}
+					reverse_first_contact = {
+						NOT = { has_first_contact_flag = hostile_first_contact_attempted }
+					}
+				}
+				owner = { set_country_flag = we_come_in_peace_achievement }
+			}
+		}
+	}
+	else = {
+		owner = {
+			if = {
+				limit = {
+					has_policy_flag = first_contact_proactive
+				}
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontactxenophile
+					min = @tier1influencecontactminxenophile
+					max = @tier1influencecontactmaxxenophile
+				}
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontact
+					min = @tier1influencecontactmin
+					max = @tier1influencecontactmax
+				}
+			}
+		}
+		switch = {
+			trigger = has_first_contact_flag
+			tiyanki_first_contact = {
+				owner = {
+					set_country_flag = tiyanki_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_tiyanki_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_tiyanki_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_tiyanki_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_tiyanki_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = tiyanki_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = tiyanki_encountered }
+						}
+					}
+				}
+			}
+			amoeba_first_contact = {
+				owner = {
+					set_country_flag = amoeba_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_amoeba_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_amoeba_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_amoebas_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_amoeba_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = amoeba_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = amoeba_encountered }
+						}
+					}
+				}
+			}
+			crystals_first_contact = {
+				owner = {
+					set_country_flag = crystals_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_crystal_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_crystal_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_crystals_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_crystal_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = crystals_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = crystals_encountered }
+						}
+					}
+				}
+			}
+			drones_first_contact = {
+				owner = {
+					set_country_flag = drones_encountered
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_drone_country_type = yes
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_drone_country_type = yes
+								}
+							}
+							custom_tooltip = further_fc_drones_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_drone_country_type = yes
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = drones_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = drones_encountered }
+						}
+					}
+				}
+			}
+			caravaneers_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.2006 } }
+					if = {
+						limit = {
+							any_country = {
+								OR = {
+									is_country_type = caravaneer_fleet
+									is_country_type = caravaneer_home
+								}
+								NOT = { is_same_value = root.contact_country }
+								root.owner = {
+									NOT = { has_communications = prev }
+									has_established_contact = prev
+								}
+							}
+						}
+						every_country = {
+							limit = {
+								OR = {
+									is_country_type = caravaneer_fleet
+									is_country_type = caravaneer_home
+								}
+								NOT = { is_same_value = root.contact_country }
+								root.owner = {
+									NOT = { has_communications = prev }
+									has_established_contact = prev
+								}
+							}
+#							custom_tooltip = further_fc_caravaneers_completed
+							hidden_effect = {
+								if = {
+									limit = {
+										exists = event_target:caravaneer_fleet1_country
+										is_same_value = event_target:caravaneer_fleet1_country
+									}
+									root.owner = { country_event = { id = cara.1020 } }
+								}
+								else_if = {
+									limit = {
+										exists = event_target:caravaneer_fleet2_country
+										is_same_value = event_target:caravaneer_fleet2_country
+									}
+									root.owner = { country_event = { id = cara.2020 } }
+								}
+								else_if = {
+									limit = {
+										exists = event_target:caravaneer_fleet3_country
+										is_same_value = event_target:caravaneer_fleet3_country
+									}
+									root.owner = { country_event = { id = cara.3020 } }
+								}
+							}
+						}
+					}
+					hidden_effect = {
+						if = {
+							limit = {
+								exists = event_target:caravaneer_fleet1_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet1_country }
+							}
+							country_event = { id = cara.1020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet2_country }
+								event_target:caravaneer_fleet2_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet3_country }
+								event_target:caravaneer_fleet3_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet2_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet2_country }
+							}
+							country_event = { id = cara.2020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet1_country }
+								event_target:caravaneer_fleet1_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet3_country }
+								event_target:caravaneer_fleet3_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								exists = event_target:caravaneer_fleet3_country
+								root.contact_country = { is_same_value = event_target:caravaneer_fleet3_country }
+							}
+							country_event = { id = cara.3020 }
+							if = {
+								limit = { exists = event_target:caravaneer_fleet1_country }
+								event_target:caravaneer_fleet1_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+							if = {
+								limit = { exists = event_target:caravaneer_fleet2_country }
+								event_target:caravaneer_fleet2_country = {
+									establish_communications_no_message = root.owner
+								}
+							}
+						}
+						if = {
+							limit = {
+								exists = event_target:caravaneer_home_country
+								NOT = { has_communications = event_target:caravaneer_home_country }
+							}
+							establish_communications_no_message = event_target:caravaneer_home_country
+						}
+					}
+				}
+			}
+			marauders_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = {
+						country_event = { id = tutorial.2007 }
+						country_event = { id = marauder.15 }
+					}
+				}
+			}
+			enclave_first_contact = {
+				contact_country = {
+					hidden_effect = {
+						country_event = { id = tutorial.63 }
+						switch = {
+							trigger = has_country_flag
+							trader_enclave_country = { country_event = { id = leviathans.101 scopes = { from = root.owner } } }
+							artist_enclave_country = { country_event = { id = leviathans.301 scopes = { from = root.owner } } }
+							curator_enclave_country = { country_event = { id = leviathans.501 scopes = { from = root.owner } } }
+							default = { log_error = "Unexpected enclave type or missing script flag" }
+						}
+					}
+				}
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.2007 } }
+				}
+			}
+			pirates_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.2007 } }
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = pirate
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = pirate
+								}
+							}
+							custom_tooltip = further_fc_pirates_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_country_type = pirate
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+						}
+					}
+				}
+			}
+			void_clouds_first_contact = {
+				owner = {
+					hidden_effect = { country_event = { id = tutorial.61 } }
+					set_country_flag = void_clouds_encountered
+					if = {
+						limit = {
+							any_active_first_contact = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = cloud
+								}
+							}
+						}
+						every_active_first_contact = {
+							limit = {
+								NOT = { is_same_value = root }
+								contact_country = {
+									is_country_type = cloud
+								}
+							}
+							custom_tooltip = further_fc_clouds_completed
+						}
+					}
+				}
+				hidden_effect = {
+					every_country = {
+						limit = {
+							NOT = { is_same_value = root.contact_country }
+							NOT = { has_communications = root.owner }
+							is_country_type = cloud
+						}
+						root.owner = {
+							establish_communications_no_message = prev
+							establish_communication_with_subjects_and_federation = { FLAG = void_clouds_encountered }
+						}
+					}
+					root.contact_country = {
+						root.owner = {
+							establish_communication_with_subjects_and_federation = { FLAG = void_clouds_encountered }
+						}
+					}
+				}
+			}
+			nomad_first_contact = {
+				contact_country = {
+					hidden_effect = { country_event = { id = tutorial.63 } }
+				}
+				owner = {
+					hidden_effect = {
+						country_event = { id = tutorial.2007 }
+						country_event = { id = nomad.10 }
+					}
+				}
+			}
+		}
+	}
+
+	finish_first_contact = yes
+
+	hidden_effect = {
+		owner = {
+			add_intel = {
+				who = root.contact_country
+				amount = 10
+			}
+		}
+	}
+
+	owner = {
+		if = {
+			limit = {
+				root.contact_country = {
+					is_country_type = default #it's harder
+				}
+			}
+			increment_first_contact_skill_2 = yes
+		}
+		else = {
+			increment_first_contact_skill_1 = yes
+		}
+	}
+}
+
+increment_first_contact_skill_1 = {
+	hidden_effect = {
+		increment_first_contact_skill = yes
+	}
+	if = {
+		limit = { # The tooltip is generated before the variable is incremented, so this is tricking it into showing the custom tooltip at the right time
+			is_variable_set = first_contact_skill_variable
+			check_variable = {
+				which = first_contact_skill_variable
+				value < 13
+			}
+			check_variable_arithmetic = {
+				which = first_contact_skill_variable
+				by = 3
+				value = 2
+				mode = modulo
+			}
+		}
+		custom_tooltip = first_contact_skill_increased
+	}
+}
+
+increment_first_contact_skill_2 = {
+	hidden_effect = {
+		increment_first_contact_skill = yes
+		increment_first_contact_skill = yes
+	}
+	if = {
+		limit = { # The tooltip is generated before the variable is incremented, so this is tricking it into showing the custom tooltip at the right time
+			is_variable_set = first_contact_skill_variable
+			check_variable = {
+				which = first_contact_skill_variable
+				value < 13
+			}
+
+			check_variable_arithmetic = {
+				which = first_contact_skill_variable
+				by = 3
+				value >= 1
+				mode = modulo
+			}
+		}
+		custom_tooltip = first_contact_skill_increased
+	}
+}
+
+increment_first_contact_skill = {
+	change_variable = {
+		which = first_contact_skill_variable
+		value = 1
+	}
+	if = {
+		limit = {
+			is_variable_set = first_contact_skill_variable
+			check_variable = {
+				which = first_contact_skill_variable
+				value < 13
+			}
+		}
+		if = {
+			limit = {
+				check_variable_arithmetic = {
+					which = first_contact_skill_variable
+					by = 3
+					value = 0
+					mode = modulo
+				}
+			}
+			if = {
+				limit = { has_modifier = first_contact_skill_3 }
+				remove_modifier = first_contact_skill_3
+				add_modifier = {
+					modifier = first_contact_skill_4
+				}
+			}
+			else_if = {
+				limit = { has_modifier = first_contact_skill_2 }
+				remove_modifier = first_contact_skill_2
+				add_modifier = {
+					modifier = first_contact_skill_3
+				}
+			}
+			else_if = {
+				limit = { has_modifier = first_contact_skill_1 }
+				remove_modifier = first_contact_skill_1
+				add_modifier = {
+					modifier = first_contact_skill_2
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = first_contact_skill_1
+				}
+			}
+		}
+	}
+}
+
+#first_contact scope
+first_contact_inform_intel = {
+	custom_tooltip_with_params = {
+		description = "FIRST_CONTACT_ADD_INTEL"
+		description_parameters = {
+			"INTEL" = 20
+		}
+	}
+}
+
+#first_contact.owner scope
+first_contact_add_intel = {
+	custom_tooltip_with_params = {
+		description = "FIRST_CONTACT_ADD_INTEL"
+		description_parameters = {
+			"INTEL" = @\[( $INTEL$ + 20 )]
+		}
+	}
+	hidden_effect = {
+		add_intel = {
+			who = root.contact_country
+			amount = $INTEL$
+		}
+	}
+}
+
+#planet_scope
+generate_number_planet_in_system_flags = {
+	solar_system = {
+		if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 0
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_1
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 1
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_2
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 2
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_3
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 3
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_4
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 4
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_5
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 5
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_6
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 6
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_7
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 7
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_8
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 8
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_9
+			}
+		}
+		else_if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_planet_and_closer_to_than_prevprev = yes }
+					count = 9
+				}
+			}
+			prev = {
+				set_planet_flag = planet_number_10
+			}
+		}
+	}
+}
+
+first_contact_get_ship_to_capture = {
+	contact_country = {
+		if = {
+			limit = {
+				any_owned_fleet = {
+					first_contact_can_be_captured = yes
+				}
+			}
+			random_owned_fleet = {
+				limit = {
+					first_contact_can_be_captured = yes
+				}
+				random_owned_ship = {
+					save_event_target_as = ship_to_seize
+				}
+				save_event_target_as = fleet_to_seize
+			}
+		}
+	}
+}
+
+first_contact_send_fleets_mia = {
+	every_owned_fleet = {
+		limit = {
+			if = {
+				limit = { exists = event_target:fleet_to_seize }
+				NOT = { is_same_value = event_target:fleet_to_seize }
+			}
+			is_within_borders_of = root.owner
+			if = {
+				limit = { prev = { is_hostile = root.owner } }
+				is_civilian = yes
+			}
+		}
+		set_mia = yes
+		root = {
+			set_first_contact_flag = fleets_sent_mia
+		}
+	}
+}
+
+first_contact_grant_random_tech_option = {
+	if = {
+		limit = { NOT = { exists = event_target:contact_country } }
+		root.contact_country = { save_event_target_as = contact_country }
+	}
+	locked_random_list = {
+		1 = {
+			copy_random_tech_from = {
+				who = event_target:contact_country
+				area = physics
+				progress = $PROGRESS$
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					can_copy_random_tech_from = {
+						who = event_target:contact_country
+						area = physics
+					}
+				}
+			}
+		}
+		1 = {
+			copy_random_tech_from = {
+				who = event_target:contact_country
+				area = society
+				progress = $PROGRESS$
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					can_copy_random_tech_from = {
+						who = event_target:contact_country
+						area = society
+					}
+				}
+			}
+		}
+		1 = {
+			copy_random_tech_from = {
+				who = event_target:contact_country
+				area = engineering
+				progress = $PROGRESS$
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					can_copy_random_tech_from = {
+						who = event_target:contact_country
+						area = engineering
+					}
+				}
+			}
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				can_copy_random_tech_from = {
+					who = event_target:contact_country
+				}
+			}
+			first_contact_give_scaled_tech_bonus = { #18 i.e. @tier2researchreward if $PROGRESS$ is 0.2
+				VALUE = @\[( 90 * $PROGRESS$ )]
+			}
+		}
+	}
+}
+
+first_contact_give_scaled_tech_bonus = {
+	locked_random_list = {
+		1 = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = $VALUE$
+			}
+		}
+		1 = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = $VALUE$
+			}
+		}
+		1 = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = $VALUE$
+			}
+		}
+	}
+}
+
+
+# Roll failed stuff. Put the horrible bits in code, tweak them using the defines.
+
+standard_first_contact_on_roll_failed = {
+	hidden_effect = {
+		if = {
+			limit = {
+				is_site_current_stage_score >= higher_insight_score
+			}
+			add_stage_clues = higher_insight_reward
+		#	leader = { add_experience = @FIRST_CONTACT_XP_2_INSIGHT }
+		}
+		else_if = {
+			limit = {
+				is_site_current_stage_score >= lower_insight_score
+			}
+			add_stage_clues = lower_insight_reward
+		#	leader = { add_experience = @FIRST_CONTACT_XP_1_INSIGHT }
+		}
+		# else = {
+		# 	leader = { add_experience = @FIRST_CONTACT_XP_0_INSIGHT }
+		# }
+		random_list = {
+			19 = { }
+			1 = {
+				$RANDOM_EVENTS$ = yes
+				set_timed_first_contact_flag = {
+					flag = first_contact_event_fired
+					days = 125
+				}
+				modifier = {
+					factor = 0
+					has_first_contact_flag = first_contact_event_fired
+				}
+			}
+		}
+	}
+}
+
+# first contact scope, used via standard_first_contact_on_roll_failed
+early_fc_random_events = {
+	random_list = {
+		2 = { # Extra clear signal found, gain clues.
+			first_contact_event = { id = first_contact.5000 }
+			set_first_contact_flag = fc_event_5000
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5000
+			}
+		}
+		1 = { # They are just really, really good at stopping you from picking up their signals.
+			first_contact_event = { id = first_contact.5005 }
+			set_first_contact_flag = fc_event_5005
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5005
+			}
+			modifier = {
+				factor = 0
+				contact_country = {
+					has_policy_flag = first_contact_proactive
+				}
+			}
+		}
+		1 = { # The thing we thought was language was actually really not
+			first_contact_event = { id = first_contact.5010 }
+			set_first_contact_flag = fc_event_5010
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5010
+			}
+			modifier = {
+				factor = 0
+				contact_country = {
+					is_gestalt = yes
+				}
+			}
+		}
+		2 = { # They just scanned our capital! How dare they?
+			first_contact_event = { id = first_contact.5015 }
+			set_first_contact_flag = they_scanned_our_capital
+			modifier = {
+				factor = 0
+				owner = {
+					capital_scope = {
+						is_surveyed = {
+							who = root.contact_country
+							status = no
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = owner.capital_scope }
+			}
+			modifier = {
+				factor = 0
+				contact_country = {
+					NOT = { is_country_type = default } #apparently, enclaves have survey data on you!
+				}
+			}
+			modifier = {
+				factor = 0
+				has_first_contact_flag = they_scanned_our_capital
+			}
+		}
+		2 = { # We just scanned their capital... what a bonus!
+			first_contact_event = { id = first_contact.5020 }
+			set_first_contact_flag = we_scanned_their_capital
+			modifier = {
+				factor = 0
+				contact_country = {
+					exists = capital_scope
+					capital_scope = {
+						is_surveyed = {
+							who = root.owner
+							status = no
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = contact_country.capital_scope }
+			}
+			modifier = {
+				factor = 0
+				has_first_contact_flag = we_scanned_their_capital
+			}
+		}
+		1 = { # Trail gone cold
+			first_contact_event = { id = first_contact.5025 }
+			set_first_contact_flag = fc_event_5025
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5025
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					any_owned_fleet = {
+						exists = solar_system
+						solar_system = {
+							any_fleet_in_system = {
+								is_owned_by = root.contact_country
+							}
+						}
+					}
+				}
+			}
+		}
+		1 = { } #just in case all possibilities are failing, somehow
+	}
+}
+late_fc_random_events = {
+	random_list = {
+		2 = { # They just scanned our capital! How dare they?
+			first_contact_event = { id = first_contact.5015 }
+			set_first_contact_flag = they_scanned_our_capital
+			modifier = {
+				factor = 0
+				owner = {
+					capital_scope = {
+						is_surveyed = {
+							who = root.contact_country
+							status = no
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = owner.capital_scope }
+			}
+			modifier = {
+				factor = 0
+				contact_country = {
+					NOT = { is_country_type = default } #apparently, enclaves have survey data on you!
+				}
+			}
+			modifier = {
+				factor = 0
+				has_first_contact_flag = they_scanned_our_capital
+			}
+		}
+		2 = { # We just scanned their capital... what a bonus!
+			first_contact_event = { id = first_contact.5020 }
+			set_first_contact_flag = we_scanned_their_capital
+			modifier = {
+				factor = 0
+				contact_country = {
+					exists = capital_scope
+					capital_scope = {
+						is_surveyed = {
+							who = root.owner
+							status = no
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = contact_country.capital_scope }
+			}
+			modifier = {
+				factor = 0
+				has_first_contact_flag = we_scanned_their_capital
+			}
+		}
+
+		# We see their visual feed; the people react with dismay or find them really cute (but beware the Aprahanti - appearances can be deceiving)
+		2 = { # Positive reaction to sight of aliens
+			first_contact_event = { id = first_contact.5030 }
+			set_first_contact_flag = fc_event_5030
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5030
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						is_gestalt = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						is_spiritualist = yes
+						has_policy_flag = ai_outlawed
+					}
+				}
+				contact_country = {
+					is_synthetic_empire = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					is_same_species = root.contact_country
+				}
+			}
+		}
+		2 = { # Negative reaction to sight of aliens
+			first_contact_event = { id = first_contact.5035 }
+			set_first_contact_flag = fc_event_5035
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5035
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						is_gestalt = yes
+						is_xenophile = yes
+						has_ethic = ethic_fanatic_pacifist
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						is_materialist = yes
+						has_policy_flag = ai_full_rights
+					}
+				}
+				contact_country = {
+					is_synthetic_empire = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					is_same_species = root.contact_country
+				}
+			}
+		}
+		1 = { # Very confusing interpretation of their signals because they are so different ethically
+			first_contact_event = { id = first_contact.5040 }
+			set_first_contact_flag = fc_event_5040
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5040
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					NOR = {
+						opposing_ethics_divergence = {
+							steps > 2
+							who = root.contact_country
+						}
+						AND = {
+							is_gestalt = yes
+							root.contact_country = { is_gestalt = no }
+						}
+						AND = {
+							is_gestalt = no
+							root.contact_country = { is_gestalt = yes }
+						}
+					}
+				}
+			}
+		}
+		1 = { # Surprisingly easy to work out common ground due to ethical similarity
+			first_contact_event = { id = first_contact.5045 }
+			set_first_contact_flag = fc_event_5045
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5045
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					OR = {
+						opposing_ethics_divergence = {
+							steps > 1
+							who = root.contact_country
+						}
+						AND = {
+							is_gestalt = yes
+							root.contact_country = { is_gestalt = no }
+						}
+						AND = {
+							is_gestalt = no
+							root.contact_country = { is_gestalt = yes }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = {
+						owner = { is_hive_empire = yes }
+						contact_country = { is_hive_empire = no }
+					}
+					AND = {
+						owner = { is_machine_empire = yes }
+						contact_country = { is_machine_empire = no }
+					}
+				}
+			}
+		}
+		1 = { # Setback in interpreting their language
+			first_contact_event = { id = first_contact.5050 }
+			set_first_contact_flag = fc_event_5050
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5050
+			}
+		}
+		1 = { # Advances in interpreting their language
+			first_contact_event = { id = first_contact.5055 }
+			set_first_contact_flag = fc_event_5055
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5055
+			}
+		}
+		1 = { # For cautious: We have picked up a strong feed from them
+			first_contact_event = { id = first_contact.5065 }
+			set_first_contact_flag = fc_event_5065
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5065
+			}
+			modifier = {
+				factor = 0
+				contact_country = {
+					has_policy_flag = first_contact_proactive
+				}
+			}
+		}
+		1 = { } #just in case all possibilities are failing, somehow
+	}
+}
+
+# a filtered-down list
+octopodes_fc_random_events = {
+	random_list = {
+		2 = { # They just scanned our capital! How dare they?
+			first_contact_event = { id = first_contact.5015 }
+			set_first_contact_flag = they_scanned_our_capital
+			modifier = {
+				factor = 0
+				owner = {
+					capital_scope = {
+						is_surveyed = {
+							who = root.contact_country
+							status = no
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = owner.capital_scope }
+			}
+			modifier = {
+				factor = 0
+				contact_country = {
+					NOT = { is_country_type = default } #apparently, enclaves have survey data on you!
+				}
+			}
+			modifier = {
+				factor = 0
+				has_first_contact_flag = they_scanned_our_capital
+			}
+		}
+		2 = { # We just scanned their capital... what a bonus!
+			first_contact_event = { id = first_contact.5020 }
+			set_first_contact_flag = we_scanned_their_capital
+			modifier = {
+				factor = 0
+				contact_country = {
+					exists = capital_scope
+					capital_scope = {
+						is_surveyed = {
+							who = root.owner
+							status = no
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { exists = contact_country.capital_scope }
+			}
+			modifier = {
+				factor = 0
+				has_first_contact_flag = we_scanned_their_capital
+			}
+		}
+		1 = { # Setback in interpreting their language
+			first_contact_event = { id = first_contact.5050 }
+			set_first_contact_flag = fc_event_5050
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5050
+			}
+		}
+		1 = { # Advances in interpreting their language
+			first_contact_event = { id = first_contact.5055 }
+			set_first_contact_flag = fc_event_5055
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5055
+			}
+		}
+		1 = { # For cautious: We have picked up a strong feed from them
+			first_contact_event = { id = first_contact.5065 }
+			set_first_contact_flag = fc_event_5065
+			modifier = {
+				factor = 0
+				has_first_contact_flag = fc_event_5065
+			}
+			modifier = {
+				factor = 0
+				contact_country = {
+					has_policy_flag = first_contact_proactive
+				}
+			}
+		}
+		1 = { } #just in case all possibilities are failing, somehow
+	}
+}
+
+no_events = { }
+
+hostile_fc_random_events = {
+	#no events needed, but worth keeping in case we ever decide otherwise
+}
+space_fauna_fc_random_events = {
+	#no events needed, but worth keeping in case we ever decide otherwise
+}
