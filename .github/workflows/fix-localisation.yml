@@ -7,6 +7,10 @@ jobs:
   fix_localisation:
     runs-on: ubuntu-latest
     steps:
+    - uses: rokroskar/workflow-run-cleanup-action
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DEBUG: FALSE
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
