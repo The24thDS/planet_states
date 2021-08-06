@@ -1,0 +1,3 @@
+files:
+  - source: /new_enclaves/localisation/english/*.yml
+    translation: /new_enclaves/localisation/%language%/new_enclaves_l_%language%.yml
