@@ -1,8 +1,8 @@
-﻿l_russian:
-
+---
+l_english:
   #Country Type
   mod_planet_state: "$COUNTRY_PLANET_STATE"
-  COUNTRY_PLANET_STATE: "Planet-State"
+  COUNTRY_PLANET_STATE: "Planet State"
   COUNTRY_PLANET_STATE_DESC: "As old as the Fallen Empires, these small countries have conscientiously abstained from the galactic affairs and never expanded to other planets. Much of their power and prosperity is probably a consequence of this."
   CAN_TAKE_HOSTILE_ACTION_PLANET_STATE: "We can only take hostile action against a Planet-State within our borders."
   #Ships
