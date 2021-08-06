@@ -7,6 +7,11 @@ jobs:
   fix_localisation:
     runs-on: ubuntu-latest
     steps:
+    - name: Cancel Workflow Action
+      uses: styfle/cancel-workflow-action@0.6.0
+      with:
+        all_but_latest: true
+        access_token: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
