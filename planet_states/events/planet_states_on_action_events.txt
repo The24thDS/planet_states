@@ -1,0 +1,19 @@
+namespace = ps_on_action
+
+event = {
+	id = ps_on_action.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		FromFrom = {
+			is_country_type = planet_state
+		}
+	}
+	immediate = {
+		log = "[contact_country.GetRealName]"
+		log = "[reverse_contact_country.GetRealName]"
+		FromFrom = {
+			setup_first_contact_path = { TYPE = planet_state }
+		}
+	}
+}

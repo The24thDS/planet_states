@@ -1,0 +1,181 @@
+namespace = planet_state_first_contact
+
+first_contact_event = {
+	id = planet_state_first_contact.1
+	title = first_contact_critters.1.name
+	desc = planet_state_first_contact.1.desc
+	picture = GFX_evt_satellite_in_orbit
+	show_sound = {
+		sound = event_first_contact_arthropoid
+		trigger = { contact_country = { is_species_class = ART } }
+	}
+	show_sound = {
+		sound = event_first_contact_avian
+		trigger = { contact_country = { is_species_class = AVI } }
+	}
+	show_sound = {
+		sound = event_first_contact_fungoid
+		trigger = { contact_country = { is_species_class = FUN } }
+	}
+	show_sound = {
+		sound = event_first_contact_humanoid
+		trigger = { contact_country = { is_species_class = HUM } }
+	}
+	show_sound = {
+		sound = event_first_contact_lithoid
+		trigger = { contact_country = { is_species_class = LITHOID } }
+	}
+	show_sound = {
+		sound = event_first_contact_machine
+		trigger = {
+			contact_country = {
+				OR = {
+					is_species_class = MACHINE
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	show_sound = {
+		sound = event_first_contact_mammalian
+		trigger = { contact_country = { is_species_class = MAM } }
+	}
+	show_sound = {
+		sound = event_first_contact_molluscoid
+		trigger = { contact_country = { is_species_class = MOL } }
+	}
+	show_sound = {
+		sound = event_first_contact_necroid
+		trigger = { contact_country = { is_species_class = NECROID } }
+	}
+	show_sound = {
+		sound = event_first_contact_plantoid
+		trigger = { contact_country = { is_species_class = PLANT } }
+	}
+	show_sound = {
+		sound = event_first_contact_reptilian
+		trigger = { contact_country = { is_species_class = REP } }
+	}
+	
+	is_triggered_only = yes
+	first_contact = yes
+
+	immediate = {
+		set_site_progress_locked = yes
+	}
+
+	after = { 
+		set_site_progress_locked = no
+	}
+	
+	option = {
+		name = first_contact_critters.1.A
+		set_first_contact_stage = planet_state_stage_2
+	}
+}
+
+first_contact_event = {
+	id = planet_state_first_contact.5
+	title = first_contact_critters.5.name
+	desc = planet_state_first_contact.5.desc
+	picture = GFX_planet_state
+	
+	show_sound = {
+		sound = event_first_contact_arthropoid
+		trigger = { contact_country = { is_species_class = ART } }
+	}
+	show_sound = {
+		sound = event_first_contact_avian
+		trigger = { contact_country = { is_species_class = AVI } }
+	}
+	show_sound = {
+		sound = event_first_contact_fungoid
+		trigger = { contact_country = { is_species_class = FUN } }
+	}
+	show_sound = {
+		sound = event_first_contact_humanoid
+		trigger = { contact_country = { is_species_class = HUM } }
+	}
+	show_sound = {
+		sound = event_first_contact_lithoid
+		trigger = { contact_country = { is_species_class = LITHOID } }
+	}
+	show_sound = {
+		sound = event_first_contact_machine
+		trigger = {
+			contact_country = {
+				OR = {
+					is_species_class = MACHINE
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	show_sound = {
+		sound = event_first_contact_mammalian
+		trigger = { contact_country = { is_species_class = MAM } }
+	}
+	show_sound = {
+		sound = event_first_contact_molluscoid
+		trigger = { contact_country = { is_species_class = MOL } }
+	}
+	show_sound = {
+		sound = event_first_contact_necroid
+		trigger = { contact_country = { is_species_class = NECROID } }
+	}
+	show_sound = {
+		sound = event_first_contact_plantoid
+		trigger = { contact_country = { is_species_class = PLANT } }
+	}
+	show_sound = {
+		sound = event_first_contact_reptilian
+		trigger = { contact_country = { is_species_class = REP } }
+	}
+	is_triggered_only = yes
+	first_contact = yes
+
+	immediate = {
+		set_site_progress_locked = yes
+	}
+
+	option = {
+		name = SCUM
+		trigger = {
+			owner = { has_valid_civic = civic_fanatic_purifiers }
+		}
+	}
+	
+	option = {
+		name = TASTY
+		trigger = {
+			owner = { has_valid_civic = civic_hive_devouring_swarm }
+		}
+	}
+
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			owner = { has_valid_civic = civic_machine_terminator }
+		}
+	}
+
+	option = {
+		name = first_contact_critters.5.A
+		trigger = {
+			owner = {
+				NOR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm
+					has_valid_civic = civic_machine_terminator
+				}
+			}
+		}
+	}
+	after = {
+		set_site_progress_locked = no
+		finish_first_contact_effect = yes
+		contact_country = {
+			country_event = { id = ps.12 scopes = { from = root.owner } }
+		}
+	}
+}

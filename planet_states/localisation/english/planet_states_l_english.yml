@@ -22,6 +22,10 @@
   RT_PS_PACIFIST: "Archon"
   civic_planet_state: "Planet-State"
   civic_planet_state_desc: "This society conscientiously abstained from spreading to other planets, priding its own prosperity and stability above any empire-building dreams."
+  # Districts
+  district_ps_city: "Planet State City"
+  district_ps_city_desc: "Planet Wide City"
+  district_ps_city_plural: "Planet Wide Cities"
   # Buildings
   building_ps_capitol: "Planet-State Capitol"
   building_ps_capitol_desc: "The administrative center of the Planet-State. Incredibly advanced and efficient for its size - just like its country."

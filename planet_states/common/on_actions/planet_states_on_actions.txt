@@ -5,15 +5,6 @@ on_game_start = {
 	}
 }
 
-# A fleet has entered a system
-# Scope = Fleet
-# From = System
-on_entering_system_fleet = {
-	events = {
-		ps.12 # Entering Planet-State system for the first time
-	}
-}
-
 # this = country
 on_monthly_pulse_country = {
 	events = {
@@ -77,5 +68,14 @@ on_entering_battle = {
 on_planet_attackers_win = {
 	events = {
 		ps.19 # Planet-State Conquered (HIDDEN)
+	}
+}
+
+# Scope: first_contact_scope
+# Root.Owner = contact_country.root.owner (the country for which you are setting the first contact)
+# FromFrom = contact_country (the country that will be discovered after the first contact)
+on_first_contact_stage_1_no_path = {
+	events = {
+		ps_on_action.1
 	}
 }

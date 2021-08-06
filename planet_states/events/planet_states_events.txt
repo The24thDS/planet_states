@@ -186,132 +186,19 @@ country_event = {
 	}
 }
 
-# ps.12: Entering Planet-State system for the first time (on_entering_system_fleet)
-fleet_event = {
+# ps.12: Port
+country_event = {
 	id = ps.12
-	title = ps.12.name
-	desc = ps.12.desc
-	picture = GFX_evt_throne_room
-	show_sound = event_radio_chatter
-	location = event_target:target_planet_state
-
+	hide_window = yes
 	is_triggered_only = yes
-
-	trigger = {
-		owner = {
-			is_country_type = default
-			exists = capital_scope
-		}
-		From = {
-			has_star_flag = planet_state
-			any_system_planet = {
-				exists = owner
-				owner = {
-					is_country_type = planet_state
-					NOT = { has_communications = root.owner }
-				}
-			}
-		}
-	}
-
 	immediate = {
-		From = {
-			random_system_planet = {
-				limit = {
-					exists = owner
-					owner = { is_country_type = planet_state }
-				}
-				owner = {
-					save_event_target_as = target_planet_state
-				}
-			}
-		}
-
-		owner = {
-			establish_communications_no_message = event_target:target_planet_state
-			save_event_target_as = target_default_country
-			country_event = { id = story.7 days = 2 }
-		}
-	}
-
-	option = {
-		name = SCUM
-		trigger = { owner = { has_valid_civic = civic_fanatic_purifiers } }
-	}
-	option = {
-		name = TASTY
-		trigger = { owner = { has_valid_civic = civic_hive_devouring_swarm } }
-	}
-	option = {
-		name = EXTERMINATE
-		trigger = { owner = { has_valid_civic = civic_machine_terminator } }
-	}
-
-	option = {
-		name = ps.12.a
-		trigger = { owner = { is_homicidal = no } }
-	}
-
-	after = {
-		event_target:target_default_country = {
-			if = {
-				limit = {
-					is_xenophile = yes
-				}
-				add_monthly_resource_mult = {
-					resource = influence
-					value = @tier1influencecontactxenophile
-					min = @tier1influencecontactmin
-					max = @tier1influencecontactmax
-				}
-			}
-			else = {
-				add_monthly_resource_mult = {
-					resource = influence
-					value = @tier1influencecontact
-					min = @tier1influencecontactmin
-					max = @tier1influencecontactmax
-				}
-			}
-
-			hidden_effect = {
-				if = {
-					limit = {
-						event_target:target_planet_state = {
-							has_country_flag = ps_egalitarian
-						}
-					}
-					country_event = { id = ps.13 }
-					break = yes
-				}
-				if = {
-					limit = {
-						event_target:target_planet_state = {
-							has_country_flag = ps_authoritarian
-						}
-					}
-					country_event = { id = ps.14 }
-					break = yes
-				}
-				if = {
-					limit = {
-						event_target:target_planet_state = {
-							has_country_flag = ps_militarist
-						}
-					}
-					country_event = { id = ps.15 }
-					break = yes
-				}
-				if = {
-					limit = {
-						event_target:target_planet_state = {
-							has_country_flag = ps_pacifist
-						}
-					}
-					country_event = { id = ps.16 }
-					break = yes
-				}
-			}
+		save_global_event_target_as = target_planet_state
+		switch = {
+			trigger = has_country_flag
+			ps_egalitarian = { from = { country_event = { id = ps.13 } } }
+			ps_authoritarian = { from = { country_event = { id = ps.14 } } }
+			ps_militarist = { from = { country_event = { id = ps.15 } } }
+			ps_pacifist = { from = { country_event = { id = ps.16 } } }
 		}
 	}
 }
@@ -354,7 +241,7 @@ country_event = {
 # ps.14: First contact with Authoritarian Planet-State
 country_event = {
 	id = ps.14
-	title = ps.14.name
+	title = ps.13.name
 	desc = ps.14.desc
 
 	is_triggered_only = yes
@@ -389,7 +276,7 @@ country_event = {
 # ps.15: First contact with Militarist Planet-State
 country_event = {
 	id = ps.15
-	title = ps.15.name
+	title = ps.13.name
 	desc = ps.15.desc
 
 	is_triggered_only = yes
@@ -424,7 +311,7 @@ country_event = {
 # ps.16: First contact with Pacifist Planet-State
 country_event = {
 	id = ps.16
-	title = ps.16.name
+	title = ps.13.name
 	desc = ps.16.desc
 
 	is_triggered_only = yes

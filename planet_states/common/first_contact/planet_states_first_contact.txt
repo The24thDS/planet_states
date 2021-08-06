@@ -1,0 +1,39 @@
+# Planet State
+planet_state_stage_1 = {
+	icon = GFX_firstcontact_icon_progress
+	picture = GFX_evt_star_chart
+	
+	difficulty = 3
+
+	stage_event = {
+		summary = fcsum_planet_state_1
+		event_weight = {
+			weight = 1
+		}
+		event = planet_state_first_contact.1
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = early_fc_random_events }
+	}
+}
+
+# Planet State finish
+planet_state_stage_2 = {
+	icon = GFX_firstcontact_icon_success
+	picture = GFX_evt_satellite_in_orbit
+	
+	difficulty = 5
+
+	stage_event = {
+		summary = fcsum_comms_established
+		event_weight = {
+			weight = 1
+		}
+		event = planet_state_first_contact.5
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = late_fc_random_events }
+	}
+}
