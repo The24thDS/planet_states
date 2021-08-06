@@ -1,5 +1,5 @@
----
-l_english:
+﻿l_russian:
+
   #Country Type
   mod_planet_state: "$COUNTRY_PLANET_STATE"
   COUNTRY_PLANET_STATE: "Planet State"
