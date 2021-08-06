@@ -20,7 +20,8 @@ You can decide to acquire monthly one of the following quantities:
   - 20;
   - 30;
   - 40;
-  - 50.
+  - 50;
+
 You can also sign a Commercial Pact with them once you have good relations. The pact will increase your Trade Value by 5%.
 
 ## Fanatic Authoritarian
@@ -31,7 +32,8 @@ They sell Minerals at a 1:1 rate in the following monthly quatities:
   - 20;
   - 30;
   - 40;
-  - 50.
+  - 50;
+
 You can also sign a Commercial Pact with them once you have good relations. The pact will increase your Trade Value by 5%.
 
 ## Fanatic Militarist
@@ -42,7 +44,8 @@ This Planet State will sell you Alloys at a 1:4 rate in the following monthly qu
   - 20;
   - 30;
   - 40;
-  - 50.
+  - 50;
+
 You can also sign a Commercial Pact with them once you have good relations. The pact will increase your Trade Value by 5%.
 
 ## Fanatic Pacifist
@@ -53,7 +56,8 @@ This Planet State will sell you Food at a 1:1 rate in the following monthly quat
   - 20;
   - 30;
   - 40;
-  - 50.
+  - 50;
+
 You can also sign a Commercial Pact with them once you have good relations. The pact will increase your Trade Value by 5%.
 
 # COMPATIBILITY
