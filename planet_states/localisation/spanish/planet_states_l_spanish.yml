@@ -1,5 +1,5 @@
-﻿l_spanish:
-
+---
+l_english:
   #Country Type
   mod_planet_state: "$COUNTRY_PLANET_STATE"
   COUNTRY_PLANET_STATE: "Planet-State"
@@ -24,9 +24,9 @@
   civic_planet_state: "Planet-State"
   civic_planet_state_desc: "This society conscientiously abstained from spreading to other planets, priding its own prosperity and stability above any empire-building dreams."
   #Districts
-  0: district_ps_city:0 "Planet State City"
-  1: district_ps_city_desc:0 "Planet Wide City"
-  2: district_ps_city_plural:0 "Planet Wide Cities"
+  district_ps_city: "Planet State City"
+  district_ps_city_desc: "Planet Wide City"
+  district_ps_city_plural: "Planet Wide Cities"
   #Buildings
   building_ps_capitol: "Planet-State Capitol"
   building_ps_capitol_desc: "The administrative center of the Planet-State. Incredibly advanced and efficient for its size - just like its country."
