@@ -1,17 +1,17 @@
-﻿l_french:
-
+---
+l_english:
   #Country Type
   mod_planet_state: "$COUNTRY_PLANET_STATE"
   COUNTRY_PLANET_STATE: "État-planète"
-  COUNTRY_PLANET_STATE_DESC: "As old as the Fallen Empires, these small countries have conscientiously abstained from the galactic affairs and never expanded to other planets. Much of their power and prosperity is probably a consequence of this."
-  CAN_TAKE_HOSTILE_ACTION_PLANET_STATE: "We can only take hostile action against a Planet-State within our borders."
+  COUNTRY_PLANET_STATE_DESC: "Aussi anciens que les Empires déchus, ces petits pays se sont volontairement abstenus de faire partie des affaires galactiques et ne se sont jamais étendus sur d'autres planètes. Une grande partie de leur puissance et prospérité en est probablement la conséquence."
+  CAN_TAKE_HOSTILE_ACTION_PLANET_STATE: "Nous ne pouvons entreprendre des actions hostiles qu'envers un État-planète à l'intérieur de nos frontières."
   #Ships
-  planet_state_station: "Planet-State Station"
-  planet_state_station_plural: "Planet-State Stations"
+  planet_state_station: "Station de l'État-planète"
+  planet_state_station_plural: "Stations d'État-planètes"
   #Governments
-  gov_planet_state_egalitarian: "Planet-State"
-  gov_planet_state_egalitarian_desc: "A sovereign, independent planet, more concerned about the prosperity of its own citizens than the galactic affairs."
-  RT_PS_EGALITARIAN: "First Speaker"
+  gov_planet_state_egalitarian: "État-planète"
+  gov_planet_state_egalitarian_desc: "Une planète souveraine et indépendante, plus soucieuse de la prospérité de ses propres citoyens que des affaires galactiques."
+  RT_PS_EGALITARIAN: "Grand Orateur"
   gov_planet_state_authoritarian: "$gov_planet_state_egalitarian$"
   gov_planet_state_authoritarian_desc: "$gov_planet_state_egalitarian_desc$"
   RT_PS_AUTHORITARIAN: "Grand Prince"
@@ -20,9 +20,9 @@
   RT_PS_MILITARIST: "Praetor Maximus"
   gov_planet_state_pacifist: "$gov_planet_state_egalitarian$"
   gov_planet_state_pacifist_desc: "$gov_planet_state_egalitarian_desc$"
-  RT_PS_PACIFIST: "Archon"
-  civic_planet_state: "Planet-State"
-  civic_planet_state_desc: "This society conscientiously abstained from spreading to other planets, priding its own prosperity and stability above any empire-building dreams."
+  RT_PS_PACIFIST: "Archonte"
+  civic_planet_state: "État-planète"
+  civic_planet_state_desc: "Cette société s'est consciencieusement abstenue de se propager à d'autres planètes, en s'enorgueillissant de sa propre prospérité et stabilité dépassant tout rêve d'un grand empire."
   #Districts
   district_ps_city: "Planet State City"
   district_ps_city_desc: "Planet Wide City"
