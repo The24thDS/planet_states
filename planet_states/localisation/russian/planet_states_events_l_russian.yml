@@ -1,5 +1,5 @@
-﻿l_russian:
-
+---
+l_english:
   #First contact with Planet-State
   fcsum_planet_state_1: "Мы обнаружили, что §H[This.ContactCountry.GetName]§! основаны на одной планете в §H[This.System.GetName]системе."
   planet_state_first_contact.1.desc: "Мы получили показания неизвестного характера. Сигналы, похоже, следуют какому-то повторяющемуся синтаксису, который может указывать на разумное происхождение. Это должно быть исследовано дополнительно. Они, похоже, сосредоточены вокруг одной планеты, хотя неясно, является ли это частью более крупной космической цивилизации."
@@ -64,11 +64,11 @@
   ps.200a.desc: "Ты пришел к нам воздать дань, [This.GetName]?"
   ps.200.a: "Мы заинтересованы в минералах."
   ps.200.a.alreadyhired: "We already have a Minerals trade deal with the §Y[target_ps_authoritarian.GetName]§!."
-  ps.200.ab: "We wish to end our Minerals trade deal."
-  ps.200.ab.reply: "We'll graciously relieve you of your feudal obligations."
+  ps.200.ab: "Мы хотим положить конец сделке по торговле минералами."
+  ps.200.ab.reply: "Мы великодушно освободим вас от ваших феодальных обязательств."
   ps.200.ab.tooltip: "This will terminate our current Minerals trade deal with the §Y[target_ps_authoritarian.GetName]§!"
   ps.200.b: "Давайте подпишем коммерческий пакт."
-  ps.200.b.opinion: "Requires the §Y[target_ps_authoritarian.GetName]§! to have:\n£opinion£ Opinion +50"
+  ps.200.b.opinion: "Требует §Y[target_ps_authoritarian.GetName]§! чтобы иметь:\n£opinion£ Мнение +50"
   ps.200.b.alreadyhired: "Мы уже подписали коммерческий пакт с §Y[target_ps_authoritarian.GetName]§!."
   ps.200.goodbye: "Выход."
   #ps.210: Resource Deal
