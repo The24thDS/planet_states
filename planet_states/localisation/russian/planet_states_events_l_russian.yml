@@ -1,5 +1,5 @@
-﻿l_russian:
-
+---
+l_english:
   #First contact with Planet-State
   fcsum_planet_state_1: "Мы обнаружили, что §H[This.ContactCountry.GetName]§! основаны на одной планете в §H[This.System.GetName]системе."
   planet_state_first_contact.1.desc: "Мы получили показания неизвестного характера. Сигналы, похоже, следуют какому-то повторяющемуся синтаксису, который может указывать на разумное происхождение. Это должно быть исследовано дополнительно. Они, похоже, сосредоточены вокруг одной планеты, хотя неясно, является ли это частью более крупной космической цивилизации."
@@ -15,7 +15,7 @@
   ps.100.name: "[target_ps_egalitarian.GetName]"
   ps.100a.desc: "А, это [This.GetName]. Как мы можем помочь вам сегодня?"
   ps.100.a: "Мы заинтересованы в потребительских товарах."
-  ps.100.a.alreadyhired: "We already have a Consumer Goods trade deal with the §Y[target_ps_egalitarian.GetName]§!."
+  ps.100.a.alreadyhired: "У нас уже есть сделка по торговле потребительскими товарами с §Y[target_ps_egalitarian.GetName]§!."
   ps.100.ab: "Мы хотим положить конец сделке по торговле потребительскими товарами."
   ps.100.ab.reply: "Конечно, это не проблема. Что-нибудь еще?"
   ps.100.ab.tooltip: "Сделка с §Y[target_ps_egalitarian.GetName] будет прекращена с текущим обменом товарами!."
@@ -25,7 +25,7 @@
   ps.100.goodbye: "До новых встреч!"
   #ps.110: Resource Deal
   ps.110.name: "Торговля потребительскими товарами"
-  ps.110.desc: "Well, would you look at that? We're looking for someone to buy our consumer goods!\n\nEver heard of something called \"post-scarcity society\"? Wonderful thing. But also quite problematic. The superabundance of material wealth is just so great that we don't know what to do with everything we produce!\n\nSo, in a way, you're doing us a service, buying all of those Consumer Goods and all. Which is why we'll make a special price for you, selling you Consumer Goods at a fixed rate of 1 £consumer_goods£ for 2 £energy£. What do you think?"
+  ps.110.desc: "Ну что же, смотришь на это? Мы ищем кого-нибудь покупать наши потребительские товары!\n\nНе слышал о чем-то названном пост-дефицитным общество? Прекрасная вещь. Но и довольно проблематично. Супер обилие материальных богатств настолько велико, что мы не знаем, что делать со всем, что мы производим!\n\nТаким образом, вы делаете нас услугами, покупая все эти потребительские товары и всех. Именно поэтому мы сделаем для вас особую цену, продавая вам потребительские товары по фиксированной ставке в размере 1 £consumer_goods£ за 2 £! Что вы думаете?"
   ps.110.a: "§G10§! £consumer_goods£ §H$consumer_goods$§!/месяц за §R20§! £energy£ §H$energy$§!/месяц."
   ps.110.b: "§G20§! £consumer_goods£ §H$consumer_goods$§!/месяц за §R40§! £energy£ §H$energy$§!/месяц."
   ps.110.c: "§G30§! £consumer_goods£ §H$consumer_goods$§!/месяц за §R60§! £energy£ §H$energy$§!/месяц."
@@ -41,19 +41,19 @@
   ps.120.a.reply: "Действительно замечательно. Да будет наше товарищество вечным!"
   #ps.1001: Egalitarian PS destroyed (Destroyer)
   ps.1001.name: "Планета-Государство Завоевана"
-  ps.1001.desc: "[target_planet_state_capital.GetName], formerly an independent planet known by the name of [target_planet_state.GetName], has been conquered by our troops. This ancient autonomous entity was quite advanced and powerful for its size. The planet, with all of its incredibly advanced infrastructure, will prove to be a boon for our empire.\n\nIts inhabitants, on the other hand, may pose some problems. We'll have to find a way to deal with their fierce sense of independency and suppress any potential revolts."
+  ps.1001.desc: "[target_planet_state_capital.GetName], ранее независимая планета, известная под названием [target_planet_state.GetName], была завоевана нашими войсками. Эта древняя автономная сущность была достаточно развитой и мощной для своего размера. Эта планета, со всей ее невероятно развитой инфраструктурой, окажется даром для нашей империи.\n\nЕго жители, с другой стороны, могут создать некоторые проблемы. Нам придется найти способ разобраться с их острым чувством независимости и подавить любые потенциальные восстания."
   #ps.1002: Egalitarian PS Destroyed
   ps.1002.name: "[target_planet_state.GetName] Захвачен"
-  ps.1002.a.desc: "We just received an emergency communication coming from the [target_planet_state_capital.GetName] planet. What once was an independent Planet-State known as [target_planet_state.GetName] is no more. After a long and valiant fight against the sudden attack of the §Y[ps_egalitarian_destroyer.GetName]§!, they finally surrendered. What will be of its citizens now that they have lost their freedom?"
-  ps.1002.b.desc: "We just received an emergency communication coming from the [target_planet_state_capital.GetName] planet. What once was an independent Planet-State known as [target_planet_state.GetName] is no more. After a long and valiant fight against the sudden attack an as-of-yet unindentified empire, they finally surrendered. What will be of its citizens now that they have lost their freedom?"
-  ps.1002.cd.desc: "Unfortunately, this also means that we have lost all access to the valuable services the [target_planet_state.GetName] used to provide."
+  ps.1002.a.desc: "Мы только что получили экстренное сообщение с планеты [target_planet_state_capital.GetName]. То, что когда-то называлось независимым «Планет-государством», [target_planet_state.GetName] больше не существует. После долгой и отважной борьбы с внезапной атакой §Y[ps_egalitarian_destroyer.GetName]§!, они окончательно сдались. Какой будет ее граждан теперь лишились свободы?"
+  ps.1002.b.desc: "Мы только что получили экстренное сообщение с планеты [target_planet_state_capital.GetName]. То, что когда-то называлось независимым «Планет-государством», [target_planet_state.GetName] больше не существует. После долгих и доблестных боев против внезапной атаки неотступной империи, они, наконец, сдались. Какой будет ее граждан теперь лишились свободы?"
+  ps.1002.cd.desc: "К сожалению, это также означает, что мы потеряли весь доступ к ценным услугам, которые используются [target_planet_state.GetName] для предоставления."
   ps.1002.c.desc: "$ps.1002.a.desc$\n\n$ps.1002.cd.desc$"
   ps.1002.d.desc: "$ps.1002.b.desc$\n\n$ps.1002.cd.desc$"
   ps.1002.a: "Печальный конец их наследию."
   ps.1002.b: "Это дорого стоит!"
   #ps.1004: Attacked Egalitarian PS - Agreements Terminated
   ps.1004.name: "[target_ps_egalitarian.GetName]"
-  ps.1004.desc: "We thought you were a comrade. It's sad to see you're just another oppressor, incapable of accepting our liberty. Well, we'll not suffer quietly. Oh, no sir! You'll see what a people conscious of their rights is capable of!"
+  ps.1004.desc: "Мы думали, что вы были товарищей. Это грустно, что вы просто другой угнетатель не в состоянии принять нашу свободу. Ну что же, мы не будем терпеть спокойно. Ну что же, не господин! Ты увидишь, что способны люди осознавать их права!"
   ps.1004.a: "Конец связи."
   #ps.1005: Attacked Egalitarian PS - Refuses Communications (on_custom_diplomacy)
   ps.1005.name: "[target_ps_egalitarian.GetName]"
@@ -63,17 +63,17 @@
   ps.200.name: "[target_ps_authoritarian.GetName]"
   ps.200a.desc: "Ты пришел к нам воздать дань, [This.GetName]?"
   ps.200.a: "Мы заинтересованы в минералах."
-  ps.200.a.alreadyhired: "We already have a Minerals trade deal with the §Y[target_ps_authoritarian.GetName]§!."
+  ps.200.a.alreadyhired: "У нас уже есть сделка по торговле минералами с §Y[target_ps_authoritarian.GetName]§!."
   ps.200.ab: "Мы хотим положить конец сделке по торговле минералами."
   ps.200.ab.reply: "Мы великодушно освободим вас от ваших феодальных обязательств."
-  ps.200.ab.tooltip: "This will terminate our current Minerals trade deal with the §Y[target_ps_authoritarian.GetName]§!"
+  ps.200.ab.tooltip: "Это действие прекратит сделку по торговле минералами с §Y[target_ps_authoritarian.GetName]§!"
   ps.200.b: "Давайте подпишем коммерческий пакт."
   ps.200.b.opinion: "Требует §Y[target_ps_authoritarian.GetName]§! чтобы иметь:\n£opinion£ Мнение +50"
   ps.200.b.alreadyhired: "Мы уже подписали коммерческий пакт с §Y[target_ps_authoritarian.GetName]§!."
   ps.200.goodbye: "Выход."
   #ps.210: Resource Deal
   ps.210.name: "Торговля минералами"
-  ps.210.desc: "We do not trade. We do, however, exchange gifts with our vassals in return of their feudal obligations - 1 £minerals£ for 1 £energy£. Since we consider you a valuable subject, we are willing to exchange gifts at a similar rate."
+  ps.210.desc: "Мы не торгуем, однако, обменяем подарки с нашими вассалами в обмен на свои феодальные обязательства - 1 фунтов стерлингов за 1 фунт энергоснабжение. Поскольку мы считаем Вас ценным предметом, мы готовы обменять подарки по аналогичному курсу."
   ps.210.a: "§G10§! £minerals£ §H$minerals$§!/месяц для §R10§! £energy£ §H$energy$§!/месяц."
   ps.210.b: "§G20§! £minerals£ §H$minerals$§!/месяц для §R20§! £energy£ §H$energy$§!/месяц."
   ps.210.c: "§G30§! £minerals£ §H$minerals$§!/месяц за §R30§! £energy£ §H$energy$§!/месяц."
@@ -99,7 +99,7 @@
   ps.300.name: "[target_ps_militarist.GetName]"
   ps.300a.desc: "[This.GetName] здесь! Вы пришли на дуэль? Или просто хотите понаблюдать за нашими коллизионными сражениями?"
   ps.300.a: "Мы заинтересованы в сплавах."
-  ps.300.a.alreadyhired: "We already have an Alloys trade deal with the §Y[target_ps_militarist.GetName]§!."
+  ps.300.a.alreadyhired: "У нас уже есть сделка по торговле сплавами с §Y[target_ps_militarist.GetName]§!."
   ps.300.ab: "We wish to end our Alloys trade deal."
   ps.300.ab.reply: "Конечно. Но почему? Нет такой вещи, как слишком много мечей! ...Не берите в голову. Мы сами хорошо используем Сплавы."
   ps.300.ab.tooltip: "This will terminate our current Alloys trade deal with the §Y[target_ps_militarist.GetName]§!"
