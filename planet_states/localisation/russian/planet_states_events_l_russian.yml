@@ -1,5 +1,5 @@
-﻿l_russian:
-
+---
+l_english:
   #First contact with Planet-State
   fcsum_planet_state_1: "Мы обнаружили, что §H[This.ContactCountry.GetName]§! основаны на одной планете в §H[This.System.GetName]системе."
   planet_state_first_contact.1.desc: "Мы получили показания неизвестного характера. Сигналы, похоже, следуют какому-то повторяющемуся синтаксису, который может указывать на разумное происхождение. Это должно быть исследовано дополнительно. Они, похоже, сосредоточены вокруг одной планеты, хотя неясно, является ли это частью более крупной космической цивилизации."
@@ -100,21 +100,21 @@
   ps.300a.desc: "[This.GetName] здесь! Вы пришли на дуэль? Или просто хотите понаблюдать за нашими коллизионными сражениями?"
   ps.300.a: "Мы заинтересованы в сплавах."
   ps.300.a.alreadyhired: "У нас уже есть сделка по торговле сплавами с §Y[target_ps_militarist.GetName]§!."
-  ps.300.ab: "We wish to end our Alloys trade deal."
+  ps.300.ab: "Мы хотим прекратить торговую сделку сплавами."
   ps.300.ab.reply: "Конечно. Но почему? Нет такой вещи, как слишком много мечей! ...Не берите в голову. Мы сами хорошо используем Сплавы."
-  ps.300.ab.tooltip: "This will terminate our current Alloys trade deal with the §Y[target_ps_militarist.GetName]§!"
+  ps.300.ab.tooltip: "Это действие прекратит сделку по торговле сплавами с §Y[target_ps_militarist.GetName]§!"
   ps.300.b: "Давайте подпишем коммерческий пакт."
-  ps.300.b.opinion: "Requires the §Y[target_ps_militarist.GetName]§! to have:\n£opinion£ Opinion +50"
-  ps.300.b.alreadyhired: "We already signed a commercial pact with the §Y[target_ps_militarist.GetName]§!."
+  ps.300.b.opinion: "Требует §Y[target_ps_militarist.GetName]§! чтобы иметь:\n£opinion£ Мнение +50"
+  ps.300.b.alreadyhired: "Мы уже подписали коммерческий пакт с §Y[target_ps_militarist.GetName]§!."
   ps.300.goodbye: "До свидания."
   #ps.310: Resource Deal
   ps.310.name: "Сделка по торговле сплавами"
-  ps.310.desc: "To be honest, we already use most of our supply of alloys ourselves. Swords and armor can't be created out of thin air. Sad thing, we know.\n\nWe do have a small quantity we could trade with you, though. We'll probably use the credits to buy more alloys later, but whatever. How does 1 £alloys£ for 4 £energy£ sound to you?"
+  ps.310.desc: "Если быть честным, то мы сами используем большую часть наших сплавов. Мечи и броня не могут быть созданы из тонкого воздуха. К сожалению, мы знаем.\n\nОднако у нас есть небольшое количество, которое мы могли бы с вами обменять. Как звучит 1 £alloys£ за 4 £energy£?"
   ps.310.a: "§G10§! £alloys£ §H$alloys$§!/месяц для §R40§! £energy£ §H$energy$§!/месяц."
   ps.310.b: "§G20§! £alloys£ §H$alloys$§!/месяц для §R80§! £energy£ §H$energy$§!/месяц."
   ps.310.c: "§G30§! £alloys£ §H$alloys$§!/месяц для §R120§! £energy£ §H$energy$§!/месяц."
-  ps.310.d: "§G40§! £alloys£ §H$alloys$§!/month for §R160§! £energy£ §H$energy$§!/month."
-  ps.310.e: "§G50§! £alloys£ §H$alloys$§!/month for §R200§! £energy£ §H$energy$§!/month."
+  ps.310.d: "§G40§! £alloys£ §H$alloys$§!/месяц для §R120§! £energy£ §H$energy$§!/месяц."
+  ps.310.e: "§G50§! £alloys£ §H$alloys$§!/месяц для §R80§! £energy£ §H$energy$§!/месяц."
   ps.310.back: "Что еще вы мне предлагаете?"
   #ps.311: Resource Deal - Answer
   ps.311.desc: "Да! Кредиты! Теперь мы можем купить больше сплавов!\n\n...Может быть, нам следовало все хорошенько обдумать. Ну что ж. Что сделано, то сделано."
@@ -125,27 +125,27 @@
   ps.320.a.reply: "Это оказалось очень хорошо, не думаешь?"
   #ps.3004: Attacked Militarist PS - Agreements Terminated
   ps.3004.name: "[target_ps_militarist.GetName]"
-  ps.3004.desc: "We mistook you for a friend. In reality, it was even better: you are a rival! Finally something interesting is happening in this galaxy!"
+  ps.3004.desc: "Мы брали тебя за друга. На самом деле это было еще лучше: ты соперник! Наконец-то что-то интересное происходит в этой галактике!"
   ps.3004.a: "Конец связи."
   #ps.3005: Attacked Militarist PS - Refuses Communications
   ps.3005.name: "[target_ps_authoritarian.GetName]"
-  ps.3005a.desc: "We are not savages. Why don't we resolve this in a civilized manner? You and me, armed only with swords, in a fight to death at the colosseum. Winner takes all."
+  ps.3005a.desc: "Мы не экономим. Почему бы не урегулировать это цивилизованно? Ты и я, вооруженный только мечами, в борьбе с смертью в колоссале. Победитель принимает всех."
   ps.3005.a: "Конец связи."
   #ps.400: Pacifist PS - Main Menu (Initial)
   ps.400.name: "[target_ps_pacifist.GetName]"
-  ps.400a.desc: "It's a pleasure to see you again, [This.GetName]. How can we be of service today?"
+  ps.400a.desc: "Мне приятно видеть вас снова, [This.GetName]. Как мы можем быть сервисом сегодня?"
   ps.400.a: "Мы заинтересованы в продовольствии."
   ps.400.a.alreadyhired: "У нас уже есть сделка с §Y[target_ps_pacifist.GetName]§!."
-  ps.400.ab: "We wish to end our Food trade deal."
-  ps.400.ab.reply: "We rejoice to hear that your society is prospering and our services are not needed anymore. If you need them again in the future, you just have to ask!"
-  ps.400.ab.tooltip: "This will terminate our current Food trade deal with the §Y[target_ps_pacifist.GetName]§!"
+  ps.400.ab: "Мы хотим прекратить торговую сделку по пище."
+  ps.400.ab.reply: "Мы рады услышать, что Ваше общество процветает, и наши услуги больше не нужны. Если они вам понадобятся снова в будущем, вам просто нужно спросить!"
+  ps.400.ab.tooltip: "Это действие прекратит сделку по торговле пищей с §Y[target_ps_pacifist.GetName]§!"
   ps.400.b: "Давайте подпишем коммерческий пакт."
-  ps.400.b.opinion: "Requires the §Y[target_ps_pacifist.GetName]§! to have:\n£opinion£ Opinion +50"
-  ps.400.b.alreadyhired: "We already signed a commercial pact with the §Y[target_ps_pacifist.GetName]§!."
+  ps.400.b.opinion: "Требует §Y[target_ps_pacifist.GetName]§! чтобы иметь:\n£opinion£ Мнение +50"
+  ps.400.b.alreadyhired: "Мы уже подписали коммерческий пакт с §Y[target_ps_pacifist.GetName]§!."
   ps.400.goodbye: "Увидимся с вами позже."
   #ps.410: Resource Deal
   ps.410.name: "Сделка по торговле продовольствием"
-  ps.410.desc: "As we've said before, we are a but simple, humble farmers. Fortunately, the fruit of this planet is bountiful, so we have much food to share.\n\nBut not enough to do it for free, unfortunately. We sell 1 £food£ for 1 £energy£. Is that a reasonable for you?"
+  ps.410.desc: "Как мы уже говорили ранее, мы - но простые, скромные фермеры. К счастью, фрукты этой планеты является щедрым, поэтому у нас есть много еды для совместного использования.\n\nНо не достаточно, чтобы сделать это бесплатно. Мы продаем 1 £food£ за 1 £energy£. Это разумно для вас?"
   ps.410.a: "§G10§! £food£ §H$food$§!/месяц за §R10§! £energy£ §H$energy$§!/месяц."
   ps.410.b: "§G20§! £food£ §H$food$§!/месяц за §R20§! £energy£ §H$energy$§!/месяц."
   ps.410.c: "§G30§! £food£ §H$food$§!/месяц за §R30§! £energy£ §H$energy$§!/месяц."
