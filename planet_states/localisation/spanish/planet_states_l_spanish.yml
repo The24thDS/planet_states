@@ -1,13 +1,14 @@
 ﻿l_spanish:
-  # Country Type
+
+  #Country Type
   mod_planet_state: "$COUNTRY_PLANET_STATE"
   COUNTRY_PLANET_STATE: "Planet-State"
   COUNTRY_PLANET_STATE_DESC: "As old as the Fallen Empires, these small countries have conscientiously abstained from the galactic affairs and never expanded to other planets. Much of their power and prosperity is probably a consequence of this."
   CAN_TAKE_HOSTILE_ACTION_PLANET_STATE: "We can only take hostile action against a Planet-State within our borders."
-  # Ships
+  #Ships
   planet_state_station: "Planet-State Station"
   planet_state_station_plural: "Planet-State Stations"
-  # Governments
+  #Governments
   gov_planet_state_egalitarian: "Planet-State"
   gov_planet_state_egalitarian_desc: "A sovereign, independent planet, more concerned about the prosperity of its own citizens than the galactic affairs."
   RT_PS_EGALITARIAN: "First Speaker"
@@ -22,7 +23,11 @@
   RT_PS_PACIFIST: "Archon"
   civic_planet_state: "Planet-State"
   civic_planet_state_desc: "This society conscientiously abstained from spreading to other planets, priding its own prosperity and stability above any empire-building dreams."
-  # Buildings
+  #Districts
+  district_ps_city: "Planet State City"
+  district_ps_city_desc: "Planet Wide City"
+  district_ps_city_plural: "Planet Wide Cities"
+  #Buildings
   building_ps_capitol: "Planet-State Capitol"
   building_ps_capitol_desc: "The administrative center of the Planet-State. Incredibly advanced and efficient for its size - just like its country."
   building_ps_anti_matter_reactor: "Anti-Matter Reactor"
@@ -47,7 +52,7 @@
   building_ps_manorial_lands_desc: "Huge estates controlled by nobles. Although in theory a grant from the crown, they are mostly independent and autonomous jurisdictions."
   building_ps_bastion: "Bastion"
   building_ps_bastion_desc: "The Planet-State's military center, where loyal soldiers sworn to protect their nation's autonomy are trained."
-  # Pop jobs
+  #Pop jobs
   job_archduke: "Archduke"
   job_archduke_plural: "Archdukes"
   job_archduke_desc: "Only below the monarch in power and the royalty in nobility, the Archdukes are important pillars of the realm."
@@ -64,7 +69,7 @@
   job_baron_plural: "Barons"
   job_baron_desc: "Well-born, well-bred land-owning elites. The backbone of the realm."
   mod_job_baron_add: "Archduke Jobs"
-  # Static Modifiers
+  #Static Modifiers
   planet_lost_autonomy: "Lost Autonomy"
   planet_lost_autonomy_desc: "This was a former sovereign Planet-State. Its inhabitants have a fierce sense of independency, only waiting for the appropriate moment to take it back."
   modifier_ps_egalitarian_trade_deal_1: "Egalitarian Planet-State Trade Deal (£consumer_goods£ x10)"
@@ -93,7 +98,7 @@
   modifier_ps_authoritarian_commercial_pact: "Planet-State Commercial Pact (Authoritarian)"
   modifier_ps_militarist_commercial_pact: "Planet-State Commercial Pact (Militarist)"
   modifier_ps_pacifist_commercial_pact: "Planet-State Commercial Pact (Pacifist)"
-  # Opinion Modifiers
+  #Opinion Modifiers
   opinion_destroyed_ps_egalitarian: "Destroyed Planet-State"
   opinion_destroyed_ps_egalitarian_trade: "Destroyed Planet-State we had deals with"
   opinion_destroyed_ps_authoritarian: "$opinion_destroyed_ps_egalitarian$"
@@ -102,3 +107,4 @@
   opinion_destroyed_ps_militarist_trade: "$opinion_destroyed_ps_egalitarian_trade$"
   opinion_destroyed_ps_pacifist: "$opinion_destroyed_ps_egalitarian$"
   opinion_destroyed_ps_pacifist_trade: "$opinion_destroyed_ps_egalitarian_trade$"
+  opinion50: "+50 £opinion£ Opinion"
