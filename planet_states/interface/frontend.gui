@@ -202,13 +202,13 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "ne_version"
 				font = "cg_16b"
-				text = "Planet States v1.1.0"
+				text = "Planet States v1.1.1"
 				position = { x= -385 y = -58  }
 				maxWidth = 300
 				maxHeight = 20
 				fixedSize = yes
 				format = left
-				tooltip = "Commit: 806cefb"
+				tooltip = "Commit: 92becad"
 			}
 			instantTextBoxType = {
 				name = "version"
