@@ -21,12 +21,12 @@ create_planet_state_egalitarian = {
 				trait = trait_venerable
 				trait = trait_communal
 			}
-		}
-		last_created_species = {
-			save_event_target_as = ps_egalitarian_main_species
+			effect = {
+				save_event_target_as = ps_egalitarian_main_species
+			}
 		}
 		create_country = {
-			name = random
+			name = NAME_PS_Egalitarian
 			type = planet_state
 			authority = "auth_democratic"
 			civics = {
@@ -34,49 +34,72 @@ create_planet_state_egalitarian = {
 				civic = civic_idealistic_foundation
 				civic = civic_shared_burden
 			}
-			species = last_created_species
+			species = event_target:ps_egalitarian_main_species
 			flag = random
 			ethos = {
 				ethic = ethic_fanatic_egalitarian
 			}
 			ignore_initial_colony_error = yes
-		}
-		# Create Station and Leader
-		last_created_country = {
-			set_country_flag = ps_egalitarian
-			save_event_target_as = target_ps_egalitarian
-			create_fleet = {
-				name = "NAME_PS_Egalitarian_Fleet"
-				settings = {
-					spawn_debris = no
-				}
-				effect = {
-					set_owner = prev
-					create_ship = {
-						name = random
-						design = "NAME_Planet_State_Station"
-						graphical_culture = prev
+			effect = {
+				# Create Station and Leader
+				set_country_flag = ps_egalitarian
+				save_event_target_as = target_ps_egalitarian
+				create_fleet = {
+					name = "NAME_PS_Egalitarian_Fleet"
+					settings = {
+						spawn_debris = no
 					}
-					set_location = {
-						target = prevprev
-						angle = random
-						distance = 15
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_Planet_State_Station"
+							graphical_culture = prev
+						}
+						set_location = {
+							target = prevprev
+							angle = random
+							distance = 15
+						}
+					}
+				}
+				create_leader = {
+					class = ruler
+					species = event_target:ps_egalitarian_main_species
+					name = random
+					skill = 5
+					effect = {
+						event_target:target_ps_egalitarian = {
+							set_leader = prev
+						}
 					}
 				}
 			}
-			create_leader = {
-				class = ruler
-				species = last_created_species
-				name = random
-				skill = 5
-			}
-			set_leader = last_created_leader
 		}
 		# Set Planet-State as Owner of the planet
 		set_owner = event_target:target_ps_egalitarian
 		set_controller = event_target:target_ps_egalitarian
 		set_capital = yes
+		set_name = "Luke"
 		# Add Builings, Districts, Pops
+		while = {
+			limit = {
+				free_district_slots > 0
+			}
+			add_district_if_free_slot = {
+				DISTRICT = district_arcology_housing
+			}
+		}
+		while = {
+			count = 244
+			create_pop = {
+				species = owner_main_species
+				ethos = {
+					ethic = ethic_fanatic_egalitarian
+				}
+			}
+		}
+		
 		add_building = building_ps_capitol
 		add_building = building_ps_anti_matter_reactor
 		add_building = building_ps_bastion
@@ -89,20 +112,6 @@ create_planet_state_egalitarian = {
 		add_building = building_ps_distillation_complex
 		add_building = building_ps_chemical_complex
 		add_building = building_ps_synthesizers_complex
-
-		while = {
-			count = 25
-			add_district = district_arcology_housing
-		}
-		while = {
-			count = 244
-			create_pop = {
-				species = owner_main_species
-				ethos = {
-					ethic = ethic_fanatic_egalitarian
-				}
-			}
-		}
 		event_target:target_ps_egalitarian = {
 			set_policy = {
 				policy = purge
@@ -145,12 +154,12 @@ create_planet_state_authoritarian = {
 				trait = trait_erudite
 				trait = trait_decadent
 			}
-		}
-		last_created_species = {
-			save_event_target_as = ps_authoritarian_main_species
+			effect = {
+				save_event_target_as = ps_authoritarian_main_species
+			}
 		}
 		create_country = {
-			name = random
+			name = NAME_PS_Authoritarian
 			type = planet_state
 			authority = "auth_imperial"
 			civics = {
@@ -158,49 +167,85 @@ create_planet_state_authoritarian = {
 				civic = civic_aristocratic_elite
 				civic = civic_functional_architecture
 			}
-			species = last_created_species
+			species = event_target:ps_authoritarian_main_species
 			flag = random
 			ethos = {
 				ethic = ethic_fanatic_authoritarian
 			}
 			ignore_initial_colony_error = yes
-		}
-		# Create Station and Leader
-		last_created_country = {
-			set_country_flag = ps_authoritarian
-			save_event_target_as = target_ps_authoritarian
-			create_fleet = {
-				name = "NAME_PS_Authoritarian_Fleet"
-				settings = {
-					spawn_debris = no
-				}
-				effect = {
-					set_owner = prev
-					create_ship = {
-						name = random
-						design = "NAME_Planet_State_Station"
-						graphical_culture = prev
+			effect = {
+				set_country_flag = ps_authoritarian
+				save_event_target_as = target_ps_authoritarian
+				create_fleet = {
+					name = "NAME_PS_Authoritarian_Fleet"
+					settings = {
+						spawn_debris = no
 					}
-					set_location = {
-						target = prevprev
-						angle = random
-						distance = 15
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_Planet_State_Station"
+							graphical_culture = prev
+						}
+						set_location = {
+							target = prevprev
+							angle = random
+							distance = 15
+						}
+					}
+				}
+				create_leader = {
+					class = ruler
+					species = event_target:ps_authoritarian_main_species
+					name = random
+					skill = 5
+					effect = {
+						event_target:target_ps_authoritarian = {
+							set_leader = prev
+						}
 					}
 				}
 			}
-			create_leader = {
-				class = ruler
-				species = last_created_species
-				name = random
-				skill = 5
-			}
-			set_leader = last_created_leader
 		}
 		# Set Planet-State as Owner of the planet
 		set_owner = event_target:target_ps_authoritarian
 		set_controller = event_target:target_ps_authoritarian
 		set_capital = yes
 		# Add Builings, Districts, Pops
+		while = {
+			count = 10
+			add_district_if_free_slot = {
+				DISTRICT = district_ps_city
+			}
+		}
+		while = {
+			count = 5
+			add_district_if_free_slot = {
+				DISTRICT = district_farming
+			}
+		}
+		while = {
+			count = 5
+			add_district_if_free_slot = {
+				DISTRICT = district_generator
+			}
+		}
+		while = {
+			count = 5
+			add_district_if_free_slot = {
+				DISTRICT = district_mining
+			}
+		}
+		while = {
+			count = 75
+			create_pop = {
+				species = owner_main_species
+				ethos = {
+					ethic = ethic_fanatic_authoritarian
+				}
+			}
+		}
 		add_building = building_ps_capitol
 		add_building = building_ps_manorial_lands
 		add_building = building_ps_manorial_lands
@@ -213,31 +258,6 @@ create_planet_state_authoritarian = {
 		add_building = building_ps_distillation_complex
 		add_building = building_ps_chemical_complex
 		add_building = building_ps_synthesizers_complex
-		while = {
-			count = 10
-			add_district = district_ps_city
-		}
-		while = {
-			count = 5
-			add_district = district_farming
-		}
-		while = {
-			count = 5
-			add_district = district_generator
-		}
-		while = {
-			count = 5
-			add_district = district_mining
-		}
-		while = {
-			count = 75
-			create_pop = {
-				species = owner_main_species
-				ethos = {
-					ethic = ethic_fanatic_authoritarian
-				}
-			}
-		}
 		create_species = {
 			name = random
 			class = random_non_machine
@@ -249,9 +269,9 @@ create_planet_state_authoritarian = {
 				trait = trait_presapient_proles
 				trait = trait_robust
 			}
-		}
-		last_created_species = {
-			save_event_target_as = ps_authoritarian_specialist_species
+			effect = {
+				save_event_target_as = ps_authoritarian_specialist_species
+			}
 		}
 		while = {
 			count = 50
@@ -273,9 +293,9 @@ create_planet_state_authoritarian = {
 				trait = trait_presapient_proles
 				trait = trait_charismatic
 			}
-		}
-		last_created_species = {
-			save_event_target_as = ps_authoritarian_servile_species
+			effect = {
+				save_event_target_as = ps_authoritarian_servile_species
+			}
 		}
 		while = {
 			count = 60
@@ -297,9 +317,9 @@ create_planet_state_authoritarian = {
 				trait = trait_very_strong
 				trait = trait_nerve_stapled
 			}
-		}
-		last_created_species = {
-			save_event_target_as = ps_authoritarian_slave_species
+			effect = {
+				save_event_target_as = ps_authoritarian_slave_species
+			}
 		}
 		while = {
 			count = 60
@@ -327,7 +347,7 @@ create_planet_state_militarist = {
 		set_planet_size = 25
 		change_pc = rl_habitable_normal
 		clear_deposits = yes
-		clear_blocker = yes
+		clear_blockers = yes
 		# Create Species and Country
 		create_species = {
 			name = random
@@ -339,12 +359,12 @@ create_planet_state_militarist = {
 				trait = trait_resilient
 				trait = trait_quarrelsome
 			}
-		}
-		last_created_species = {
-			save_event_target_as = ps_militarist_main_species
+			effect = {
+				save_event_target_as = ps_militarist_main_species
+			}
 		}
 		create_country = {
-			name = random
+			name = NAME_PS_Militarist
 			type = planet_state
 			authority = "auth_dictatorial"
 			civics = {
@@ -352,61 +372,53 @@ create_planet_state_militarist = {
 				civic = civic_distinguished_admiralty
 				civic = civic_warrior_culture
 			}
-			species = last_created_species
+			species = event_target:ps_militarist_main_species
 			flag = random
 			ethos = {
 				ethic = ethic_fanatic_militarist
 			}
 			ignore_initial_colony_error = yes
-		}
-		# Create Station and Leader
-		last_created_country = {
-			set_country_flag = ps_militarist
-			save_event_target_as = target_ps_militarist
-			create_fleet = {
-				name = "NAME_PS_Militarist_Fleet"
-				settings = {
-					spawn_debris = no
-				}
-				effect = {
-					set_owner = prev
-					create_ship = {
-						name = random
-						design = "NAME_Planet_State_Station"
-						graphical_culture = prev
+			# Create Station and Leader
+			effect = {
+				set_country_flag = ps_militarist
+				save_event_target_as = target_ps_militarist
+				create_fleet = {
+					name = "NAME_PS_Militarist_Fleet"
+					settings = {
+						spawn_debris = no
 					}
-					set_location = {
-						target = prevprev
-						angle = random
-						distance = 15
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_Planet_State_Station"
+							graphical_culture = prev
+						}
+						set_location = {
+							target = prevprev
+							angle = random
+							distance = 15
+						}
+					}
+				}
+				create_leader = {
+					class = ruler
+					species = event_target:ps_militarist_main_species
+					name = random
+					skill = 5
+					effect = {
+						event_target:target_ps_militarist = {
+							set_leader = prev
+						}
 					}
 				}
 			}
-			create_leader = {
-				class = ruler
-				species = last_created_species
-				name = random
-				skill = 5
-			}
-			set_leader = last_created_leader
 		}
 		# Set Planet-State as Owner of the planet
 		set_owner = event_target:target_ps_militarist
 		set_controller = event_target:target_ps_militarist
 		set_capital = yes
 		# Add Builings, Districts, Pops
-		add_building = building_ps_capitol
-		add_building = building_ps_anti_matter_reactor
-		add_building = building_ps_aeroponics_farms_complex
-		add_building = building_ps_mineral_purification_complex
-		add_building = building_ps_multidimensional_printers
-		add_building = building_ps_leisure_complex
-		add_building = building_ps_distillation_complex
-		add_building = building_ps_chemical_complex
-		add_building = building_ps_synthesizers_complex
-		add_building = building_ps_bastion
-		add_building = building_ps_bastion
-		add_building = building_ps_bastion
 		while = {
 			count = 11
 			add_district = district_ps_city
@@ -420,6 +432,18 @@ create_planet_state_militarist = {
 				}
 			}
 		}
+		add_building = building_ps_capitol
+		add_building = building_ps_anti_matter_reactor
+		add_building = building_ps_aeroponics_farms_complex
+		add_building = building_ps_mineral_purification_complex
+		add_building = building_ps_multidimensional_printers
+		add_building = building_ps_leisure_complex
+		add_building = building_ps_distillation_complex
+		add_building = building_ps_chemical_complex
+		add_building = building_ps_synthesizers_complex
+		add_building = building_ps_bastion
+		add_building = building_ps_bastion
+		add_building = building_ps_bastion
 		create_species = {
 			name = "NAME_Synthetic"
 			plural = "NAME_Synthetics"
@@ -431,9 +455,9 @@ create_planet_state_militarist = {
 				trait = "trait_robot_efficient_processors"
 				trait = "trait_robot_loyalty_circuits"
 			}
-		}
-		last_created_species = {
-			save_event_target_as = ps_militarist_robot_species
+			effect = {
+				save_event_target_as = ps_militarist_robot_species
+			}
 		}
 		while = {
 			count = 150
@@ -490,9 +514,12 @@ create_planet_state_pacifist = {
 				trait = trait_communal
 				trait = trait_nonadaptive
 			}
+			effect = {
+				save_event_target_as = pacifist_species
+			}
 		}
 		create_country = {
-			name = random
+			name = NAME_PS_Pacifist
 			type = planet_state
 			authority = "auth_oligarchic"
 			civics = {
@@ -500,61 +527,53 @@ create_planet_state_pacifist = {
 				civic = civic_agrarian_idyll
 				civic = civic_environmentalist
 			}
-			species = last_created_species
+			species = event_target:pacifist_species
 			flag = random
 			ethos = {
 				ethic = ethic_fanatic_pacifist
 			}
 			ignore_initial_colony_error = yes
-		}
-		# Create Station and Leader
-		last_created_country = {
-			set_country_flag = ps_pacifist
-			save_event_target_as = target_ps_pacifist
-			create_fleet = {
-				name = "NAME_PS_Pacifist_Fleet"
-				settings = {
-					spawn_debris = no
-				}
-				effect = {
-					set_owner = prev
-					create_ship = {
-						name = random
-						design = "NAME_Planet_State_Station"
-						graphical_culture = prev
+			# Create Station and Leader
+			effect = {
+				set_country_flag = ps_pacifist
+				save_event_target_as = target_ps_pacifist
+				create_fleet = {
+					name = "NAME_PS_Pacifist_Fleet"
+					settings = {
+						spawn_debris = no
 					}
-					set_location = {
-						target = prevprev
-						angle = random
-						distance = 15
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_Planet_State_Station"
+							graphical_culture = prev
+						}
+						set_location = {
+							target = prevprev
+							angle = random
+							distance = 15
+						}
+					}
+				}
+				create_leader = {
+					class = ruler
+					species = event_target:pacifist_species
+					name = random
+					skill = 5
+					effect = {
+						event_target:target_ps_pacifist = {
+							set_leader = prev
+						}
 					}
 				}
 			}
-			create_leader = {
-				class = ruler
-				species = last_created_species
-				name = random
-				skill = 5
-			}
-			set_leader = last_created_leader
 		}
 		# Set Planet-State as Owner of the planet
 		set_owner = event_target:target_ps_pacifist
 		set_controller = event_target:target_ps_pacifist
 		set_capital = yes
 		# Add Builings, Districts, Pops
-		add_building = building_ps_capitol
-		add_building = building_ps_anti_matter_reactor
-		add_building = building_ps_aeroponics_farms_complex
-		add_building = building_ps_mineral_purification_complex
-		add_building = building_ps_multidimensional_printers
-		add_building = building_ps_leisure_complex
-		add_building = building_ps_distillation_complex
-		add_building = building_ps_chemical_complex
-		add_building = building_ps_synthesizers_complex
-		add_building = building_ps_bastion
-		add_building = building_ps_bastion
-		add_building = building_ps_bastion
 		while = {
 			count = 14
 			add_district = district_ps_city
@@ -574,6 +593,18 @@ create_planet_state_pacifist = {
 				}
 			}
 		}
+		add_building = building_ps_capitol
+		add_building = building_ps_anti_matter_reactor
+		add_building = building_ps_aeroponics_farms_complex
+		add_building = building_ps_mineral_purification_complex
+		add_building = building_ps_multidimensional_printers
+		add_building = building_ps_leisure_complex
+		add_building = building_ps_distillation_complex
+		add_building = building_ps_chemical_complex
+		add_building = building_ps_synthesizers_complex
+		add_building = building_ps_bastion
+		add_building = building_ps_bastion
+		add_building = building_ps_bastion
 	}
 }
 
@@ -667,5 +698,12 @@ remove_planet_state_trade_deal_modifier = {
 		modifier_ps_$TYPE$_trade_deal_5 = {
 			remove_modifier = modifier_ps_$TYPE$_trade_deal_5
 		}
+	}
+}
+
+add_district_if_free_slot = {
+	if = {
+		limit = { num_free_districts = { type = $DISTRICT$ value > 0 } }
+		add_district = $DISTRICT$
 	}
 }
