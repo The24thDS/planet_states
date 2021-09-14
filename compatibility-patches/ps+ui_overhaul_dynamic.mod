@@ -1,7 +1,7 @@
-version="1.0.1"
+version="1.0.2"
 tags={
 	"Fixes"
 }
-name="[3.0.*] UI Overhaul Dynamic + Planet States"
-supported_version="3.0.*"
+name="[3.1.*] UI Overhaul Dynamic + Planet States"
+supported_version="3.1.*"
 path="mod/ps+ui_overhaul_dynamic"

@@ -79,3 +79,17 @@ has_any_active_ps_pacifist_deal = {
 		has_modifier = modifier_ps_pacifist_commercial_pact
 	}
 }
+
+
+districts_count_min_max = {
+	AND = {
+		num_free_districts = {
+			type = $TYPE$
+			value < $MAX$
+		}
+		num_free_districts = {
+			type = $TYPE$
+			value >= $MIN$
+		}
+	}
+}
