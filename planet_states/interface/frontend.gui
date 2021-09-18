@@ -202,7 +202,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "ne_version"
 				font = "cg_16b"
-				text = "Planet States v1.1.1"
+				text = "PS_VERSION"
 				position = { x= -385 y = -58  }
 				maxWidth = 300
 				maxHeight = 20
