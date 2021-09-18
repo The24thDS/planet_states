@@ -1,5 +1,5 @@
-﻿l_polish:
-
+---
+l_english:
   #Country Type
   mod_planet_state: "$COUNTRY_PLANET_STATE"
   COUNTRY_PLANET_STATE: "Planet-State"
@@ -108,3 +108,5 @@
   opinion_destroyed_ps_pacifist: "$opinion_destroyed_ps_egalitarian$"
   opinion_destroyed_ps_pacifist_trade: "$opinion_destroyed_ps_egalitarian_trade$"
   opinion50: "+50 £opinion£ Opinion"
+  #Others
+  PS_VERSION: "Planet States v1.1.1"
