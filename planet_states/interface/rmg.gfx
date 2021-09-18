@@ -1,18 +1,39 @@
-spriteTypes = {	
-	
+spriteTypes = {
 	spriteType = {
 		name = "GFX_front_menu_rmg_discord"
 		texturefile = "gfx/interface/buttons/main_menu_rmg_discord.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_front_menu_rmg_steam"
 		texturefile = "gfx/interface/buttons/main_menu_rmg_steam.dds"
 	}
-
 	spriteType = {
 		name = "GFX_rmg_logo"
 		texturefile = "gfx/interface/icons/logo_rmg.dds"
 	}
-
+	spriteType = {
+		name = "GFX_rmg_lotor_dev_diary_3"
+		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_3.dds"
+	}
+	spriteType = {
+		name = "GFX_rmg_new_enclaves"
+		texturefile = "gfx/interface/buttons/rmg_new_enclaves.dds"
+	}
+	spriteType = {
+		name = "GFX_rmg_stnc"
+		texturefile = "gfx/interface/buttons/rmg_stnc.dds"
+	}
+	spriteType = {
+		name = "GFX_rmg_swnd"
+		texturefile = "gfx/interface/buttons/rmg_swnd.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_glow_tile_purple"
+		textureFile = "gfx/interface/tiles/glow_tile_purple.dds"
+		borderSize = {
+			x = 12
+			y = 12
+		}
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
 }
