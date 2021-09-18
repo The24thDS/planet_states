@@ -1,0 +1,40 @@
+{
+  "bumpFiles": [
+    {
+      "filename": "planet_states.mod",
+      "updater": "mod-file-updater.js"
+    },
+    {
+      "filename": "planet_states/descriptor.mod",
+      "updater": "mod-file-updater.js"
+    },
+    {
+      "filename": "planet_states/localisation/braz_por/planet_states_l_braz_por.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "planet_states/localisation/english/planet_states_l_english.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "planet_states/localisation/french/planet_states_l_french.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "planet_states/localisation/german/planet_states_l_german.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "planet_states/localisation/polish/planet_states_l_polish.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "planet_states/localisation/russian/planet_states_l_russian.yml",
+      "updater": "yml-file-updater.js"
+    },
+    {
+      "filename": "planet_states/localisation/spanish/planet_states_l_spanish.yml",
+      "updater": "yml-file-updater.js"
+    }
+  ]
+}
