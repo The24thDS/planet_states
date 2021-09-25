@@ -1,5 +1,5 @@
----
-l_english:
+﻿l_french:
+
   #First contact with Planet-State
   fcsum_planet_state_1: "Nous avons découvert que le §H[This.ContactCountry.GetName]§! est basé autour d'une seule planète dans le système §H[This.System.GetName]§! ."
   planet_state_first_contact.1.desc: "We have picked up readings of unknown nature. The signals seem to follow some kind of repeating syntax which could indicate sapient origin. It should be investigated further. They seem to be concentrated around a single planet, though it is unclear whether this forms part of a larger spacefaring civilization."
