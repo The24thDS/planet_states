@@ -1,5 +1,5 @@
-﻿l_french:
-
+---
+l_english:
   #First contact with Planet-State
   fcsum_planet_state_1: "Nous avons découvert que le §H[This.ContactCountry.GetName]§! est basé autour d'une seule planète dans le système §H[This.System.GetName]§!."
   planet_state_first_contact.1.desc: "Nous avons récupéré des données de nature inconnue. Les signaux semblent suivre une sorte de syntaxe répétitive qui pourrait indiquer la présence d'une civilisation. Cela devrait faire l'objet d'une investigation plus approfondie. Ils sembleraient qu'ils soient concentrés sur une seule planète, bien que ce ne soit pas clair si elle fait partie d'une plus grande civilisation spatiale."
@@ -108,7 +108,7 @@
   ps.300.b.alreadyhired: "Nous avons déjà signé un pacte commercial avec la §Y[target_ps_militarist.GetName]§!."
   ps.300.goodbye: "Au revoir."
   #ps.310: Resource Deal
-  ps.310.name: "Offre commerciale d'Alliages"
+  ps.310.name: "Accord commercial d'Alliages"
   ps.310.desc: "Pour être honnête, nous avons déjà utilisé nous-mêmes la majeur partie de notre alliage. Les épées et les armures ne peuvent pas être créées à partir de rien. Triste, nous le savons.\n\nNous en avons une petite quantité que nous pouvons vous échanger, cependant. Nous utiliserons probablement les crédits pour acheter plus d'alliages plus tard, mais peu importe. Comment sonne pour vous 1 £alloys£ pour 4 £energy£ ?"
   ps.310.a: "§G10§! £alloys£ §H$alloys$§!/mois pour §R40§! £energy£ §H$energy$§!/mois."
   ps.310.b: "§G20§! £alloys£ §H$alloys$§!/mois pour §R80§! £energy£ §H$energy$§!/mois."
@@ -125,26 +125,26 @@
   ps.320.a.reply: "Ça s'est très bien passé, n'est-ce pas ?"
   #ps.3004: Attacked Militarist PS - Agreements Terminated
   ps.3004.name: "[target_ps_militarist.GetName]"
-  ps.3004.desc: "We mistook you for a friend. In reality, it was even better: you are a rival! Finally something interesting is happening in this galaxy!"
-  ps.3004.a: "End communications."
+  ps.3004.desc: "Nous vous avons pris pour un ami. En réalité, c'était encore mieux : vous êtes un rival ! Enfin quelque chose d'intéressant se passe dans cette galaxie !"
+  ps.3004.a: "Fin de communication."
   #ps.3005: Attacked Militarist PS - Refuses Communications
   ps.3005.name: "[target_ps_authoritarian.GetName]"
-  ps.3005a.desc: "We are not savages. Why don't we resolve this in a civilized manner? You and me, armed only with swords, in a fight to death at the colosseum. Winner takes all."
-  ps.3005.a: "End communications."
+  ps.3005a.desc: "Nous ne sommes pas des sauvages. Pourquoi ne résolvons-nous pas cela de manière civilisé ? Vous et moi, armés seulement d'épées, dans un combat à mort dans le colisée. Le gagnant prend tout."
+  ps.3005.a: "Fin de communication."
   #ps.400: Pacifist PS - Main Menu (Initial)
   ps.400.name: "[target_ps_pacifist.GetName]"
-  ps.400a.desc: "It's a pleasure to see you again, [This.GetName]. How can we be of service today?"
-  ps.400.a: "We are interested in Food."
-  ps.400.a.alreadyhired: "We already have a Food trade deal with the §Y[target_ps_pacifist.GetName]§!."
-  ps.400.ab: "We wish to end our Food trade deal."
-  ps.400.ab.reply: "We rejoice to hear that your society is prospering and our services are not needed anymore. If you need them again in the future, you just have to ask!"
-  ps.400.ab.tooltip: "This will terminate our current Food trade deal with the §Y[target_ps_pacifist.GetName]§!"
-  ps.400.b: "Let's sign a commercial pact."
-  ps.400.b.opinion: "Requires the §Y[target_ps_pacifist.GetName]§! to have:\n£opinion£ Opinion +50"
-  ps.400.b.alreadyhired: "We already signed a commercial pact with the §Y[target_ps_pacifist.GetName]§!."
-  ps.400.goodbye: "See you later."
+  ps.400a.desc: "C'est un plaisir de vous revoir, [This.GetName]. Comment pouvons-nous être utiles aujourd'hui ?"
+  ps.400.a: "Nous sommes intéressés par la nourriture."
+  ps.400.a.alreadyhired: "Nous avons déjà accord commercial avec la §Y[target_ps_pacifist.GetName]§!."
+  ps.400.ab: "Nous souhaiterions mettre un terme à notre accord commercial."
+  ps.400.ab.reply: "Nous nous réjouissons d'entendre que votre société prospère et que nos services ne soient plus nécessaires. Si vous en avez besoin à l'avenir, il vous suffit de demander !"
+  ps.400.ab.tooltip: "Cela va mettre fin à notre actuel accord commercial avec la §Y[target_ps_pacifist.GetName]§!"
+  ps.400.b: "Signons un pacte commercial."
+  ps.400.b.opinion: "Nécessite que la §Y[target_ps_pacifist.GetName]§! ait :\n£opinion£ Opinion +50"
+  ps.400.b.alreadyhired: "Nous avons déjà signé un pacte commercial avec la §Y[target_ps_pacifist.GetName]§!."
+  ps.400.goodbye: "À plus tard."
   #ps.410: Resource Deal
-  ps.410.name: "Food Trade Deal"
+  ps.410.name: "Accord commercial de Nourritures"
   ps.410.desc: "As we've said before, we are a but simple, humble farmers. Fortunately, the fruit of this planet is bountiful, so we have much food to share.\n\nBut not enough to do it for free, unfortunately. We sell 1 £food£ for 1 £energy£. Is that a reasonable for you?"
   ps.410.a: "§G10§! £food£ §H$food$§!/month for §R10§! £energy£ §H$energy$§!/month."
   ps.410.b: "§G20§! £food£ §H$food$§!/month for §R20§! £energy£ §H$energy$§!/month."
