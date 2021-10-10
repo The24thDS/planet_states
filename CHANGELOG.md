@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/The24thDS/planet_states/compare/v1.3.0...v1.3.1) (2021-10-10)
+
+
+### Bug Fixes
+
+* removed one time energy payment for trades ([6e6ecf5](https://github.com/The24thDS/planet_states/commit/6e6ecf5221d1e04fa6bcd972308ca88b1404473e))
+
 ## [1.3.0](https://github.com/The24thDS/planet_states/compare/v1.2.0...v1.3.0) (2021-10-10)
 
 
