@@ -1,5 +1,5 @@
-﻿l_russian:
-
+---
+l_english:
   #Country Type
   mod_planet_state: "$COUNTRY_PLANET_STATE"
   COUNTRY_PLANET_STATE: "Планета-Государство"
