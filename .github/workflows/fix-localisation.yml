@@ -1,8 +1,8 @@
 name: Fix localisation
 on:
   push:
-    branches-ignore:
-      - 'master'
+    branches:
+      - 'feature/translate'
 jobs:
   cancel:
     name: 'Cancel Previous Runs'
@@ -16,29 +16,26 @@ jobs:
   fix_localisation:
     runs-on: ubuntu-latest
     steps:
-    - name: Cancel Workflow Action
-      uses: styfle/cancel-workflow-action@0.6.0
-      with:
-        all_but_latest: true
-        access_token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-    - name: Fix locs
-      uses: The24thDS/stellaris-localisation-crowdin-fix@v1.0.3
-      with:
-        localisation_folder: 'planet_states/localisation'
-    - name: Check if there are changes
-      id: changes
-      uses: UnicornGlobal/has-changes-action@v1.0.11
-    - name: Commit files
-      if: steps.changes.outputs.changed == 1
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add .
-        git commit -m "Autofix for localisation files"
-        git push
-
-
-
+      - name: Cancel Workflow Action
+        uses: styfle/cancel-workflow-action@0.6.0
+        with:
+          all_but_latest: true
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
+      - name: Fix locs
+        uses: The24thDS/stellaris-localisation-crowdin-fix@v1.0.3
+        with:
+          localisation_folder: 'planet_states/localisation'
+      - name: Check if there are changes
+        id: changes
+        uses: UnicornGlobal/has-changes-action@v1.0.11
+      - name: Commit files
+        if: steps.changes.outputs.changed == 1
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Autofix for localisation files"
+          git push
