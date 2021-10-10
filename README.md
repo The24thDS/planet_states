@@ -1,9 +1,3 @@
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-dark.svg?style=tound-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 This is the updated version of the Planet States mod originally made by [lpslucasps](https://github.com/lpslucasps).
 
 I've decided to fork his repo and maintain the mod since he has been inactive for the last 16 months.
@@ -74,27 +68,17 @@ If you want to contribute by translating the locs, you can do that on [Crowdin](
 
 If you like my work you can sponsor me on [Github](https://github.com/sponsors/The24thDS) or buy me a tea on [BuyMeACoffe](https://www.buymeacoffee.com/the24thds).
 
-## Contributors ✨
+## Credits
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+This mod would not exist in its current state without these people:
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://david-sima.dev"><img src="https://avatars.githubusercontent.com/u/26633429?v=4?s=100" width="100px;" alt=""/><br /><sub><b>The24thDS</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=The24thDS" title="Code">💻</a> <a href="#content-The24thDS" title="Content">🖋</a> <a href="#ideas-The24thDS" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-The24thDS" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/lpslucasps"><img src="https://avatars.githubusercontent.com/u/1896763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lpslucasps</b></sub></a><br /><a href="https://github.com/The24thDS/new_enclaves/commits?author=lpslucasps" title="Code">💻</a> <a href="#content-lpslucasps" title="Content">🖋</a> <a href="#ideas-lpslucasps" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://steamcommunity.com/id/Kyllianpt"><img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg" width="100px;" alt=""/><br /><sub><b>Kyllian</b></sub></a><br /><a title="Code">💻</a></td>
-  </tr>
-</table>
+- [lpslucasps](https://github.com/lpslucasps) with the original idea behind the mod;
+- [Kyllian](https://steamcommunity.com/id/Kyllianpt) for fixing bugs related to the Planet State's economy;
+- [Утка Речная](https://crowdin.com/profile/oralnegorod) with the Russian translation;
+- [Teralion](https://steamcommunity.com/id/Teralion/) and [Titus](https://crowdin.com/profile/titus_i) with the French translation;
+- and everyone that plays this mod.
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+Thank you all!
 
 # LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a> for eveyone except Paradox Interactive, for which the project is licensed under [CC0 1.0 Universal (CC0 1.0)

@@ -7,36 +7,35 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-      with:
-        lfs: true
-    - name: Checkout LFS objects
-      run: git lfs checkout
-    - name: Archive Planet States
-      uses: thedoctor0/zip-release@master
-      with:
-        filename: 'planet_states_vx.x.x.zip'
-        exclusions: '*.git* /*assets/* /*compatibility-patches/* /*addons/* /*steam/* /*vanilla_cache/* .all-contributorsrc README.md crowdin.yml'
-    - name: Archive Planet States Compatibility Patches
-      uses: thedoctor0/zip-release@master
-      with:
-        filename: 'planet_states_compatibility_patches.zip'
-        path: 'compatibility-patches/'
-    - name: Create release with artifacts
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: 'planet_states_vx.x.x.zip,planet_states_compatibility_patches.zip'
-        name: 'Planet States vx.x.x'
-        body: 'Available on: - Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2409516058'
-        tag: 'vx.x.x'
-        commit: 'master'
-        draft: true
-        token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Trigger Jenkins job
-      uses: appleboy/jenkins-action@master
-      with:
-        url: "https://jenkins.rmg.david-sima.dev/"
-        user: "the24thds"
-        token: ${{ secrets.TOKEN }}
-        job: "planet_states_steam_deploy"
-    
+      - uses: actions/checkout@master
+        with:
+          lfs: true
+      - name: Checkout LFS objects
+        run: git lfs checkout
+      - name: Archive Planet States
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: 'planet_states_vx.x.x.zip'
+          exclusions: '*.git* /*assets/* /*compatibility-patches/* /*addons/* /*steam/* /*vanilla_cache/* .all-contributorsrc README.md crowdin.yml'
+      - name: Archive Planet States Compatibility Patches
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: 'planet_states_compatibility_patches.zip'
+          path: 'compatibility-patches/'
+      - name: Create release with artifacts
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: 'planet_states_vx.x.x.zip,planet_states_compatibility_patches.zip'
+          name: 'Planet States vx.x.x'
+          body: 'Available on: - Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2409516058'
+          tag: 'vx.x.x'
+          commit: 'master'
+          draft: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Trigger Jenkins job
+        uses: appleboy/jenkins-action@master
+        with:
+          url: 'https://jenkins.rmg.david-sima.dev/'
+          user: 'the24thds'
+          token: ${{ secrets.TOKEN }}
+          job: 'planet_states_steam_deploy'
