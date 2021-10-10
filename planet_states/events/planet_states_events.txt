@@ -753,12 +753,10 @@ country_event = {
 	option = {
 		name = ps.110.a
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_egalitarian }
 			}
 		}
-		add_resource = { energy = -1000 }
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_1
 		}
@@ -771,12 +769,10 @@ country_event = {
 	option = {
 		name = ps.110.b
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_egalitarian }
 			}
 		}
-		add_resource = { energy = -2000 }
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_2
 		}
@@ -789,12 +785,10 @@ country_event = {
 	option = {
 		name = ps.110.c
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_egalitarian }
 			}
 		}
-		add_resource = { energy = -3000 }
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_3
 		}
@@ -807,12 +801,10 @@ country_event = {
 	option = {
 		name = ps.110.d
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_egalitarian }
 			}
 		}
-		add_resource = { energy = -4000 }
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_4
 		}
@@ -825,12 +817,10 @@ country_event = {
 	option = {
 		name = ps.110.e
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_egalitarian }
 			}
 		}
-		add_resource = { energy = -5000 }
 		add_modifier = {
 			modifier = modifier_ps_egalitarian_trade_deal_5
 		}
@@ -1437,12 +1427,10 @@ country_event = {
 	option = {
 		name = ps.210.a
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_authoritarian }
 			}
 		}
-		add_resource = { energy = -1000 }
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_1
 		}
@@ -1455,12 +1443,10 @@ country_event = {
 	option = {
 		name = ps.210.b
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_authoritarian }
 			}
 		}
-		add_resource = { energy = -2000 }
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_2
 		}
@@ -1473,12 +1459,10 @@ country_event = {
 	option = {
 		name = ps.210.c
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_authoritarian }
 			}
 		}
-		add_resource = { energy = -3000 }
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_3
 		}
@@ -1491,12 +1475,10 @@ country_event = {
 	option = {
 		name = ps.210.d
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_authoritarian }
 			}
 		}
-		add_resource = { energy = -4000 }
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_4
 		}
@@ -1509,12 +1491,10 @@ country_event = {
 	option = {
 		name = ps.210.e
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_authoritarian }
 			}
 		}
-		add_resource = { energy = -5000 }
 		add_modifier = {
 			modifier = modifier_ps_authoritarian_trade_deal_5
 		}
@@ -2120,12 +2100,10 @@ country_event = {
 	option = {
 		name = ps.310.a
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_militarist }
 			}
 		}
-		add_resource = { energy = -1000 }
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_1
 		}
@@ -2138,12 +2116,10 @@ country_event = {
 	option = {
 		name = ps.310.b
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_militarist }
 			}
 		}
-		add_resource = { energy = -2000 }
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_2
 		}
@@ -2156,12 +2132,10 @@ country_event = {
 	option = {
 		name = ps.310.c
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_militarist }
 			}
 		}
-		add_resource = { energy = -3000 }
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_3
 		}
@@ -2174,12 +2148,10 @@ country_event = {
 	option = {
 		name = ps.310.d
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_militarist }
 			}
 		}
-		add_resource = { energy = -4000 }
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_4
 		}
@@ -2192,12 +2164,10 @@ country_event = {
 	option = {
 		name = ps.310.e
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_militarist }
 			}
 		}
-		add_resource = { energy = -5000 }
 		add_modifier = {
 			modifier = modifier_ps_militarist_trade_deal_5
 		}
@@ -2803,12 +2773,10 @@ country_event = {
 	option = {
 		name = ps.410.a
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 1000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_pacifist }
 			}
 		}
-		add_resource = { energy = -1000 }
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_1
 		}
@@ -2821,12 +2789,10 @@ country_event = {
 	option = {
 		name = ps.410.b
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 2000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_pacifist }
 			}
 		}
-		add_resource = { energy = -2000 }
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_2
 		}
@@ -2839,12 +2805,10 @@ country_event = {
 	option = {
 		name = ps.410.c
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 3000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_pacifist }
 			}
 		}
-		add_resource = { energy = -3000 }
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_3
 		}
@@ -2857,12 +2821,10 @@ country_event = {
 	option = {
 		name = ps.410.d
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 4000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_pacifist }
 			}
 		}
-		add_resource = { energy = -4000 }
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_4
 		}
@@ -2875,12 +2837,10 @@ country_event = {
 	option = {
 		name = ps.410.e
 		allow = {
-			resource_stockpile_compare = { resource = energy value >= 5000 }
 			hidden_trigger = {
 				NOT = { has_country_flag = attacked_ps_pacifist }
 			}
 		}
-		add_resource = { energy = -5000 }
 		add_modifier = {
 			modifier = modifier_ps_pacifist_trade_deal_5
 		}
