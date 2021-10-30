@@ -12,8 +12,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/logo_rmg.dds"
 	}
 	spriteType = {
-		name = "GFX_rmg_lotor_dev_diary_3"
-		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_3.dds"
+		name = "GFX_rmg_lotor_dev_diary_6"
+		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_6.dds"
+	}
+	spriteType = {
+		name = "GFX_rmg_lotor_dev_diary_5"
+		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_5.dds"
+	}
+	spriteType = {
+		name = "GFX_rmg_lotor_dev_diary_4"
+		texturefile = "gfx/interface/buttons/rmg_lotor_dev_diary_4.dds"
 	}
 	spriteType = {
 		name = "GFX_rmg_new_enclaves"

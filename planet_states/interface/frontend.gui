@@ -530,22 +530,22 @@ guiTypes = {
 			}
 		
 			buttonType =	{
-				name = "lotor_dev_diary_3"
-				quadTextureSprite = "GFX_rmg_lotor_dev_diary_3"
+				name = "lotor_dev_diary_6"
+				quadTextureSprite = "GFX_rmg_lotor_dev_diary_6"
 				position = { x = 20 y = 60 }
-				web_link="https://www.reddit.com/r/Stellaris/comments/pqlo1s/star_wars_legacy_of_the_old_republic_dev_diary_3/"
+				web_link="https://www.reddit.com/r/Stellaris/comments/qij6fm/star_wars_legacy_of_the_old_republic_dev_diary_6/"
 			}
 			buttonType =	{
-				name = "swnd"
-				quadTextureSprite = "GFX_rmg_swnd"
+				name = "lotor_dev_diary_5"
+				quadTextureSprite = "GFX_rmg_lotor_dev_diary_5"
 				position = { x = 20 y = 160 }
-				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2583755721"
+				web_link="https://www.reddit.com/r/Stellaris/comments/q8lmak/star_wars_legacy_of_the_old_republic_dev_diary_5/"
 			}
 			buttonType =	{
-				name = "new_enclaves"
-				quadTextureSprite = "GFX_rmg_new_enclaves"
+				name = "lotor_dev_diary_4"
+				quadTextureSprite = "GFX_rmg_lotor_dev_diary_4"
 				position = { x = 20 y = 260 }
-				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2356224372"
+				web_link="https://www.reddit.com/r/Stellaris/comments/pzb8h0/star_wars_legacy_of_the_old_republic_dev_diary_4/"
 			}
 			buttonType =	{
 				name = "stnc"
