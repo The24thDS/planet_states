@@ -1,5 +1,5 @@
----
-l_english:
+﻿l_braz_por:
+
   #First contact with Planet-State
   fcsum_planet_state_1: "Descobrimos que o império §H[This.ContactCountry.GetName]§! Se encontra em um único planeta no sistema §H[This.System.GetName]§."
   planet_state_first_contact.1.desc: "Detectamos leituras de natureza desconhecida. Os sinais parecem seguir algum tipo de sintaxe repetida que poderia indicar origem sapiente. O sinal deve ser investigado mais detalhadamente antes de qualquer conclusão. Eles estão concentrados em torno de um único planeta, embora não seja claro se isso faz parte de uma civilização avançada ou não."
