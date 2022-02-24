@@ -5,7 +5,7 @@ tags={
 	"Galaxy Generation"
 	"Gameplay"
 }
-name="[3.1.*] Planet States"
-supported_version="3.1.*"
+name="[3.3.*] Planet States"
+supported_version="3.3.*"
 path="mod/planet_states"
 picture="thumbnail.jpg"
