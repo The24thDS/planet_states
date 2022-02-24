@@ -10,8 +10,6 @@ event = {
 		}
 	}
 	immediate = {
-		log = "[contact_country.GetRealName]"
-		log = "[reverse_contact_country.GetRealName]"
 		FromFrom = {
 			setup_first_contact_path = { TYPE = planet_state }
 		}

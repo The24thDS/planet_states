@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/The24thDS/planet_states/compare/v1.4.0...v1.5.0) (2022-02-24)
+
+
+### Features
+
+* updated for Stellaris 3.3 ([2b33317](https://github.com/The24thDS/planet_states/commit/2b3331755be8dcf262d49514187cdcfd4a520896))
+
 ## [1.4.0](https://github.com/The24thDS/planet_states/compare/v1.3.2...v1.4.0) (2021-11-24)
 
 
