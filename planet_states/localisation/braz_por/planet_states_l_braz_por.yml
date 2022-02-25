@@ -1,12 +1,12 @@
-﻿l_braz_por:
-
+---
+l_english:
   #Country Type
   mod_planet_state: "$COUNTRY_PLANET_STATE"
   COUNTRY_PLANET_STATE: "Estado-Planetário"
   COUNTRY_PLANET_STATE_DESC: "Tão antigos quanto os Impérios Caídos, estes pequenos Estados Planetários absteram-se dos assuntos galáticos e nunca se expandiram para outros planetas. Grande parte de seu poder e prosperidade, provavelmente é decorrente disto."
   CAN_TAKE_HOSTILE_ACTION_PLANET_STATE: "Só podemos tomar medidas hostis contra Estados Planetários dentro das nossas fronteiras."
   #Ships
-  planet_state_station: "Estção Estado-Planetária"
+  planet_state_station: "Estação Estado-Planetária"
   planet_state_station_plural: "Estações Estado-Planetárias"
   #Governments
   gov_planet_state_egalitarian: "Estado-Planetário"
