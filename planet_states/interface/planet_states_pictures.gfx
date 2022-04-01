@@ -5,4 +5,17 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	
+	spriteType = {
+		name = "GFX_front_menu_rmg_discord"
+		texturefile = "gfx/interface/buttons/main_menu_rmg_discord.dds"
+	}
+	spriteType = {
+		name = "GFX_front_menu_rmg_steam"
+		texturefile = "gfx/interface/buttons/main_menu_rmg_steam.dds"
+	}
+	spriteType = {
+		name = "GFX_rmg_logo"
+		texturefile = "gfx/interface/icons/logo_rmg.dds"
+	}
 }
