@@ -482,67 +482,9 @@ guiTypes = {
 				spriteType = "GFX_ship_designer_blocker"
 			}
 		}
-		containerWindowType = {
-			name = "rmg_view_window"
-			position = { x= 565 y = -240 } # if you increment `height` by 100 then decrement `y` by 50 (to keep the window centered)
-			size = { width = 400 height = 480 } # if you add another item increment `height` by 100
-			orientation = center
-		
-			background = {
-				name ="background"
-				quadTextureSprite = "GFX_glow_tile_purple"
-				position = { x = 0 y = 0 }
-			}
-		
-			iconType = {
-				name = "hex_bg"
-				spriteType = "GFX_hex_bg_artist"
-				position = { x = -5 y = -5 }
-				alwaysTransparent = yes
-			}
-		
-			iconType = {
-				name = "empire_header_line"
-				quadTextureSprite = "GFX_line"
-				position = { x = 10 y = 40 }
-			}
-		
-			instantTextBoxType={
-				name = "load_label"
-				font = "large_title_font"
-				position = { x= 26 y= 8 }
-				maxWidth = 300
-				maxHeight = 16
-				text = "RMG Latest News"
-				Orientation = "UPPER_LEFT"
-				format = left
-			}
-		
-			buttonType =	{
-				name = "lotor_dev_diary_3"
-				quadTextureSprite = "GFX_rmg_lotor_dev_diary_3"
-				position = { x = 20 y = 60 }
-				web_link="https://www.reddit.com/r/Stellaris/comments/pqlo1s/star_wars_legacy_of_the_old_republic_dev_diary_3/"
-			}
-			buttonType =	{
-				name = "swnd"
-				quadTextureSprite = "GFX_rmg_swnd"
-				position = { x = 20 y = 160 }
-				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2583755721"
-			}
-			buttonType =	{
-				name = "new_enclaves"
-				quadTextureSprite = "GFX_rmg_new_enclaves"
-				position = { x = 20 y = 260 }
-				web_link="https://steamcommunity.com/sharedfiles/filedetails/?id=2356224372"
-			}
-			buttonType =	{
-				name = "stnc"
-				quadTextureSprite = "GFX_rmg_stnc"
-				position = { x = 20 y = 360 }
-				web_link="https://steamcommunity.com/sharedfiles/filedetails/changelog/1886496498"
-			}
-		}
+
+		# JENKINS_IMPORT_RMG_NEWS #
+
 	}
 	containerWindowType = {
 		name = "save_item"
