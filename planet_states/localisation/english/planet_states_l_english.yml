@@ -16,7 +16,7 @@
   RT_PS_AUTHORITARIAN: "Grand Prince"
   gov_planet_state_militarist: "$gov_planet_state_egalitarian$"
   gov_planet_state_militarist_desc: "$gov_planet_state_egalitarian_desc$"
-  RT_PS_MILITARIST: "Praetor Maximus"
+  RT_PS_MILITARIST: "Queen"
   gov_planet_state_pacifist: "$gov_planet_state_egalitarian$"
   gov_planet_state_pacifist_desc: "$gov_planet_state_egalitarian_desc$"
   RT_PS_PACIFIST: "Archon"
