@@ -8,6 +8,7 @@ create_planet_state_egalitarian = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
+		save_global_event_target_as = ps_egalitarian_planet
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
@@ -137,6 +138,7 @@ create_planet_state_authoritarian = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
+		save_global_event_target_as = ps_authoritarian_planet
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
@@ -344,6 +346,7 @@ create_planet_state_militarist = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
+		save_global_event_target_as = ps_militarist_planet
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25
@@ -480,6 +483,7 @@ create_planet_state_pacifist = {
 			uninhabitable_regular_planet = yes
 			has_anomaly = no
 		}
+		save_global_event_target_as = ps_pacifist_planet
 		# Set Planet Size and Class
 		prevent_anomaly = yes
 		set_planet_size = 25

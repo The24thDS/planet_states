@@ -208,6 +208,7 @@ country_event = {
 	id = ps.13
 	title = ps.13.name
 	desc = ps.13.desc
+	location = event_target:ps_egalitarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -243,6 +244,7 @@ country_event = {
 	id = ps.14
 	title = ps.13.name
 	desc = ps.14.desc
+	location = event_target:ps_authoritarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -278,6 +280,7 @@ country_event = {
 	id = ps.15
 	title = ps.13.name
 	desc = ps.15.desc
+	location = event_target:ps_militarist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -313,6 +316,7 @@ country_event = {
 	id = ps.16
 	title = ps.13.name
 	desc = ps.16.desc
+	location = event_target:ps_pacifist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -519,7 +523,7 @@ country_event = {
 	id = ps.100
 	title = ps.100.name
 	desc = ps.100a.desc
-	location = From
+	location = event_target:ps_egalitarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -639,7 +643,7 @@ country_event = {
 	id = ps.101
 	title = ps.100.name
 	desc = ps.100a.desc
-	location = From
+	location = event_target:ps_egalitarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -727,6 +731,7 @@ country_event = {
 	id = ps.110
 	title = ps.110.name
 	desc = ps.110.desc
+	location = event_target:ps_egalitarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -849,6 +854,7 @@ country_event = {
 	id = ps.111
 	title = ps.110.name
 	desc = ps.111.desc
+	location = event_target:ps_egalitarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -890,6 +896,7 @@ country_event = {
 	id = ps.120
 	title = ps.120.name
 	desc = ps.120.desc
+	location = event_target:ps_egalitarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1114,6 +1121,7 @@ country_event = {
 	id = ps.1004
 	title = ps.1004.name
 	desc = ps.1004.desc
+	location = event_target:ps_egalitarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1136,6 +1144,7 @@ country_event = {
 	id = ps.1005
 	title = ps.1005.name
 	desc = ps.1005a.desc
+	location = event_target:ps_egalitarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1193,7 +1202,7 @@ country_event = {
 	id = ps.200
 	title = ps.200.name
 	desc = ps.200a.desc
-	location = From
+	location = event_target:ps_authoritarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1313,7 +1322,7 @@ country_event = {
 	id = ps.201
 	title = ps.200.name
 	desc = ps.200a.desc
-	location = From
+	location = event_target:ps_authoritarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1401,6 +1410,7 @@ country_event = {
 	id = ps.210
 	title = ps.210.name
 	desc = ps.210.desc
+	location = event_target:ps_authoritarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1523,6 +1533,7 @@ country_event = {
 	id = ps.211
 	title = ps.210.name
 	desc = ps.211.desc
+	location = event_target:ps_authoritarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1564,6 +1575,7 @@ country_event = {
 	id = ps.220
 	title = ps.220.name
 	desc = ps.220.desc
+	location = event_target:ps_authoritarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1787,6 +1799,7 @@ country_event = {
 	id = ps.2004
 	title = ps.2004.name
 	desc = ps.2004.desc
+	location = event_target:ps_authoritarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1809,6 +1822,7 @@ country_event = {
 	id = ps.2005
 	title = ps.2005.name
 	desc = ps.2005a.desc
+	location = event_target:ps_authoritarian_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1866,7 +1880,7 @@ country_event = {
 	id = ps.300
 	title = ps.300.name
 	desc = ps.300a.desc
-	location = From
+	location = event_target:ps_militarist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -1986,7 +2000,7 @@ country_event = {
 	id = ps.301
 	title = ps.300.name
 	desc = ps.300a.desc
-	location = From
+	location = event_target:ps_militarist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2074,6 +2088,7 @@ country_event = {
 	id = ps.310
 	title = ps.310.name
 	desc = ps.310.desc
+	location = event_target:ps_militarist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2196,6 +2211,7 @@ country_event = {
 	id = ps.311
 	title = ps.310.name
 	desc = ps.311.desc
+	location = event_target:ps_militarist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2237,6 +2253,7 @@ country_event = {
 	id = ps.320
 	title = ps.320.name
 	desc = ps.320.desc
+	location = event_target:ps_militarist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2460,6 +2477,7 @@ country_event = {
 	id = ps.3004
 	title = ps.3004.name
 	desc = ps.3004.desc
+	location = event_target:ps_militarist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2482,6 +2500,7 @@ country_event = {
 	id = ps.3005
 	title = ps.3005.name
 	desc = ps.3005a.desc
+	location = event_target:ps_militarist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2539,7 +2558,7 @@ country_event = {
 	id = ps.400
 	title = ps.400.name
 	desc = ps.400a.desc
-	location = From
+	location = event_target:ps_pacifist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2659,7 +2678,7 @@ country_event = {
 	id = ps.401
 	title = ps.400.name
 	desc = ps.400a.desc
-	location = From
+	location = event_target:ps_pacifist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2747,6 +2766,7 @@ country_event = {
 	id = ps.410
 	title = ps.410.name
 	desc = ps.410.desc
+	location = event_target:ps_pacifist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2869,6 +2889,7 @@ country_event = {
 	id = ps.411
 	title = ps.410.name
 	desc = ps.411.desc
+	location = event_target:ps_pacifist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -2910,6 +2931,7 @@ country_event = {
 	id = ps.420
 	title = ps.420.name
 	desc = ps.420.desc
+	location = event_target:ps_pacifist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -3133,6 +3155,7 @@ country_event = {
 	id = ps.4004
 	title = ps.4004.name
 	desc = ps.4004.desc
+	location = event_target:ps_pacifist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
@@ -3155,6 +3178,7 @@ country_event = {
 	id = ps.4005
 	title = ps.4005.name
 	desc = ps.4005a.desc
+	location = event_target:ps_pacifist_planet
 
 	is_triggered_only = yes
 	diplomatic = yes
