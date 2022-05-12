@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/The24thDS/planet_states/compare/v1.5.1...v1.6.0) (2022-05-12)
+
+
+### Features
+
+* added close button to diplomatic window ([267aca6](https://github.com/The24thDS/planet_states/commit/267aca6027d15320d31cb8b5cb903c7e73fbdc1b))
+* added focus buttons to dipomatic windows ([590f1ce](https://github.com/The24thDS/planet_states/commit/590f1ce27255ca4f220647ec2f53f4a3f373c74e))
+* added static leader names to planet states ([631a0ab](https://github.com/The24thDS/planet_states/commit/631a0ab85256422d39581a1cc0b639719181754f))
+* changed ui_overhaul compat patch to import rmg news ([6762514](https://github.com/The24thDS/planet_states/commit/67625148b2b2ee63ddeac0cd531a96bf4094fe66))
+
+
+### Bug Fixes
+
+* updated for Stellaris 3.4 ([1ffa8d5](https://github.com/The24thDS/planet_states/commit/1ffa8d55d12fa3a25941f254e291169ff51e8c3a))
+
 ### [1.5.1](https://github.com/The24thDS/planet_states/compare/v1.5.0...v1.5.1) (2022-04-01)
 
 ## [1.5.0](https://github.com/The24thDS/planet_states/compare/v1.4.0...v1.5.0) (2022-02-24)
