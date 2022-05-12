@@ -5,7 +5,7 @@ tags={
 	"Galaxy Generation"
 	"Gameplay"
 }
-name="[3.3.*] Planet States"
+name="Planet States [3.4.*]"
 picture="thumbnail.jpg"
-supported_version="3.3.*"
+supported_version="3.4.*"
 remote_file_id="2409516058"
