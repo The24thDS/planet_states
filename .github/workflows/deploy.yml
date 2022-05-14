@@ -1,0 +1,16 @@
+name: Trigger Steam Workshop deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jenkins job
+        uses: appleboy/jenkins-action@master
+        with:
+          url: "https://jenkins.rmg.david-sima.dev/"
+          user: "the24thds"
+          token: ${{ secrets.TOKEN }}
+          job: "planet_states_steam_deploy"
