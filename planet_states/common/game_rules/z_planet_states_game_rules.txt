@@ -88,6 +88,7 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
+			exists = overlord
 			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
 		}
 		custom_tooltip = {
