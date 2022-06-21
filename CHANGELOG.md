@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.2](https://github.com/The24thDS/planet_states/compare/v1.6.1...v1.6.2) (2022-06-21)
+
+
+### Bug Fixes
+
+* updated can_take_hostile_actions to 3.4.4 ([2ba5813](https://github.com/The24thDS/planet_states/commit/2ba581348ada27430bff38ae8b3de7a5dfcf53c6))
+
 ### [1.6.1](https://github.com/The24thDS/planet_states/compare/v1.6.0...v1.6.1) (2022-05-14)
 
 ## [1.6.0](https://github.com/The24thDS/planet_states/compare/v1.5.1...v1.6.0) (2022-05-12)
